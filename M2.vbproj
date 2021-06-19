@@ -172,6 +172,9 @@
     <EmbeddedResource Include="CLIENTS.resx">
       <DependentUpon>CLIENTS.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LOGIN.resx">
+      <DependentUpon>LOGIN.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SKYLITE.resx">
       <DependentUpon>SKYLITE.vb</DependentUpon>
     </EmbeddedResource>
