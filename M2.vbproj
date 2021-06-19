@@ -85,6 +85,12 @@
     <Compile Include="APPOINTMENTS.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="BUSINESS CLIENTS.Designer.vb">
+      <DependentUpon>BUSINESS CLIENTS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BUSINESS CLIENTS.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CLIENTS.Designer.vb">
       <DependentUpon>CLIENTS.vb</DependentUpon>
     </Compile>
@@ -127,6 +133,27 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>group26DataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="group26DataSet4.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>group26DataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="group26DataSet5.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>group26DataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="group26DataSet6.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>group26DataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="INDIVIDUAL CLIENTS.Designer.vb">
+      <DependentUpon>INDIVIDUAL CLIENTS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="INDIVIDUAL CLIENTS.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="LOGIN.Designer.vb">
       <DependentUpon>LOGIN.vb</DependentUpon>
@@ -194,11 +221,20 @@
     <EmbeddedResource Include="APPOINTMENTS.resx">
       <DependentUpon>APPOINTMENTS.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BUSINESS CLIENTS.resx">
+      <DependentUpon>BUSINESS CLIENTS.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CLIENTS.resx">
       <DependentUpon>CLIENTS.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CONTRACTS.resx">
       <DependentUpon>CONTRACTS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EMPLOYEES.resx">
+      <DependentUpon>EMPLOYEES.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="INDIVIDUAL CLIENTS.resx">
+      <DependentUpon>INDIVIDUAL CLIENTS.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LOGIN.resx">
       <DependentUpon>LOGIN.vb</DependentUpon>
@@ -280,6 +316,39 @@
     </None>
     <None Include="group26DataSet3.xss">
       <DependentUpon>group26DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="group26DataSet4.xsc">
+      <DependentUpon>group26DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="group26DataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>group26DataSet4.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="group26DataSet4.xss">
+      <DependentUpon>group26DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="group26DataSet5.xsc">
+      <DependentUpon>group26DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="group26DataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>group26DataSet5.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="group26DataSet5.xss">
+      <DependentUpon>group26DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="group26DataSet6.xsc">
+      <DependentUpon>group26DataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="group26DataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>group26DataSet6.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="group26DataSet6.xss">
+      <DependentUpon>group26DataSet6.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
