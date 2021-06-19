@@ -23,12 +23,12 @@ Partial Class APPOINTMENTS
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -44,6 +44,29 @@ Partial Class APPOINTMENTS
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(776, 426)
         Me.Panel1.TabIndex = 8
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(344, 72)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(123, 20)
+        Me.Button2.TabIndex = 17
+        Me.Button2.Text = "NEW APPOINTMENT"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Location = New System.Drawing.Point(138, 72)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
+        Me.DateTimePicker1.TabIndex = 16
+        '
+        'MonthCalendar1
+        '
+        Me.MonthCalendar1.CalendarDimensions = New System.Drawing.Size(3, 2)
+        Me.MonthCalendar1.Location = New System.Drawing.Point(39, 106)
+        Me.MonthCalendar1.Name = "MonthCalendar1"
+        Me.MonthCalendar1.TabIndex = 15
         '
         'Button8
         '
@@ -66,35 +89,12 @@ Partial Class APPOINTMENTS
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(631, 3)
+        Me.Button1.Location = New System.Drawing.Point(473, 72)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(142, 28)
+        Me.Button1.Size = New System.Drawing.Size(133, 20)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "VIEW APPOINTMENTS"
         Me.Button1.UseVisualStyleBackColor = True
-        '
-        'MonthCalendar1
-        '
-        Me.MonthCalendar1.CalendarDimensions = New System.Drawing.Size(3, 2)
-        Me.MonthCalendar1.Location = New System.Drawing.Point(39, 106)
-        Me.MonthCalendar1.Name = "MonthCalendar1"
-        Me.MonthCalendar1.TabIndex = 15
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(213, 72)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
-        Me.DateTimePicker1.TabIndex = 16
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(419, 72)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(123, 20)
-        Me.Button2.TabIndex = 17
-        Me.Button2.Text = "NEW APPOINTMENT"
-        Me.Button2.UseVisualStyleBackColor = True
         '
         'APPOINTMENTS
         '
