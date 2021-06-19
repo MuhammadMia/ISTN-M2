@@ -23,10 +23,10 @@ Partial Class CLIENTS
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button8 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button8 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -40,6 +40,15 @@ Partial Class CLIENTS
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(776, 426)
         Me.Panel1.TabIndex = 7
+        '
+        'Button8
+        '
+        Me.Button8.Location = New System.Drawing.Point(3, 3)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(79, 28)
+        Me.Button8.TabIndex = 14
+        Me.Button8.Text = "BACK"
+        Me.Button8.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -69,22 +78,13 @@ Partial Class CLIENTS
         Me.Button1.Text = "INDIVIDUAL CLIENTS"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'Button8
-        '
-        Me.Button8.Location = New System.Drawing.Point(3, 3)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(79, 28)
-        Me.Button8.TabIndex = 14
-        Me.Button8.Text = "BACK"
-        Me.Button8.UseVisualStyleBackColor = True
-        '
-        'CLIENT
+        'CLIENTS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.Panel1)
-        Me.Name = "CLIENT"
+        Me.Name = "CLIENTS"
         Me.Text = "CLIENT"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
