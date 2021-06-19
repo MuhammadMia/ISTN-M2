@@ -23,10 +23,10 @@ Partial Class SALE
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Button8 = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -41,23 +41,14 @@ Partial Class SALE
         Me.Panel1.Size = New System.Drawing.Size(776, 426)
         Me.Panel1.TabIndex = 6
         '
-        'Button1
+        'Button8
         '
-        Me.Button1.Location = New System.Drawing.Point(233, 202)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(160, 57)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "NEW SALE"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(399, 202)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(160, 57)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "VIEW SALES"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Button8.Location = New System.Drawing.Point(3, 3)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(79, 28)
+        Me.Button8.TabIndex = 13
+        Me.Button8.Text = "BACK"
+        Me.Button8.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -69,14 +60,23 @@ Partial Class SALE
         Me.Label1.TabIndex = 8
         Me.Label1.Text = "SALES"
         '
-        'Button8
+        'Button2
         '
-        Me.Button8.Location = New System.Drawing.Point(3, 3)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(79, 28)
-        Me.Button8.TabIndex = 13
-        Me.Button8.Text = "BACK"
-        Me.Button8.UseVisualStyleBackColor = True
+        Me.Button2.Location = New System.Drawing.Point(399, 202)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(160, 57)
+        Me.Button2.TabIndex = 1
+        Me.Button2.Text = "VIEW SALES"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(233, 202)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(160, 57)
+        Me.Button1.TabIndex = 0
+        Me.Button1.Text = "NEW SALE"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'SALE
         '

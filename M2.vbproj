@@ -203,6 +203,9 @@
     <EmbeddedResource Include="LOGIN.resx">
       <DependentUpon>LOGIN.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NEW SALE.resx">
+      <DependentUpon>NEW SALE.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PRODUCTS.resx">
       <DependentUpon>PRODUCTS.vb</DependentUpon>
     </EmbeddedResource>
