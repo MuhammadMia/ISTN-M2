@@ -85,6 +85,12 @@
     <Compile Include="APPOINTMENTS.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="BUSINESS CLIENTS.Designer.vb">
+      <DependentUpon>BUSINESS CLIENTS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BUSINESS CLIENTS.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CLIENTS.Designer.vb">
       <DependentUpon>CLIENTS.vb</DependentUpon>
     </Compile>
@@ -204,11 +210,20 @@
     <EmbeddedResource Include="APPOINTMENTS.resx">
       <DependentUpon>APPOINTMENTS.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BUSINESS CLIENTS.resx">
+      <DependentUpon>BUSINESS CLIENTS.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CLIENTS.resx">
       <DependentUpon>CLIENTS.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CONTRACTS.resx">
       <DependentUpon>CONTRACTS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EMPLOYEES.resx">
+      <DependentUpon>EMPLOYEES.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="INDIVIDUAL CLIENTS.resx">
+      <DependentUpon>INDIVIDUAL CLIENTS.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LOGIN.resx">
       <DependentUpon>LOGIN.vb</DependentUpon>
@@ -293,17 +308,6 @@
     </None>
     <None Include="group26DataSet3.xss">
       <DependentUpon>group26DataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="IST3SkyliteDB.xsc">
-      <DependentUpon>IST3SkyliteDB.xsd</DependentUpon>
-    </None>
-    <None Include="IST3SkyliteDB.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>IST3SkyliteDB.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="IST3SkyliteDB.xss">
-      <DependentUpon>IST3SkyliteDB.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
