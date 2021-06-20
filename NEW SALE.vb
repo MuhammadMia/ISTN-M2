@@ -12,8 +12,8 @@
     End Sub
 
     Private Sub NEW_SALE_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'Group26DataSet1.PRODUCTS' table. You can move, or remove it, as needed.
-        Me.PRODUCTSTableAdapter.Fill(Me.Group26DataSet1.PRODUCTS)
+        'TODO: This line of code loads data into the 'SkyliteDB.tblProducts' table. You can move, or remove it, as needed.
+        Me.TblProductsTableAdapter.Fill(Me.SkyliteDB.tblProducts)
 
     End Sub
 
@@ -21,11 +21,41 @@
 
     End Sub
 
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles tblProducts.CellContentClick
 
     End Sub
 
     Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
 
+    End Sub
+
+    Private Sub btnAddToCart_Click(sender As Object, e As EventArgs) Handles btnAddToCart.Click
+        Dim productsTable As DataTable
+        productsTable = SkyliteDB.tblProducts
+
+        Dim selectedProduct As DataRow
+        selectedProduct = productsTable.NewRow()
+        'selectedProduct = tblProducts.SelectedRows()
+
+        selectedProduct("Product_ID") = "123"
+
+    End Sub
+
+    Private Sub txbSearch_TextChanged(sender As Object, e As EventArgs) Handles txbSearch.TextChanged
+        Dim resultTable As DataTable
+        resultTable = SkyliteDB.tblProducts
+        resultTable.Rows.Clear()
+
+        For Each row As DataRow In SkyliteDB.tblProducts.Rows
+            If row.Field(Of String)("Product_Name").Contains(txbSearch.Text) Then
+                resultTable.Rows.Add(row)
+            End If
+        Next
+
+        If txbSearch.Text = "" Then
+            tblProducts.DataSource = SkyliteDB.tblProducts
+        End If
+
+        tblProducts.DataSource = resultTable
     End Sub
 End Class

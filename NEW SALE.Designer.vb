@@ -25,41 +25,46 @@ Partial Class NEW_SALE
         Me.components = New System.ComponentModel.Container()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cmbEmployeeID = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.dtSaleDate = New System.Windows.Forms.DateTimePicker()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Group26DataSet1 = New M2.group26DataSet1()
-        Me.PRODUCTSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PRODUCTSTableAdapter = New M2.group26DataSet1TableAdapters.PRODUCTSTableAdapter()
+        Me.tblProducts = New System.Windows.Forms.DataGridView()
         Me.ProductIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ProductNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ManufacturerDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColourDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SalePriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CurrentStockDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TblProductsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SkyliteDB = New M2.SkyliteDB()
+        Me.PRODUCTSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Group26DataSet1 = New M2.group26DataSet1()
+        Me.PRODUCTSTableAdapter = New M2.group26DataSet1TableAdapters.PRODUCTSTableAdapter()
+        Me.txbSearch = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.btnAddToCart = New System.Windows.Forms.Button()
+        Me.btnRemove = New System.Windows.Forms.Button()
+        Me.tblCart = New System.Windows.Forms.DataGridView()
+        Me.txbClientID = New System.Windows.Forms.TextBox()
+        Me.cmbSaleType = New System.Windows.Forms.ComboBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txbContractLength = New System.Windows.Forms.TextBox()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Button4 = New System.Windows.Forms.Button()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Group26DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.lblTotalOnceOff = New System.Windows.Forms.Label()
+        Me.lblTotalMonthly = New System.Windows.Forms.Label()
+        Me.btnPlaceOrder = New System.Windows.Forms.Button()
+        Me.TblProductsTableAdapter = New M2.SkyliteDBTableAdapters.tblProductsTableAdapter()
+        CType(Me.tblProducts, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TblProductsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PRODUCTSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Group26DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.tblCart, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button8
@@ -81,13 +86,13 @@ Partial Class NEW_SALE
         Me.Label1.TabIndex = 16
         Me.Label1.Text = "NEW SALE"
         '
-        'ComboBox1
+        'cmbEmployeeID
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(99, 365)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(200, 21)
-        Me.ComboBox1.TabIndex = 17
+        Me.cmbEmployeeID.FormattingEnabled = True
+        Me.cmbEmployeeID.Location = New System.Drawing.Point(99, 365)
+        Me.cmbEmployeeID.Name = "cmbEmployeeID"
+        Me.cmbEmployeeID.Size = New System.Drawing.Size(200, 21)
+        Me.cmbEmployeeID.TabIndex = 17
         '
         'Label2
         '
@@ -107,12 +112,12 @@ Partial Class NEW_SALE
         Me.Label3.TabIndex = 19
         Me.Label3.Text = "Employee ID"
         '
-        'DateTimePicker1
+        'dtSaleDate
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(99, 405)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
-        Me.DateTimePicker1.TabIndex = 20
+        Me.dtSaleDate.Location = New System.Drawing.Point(99, 405)
+        Me.dtSaleDate.Name = "dtSaleDate"
+        Me.dtSaleDate.Size = New System.Drawing.Size(200, 20)
+        Me.dtSaleDate.TabIndex = 20
         '
         'Label4
         '
@@ -132,30 +137,16 @@ Partial Class NEW_SALE
         Me.Label5.TabIndex = 22
         Me.Label5.Text = "Sale Type"
         '
-        'DataGridView1
+        'tblProducts
         '
-        Me.DataGridView1.AutoGenerateColumns = False
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ProductIDDataGridViewTextBoxColumn, Me.ProductNameDataGridViewTextBoxColumn, Me.ManufacturerDataGridViewTextBoxColumn, Me.ColourDataGridViewTextBoxColumn, Me.SalePriceDataGridViewTextBoxColumn, Me.CurrentStockDataGridViewTextBoxColumn})
-        Me.DataGridView1.DataSource = Me.PRODUCTSBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 101)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(649, 182)
-        Me.DataGridView1.TabIndex = 23
-        '
-        'Group26DataSet1
-        '
-        Me.Group26DataSet1.DataSetName = "group26DataSet1"
-        Me.Group26DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'PRODUCTSBindingSource
-        '
-        Me.PRODUCTSBindingSource.DataMember = "PRODUCTS"
-        Me.PRODUCTSBindingSource.DataSource = Me.Group26DataSet1
-        '
-        'PRODUCTSTableAdapter
-        '
-        Me.PRODUCTSTableAdapter.ClearBeforeFill = True
+        Me.tblProducts.AutoGenerateColumns = False
+        Me.tblProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.tblProducts.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ProductIDDataGridViewTextBoxColumn, Me.ProductNameDataGridViewTextBoxColumn, Me.ManufacturerDataGridViewTextBoxColumn, Me.ColourDataGridViewTextBoxColumn, Me.SalePriceDataGridViewTextBoxColumn, Me.CurrentStockDataGridViewTextBoxColumn})
+        Me.tblProducts.DataSource = Me.TblProductsBindingSource
+        Me.tblProducts.Location = New System.Drawing.Point(12, 101)
+        Me.tblProducts.Name = "tblProducts"
+        Me.tblProducts.Size = New System.Drawing.Size(649, 182)
+        Me.tblProducts.TabIndex = 23
         '
         'ProductIDDataGridViewTextBoxColumn
         '
@@ -193,12 +184,36 @@ Partial Class NEW_SALE
         Me.CurrentStockDataGridViewTextBoxColumn.HeaderText = "Current_Stock"
         Me.CurrentStockDataGridViewTextBoxColumn.Name = "CurrentStockDataGridViewTextBoxColumn"
         '
-        'TextBox1
+        'TblProductsBindingSource
         '
-        Me.TextBox1.Location = New System.Drawing.Point(66, 70)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(227, 20)
-        Me.TextBox1.TabIndex = 25
+        Me.TblProductsBindingSource.DataMember = "tblProducts"
+        Me.TblProductsBindingSource.DataSource = Me.SkyliteDB
+        '
+        'SkyliteDB
+        '
+        Me.SkyliteDB.DataSetName = "SkyliteDB"
+        Me.SkyliteDB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'PRODUCTSBindingSource
+        '
+        Me.PRODUCTSBindingSource.DataMember = "PRODUCTS"
+        Me.PRODUCTSBindingSource.DataSource = Me.Group26DataSet1
+        '
+        'Group26DataSet1
+        '
+        Me.Group26DataSet1.DataSetName = "group26DataSet1"
+        Me.Group26DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'PRODUCTSTableAdapter
+        '
+        Me.PRODUCTSTableAdapter.ClearBeforeFill = True
+        '
+        'txbSearch
+        '
+        Me.txbSearch.Location = New System.Drawing.Point(66, 70)
+        Me.txbSearch.Name = "txbSearch"
+        Me.txbSearch.Size = New System.Drawing.Size(227, 20)
+        Me.txbSearch.TabIndex = 25
         '
         'Label6
         '
@@ -209,46 +224,46 @@ Partial Class NEW_SALE
         Me.Label6.TabIndex = 26
         Me.Label6.Text = "Search"
         '
-        'Button1
+        'btnAddToCart
         '
-        Me.Button1.Location = New System.Drawing.Point(667, 101)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(91, 182)
-        Me.Button1.TabIndex = 27
-        Me.Button1.Text = "Add to Cart"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnAddToCart.Location = New System.Drawing.Point(667, 101)
+        Me.btnAddToCart.Name = "btnAddToCart"
+        Me.btnAddToCart.Size = New System.Drawing.Size(91, 182)
+        Me.btnAddToCart.TabIndex = 27
+        Me.btnAddToCart.Text = "Add to Cart"
+        Me.btnAddToCart.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnRemove
         '
-        Me.Button2.Location = New System.Drawing.Point(1257, 101)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(89, 182)
-        Me.Button2.TabIndex = 28
-        Me.Button2.Text = "Remove"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnRemove.Location = New System.Drawing.Point(1257, 101)
+        Me.btnRemove.Name = "btnRemove"
+        Me.btnRemove.Size = New System.Drawing.Size(89, 182)
+        Me.btnRemove.TabIndex = 28
+        Me.btnRemove.Text = "Remove"
+        Me.btnRemove.UseVisualStyleBackColor = True
         '
-        'DataGridView2
+        'tblCart
         '
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Location = New System.Drawing.Point(798, 101)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.Size = New System.Drawing.Size(453, 182)
-        Me.DataGridView2.TabIndex = 29
+        Me.tblCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.tblCart.Location = New System.Drawing.Point(798, 101)
+        Me.tblCart.Name = "tblCart"
+        Me.tblCart.Size = New System.Drawing.Size(453, 182)
+        Me.tblCart.TabIndex = 29
         '
-        'TextBox2
+        'txbClientID
         '
-        Me.TextBox2.Location = New System.Drawing.Point(99, 328)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(200, 20)
-        Me.TextBox2.TabIndex = 30
+        Me.txbClientID.Location = New System.Drawing.Point(99, 328)
+        Me.txbClientID.Name = "txbClientID"
+        Me.txbClientID.Size = New System.Drawing.Size(200, 20)
+        Me.txbClientID.TabIndex = 30
         '
-        'ComboBox2
+        'cmbSaleType
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(99, 446)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(200, 21)
-        Me.ComboBox2.TabIndex = 31
+        Me.cmbSaleType.FormattingEnabled = True
+        Me.cmbSaleType.Location = New System.Drawing.Point(99, 446)
+        Me.cmbSaleType.Name = "cmbSaleType"
+        Me.cmbSaleType.Size = New System.Drawing.Size(200, 21)
+        Me.cmbSaleType.TabIndex = 31
         '
         'Label7
         '
@@ -259,12 +274,12 @@ Partial Class NEW_SALE
         Me.Label7.TabIndex = 32
         Me.Label7.Text = "Contract Length (Months)"
         '
-        'TextBox3
+        'txbContractLength
         '
-        Me.TextBox3.Location = New System.Drawing.Point(541, 328)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(60, 20)
-        Me.TextBox3.TabIndex = 33
+        Me.txbContractLength.Location = New System.Drawing.Point(541, 328)
+        Me.txbContractLength.Name = "txbContractLength"
+        Me.txbContractLength.Size = New System.Drawing.Size(60, 20)
+        Me.txbContractLength.TabIndex = 33
         '
         'Button3
         '
@@ -295,70 +310,76 @@ Partial Class NEW_SALE
         Me.Label9.TabIndex = 37
         Me.Label9.Text = "Total Due Monthly:"
         '
-        'Label10
+        'lblTotalOnceOff
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(1007, 373)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(68, 25)
-        Me.Label10.TabIndex = 38
-        Me.Label10.Text = "R0.00"
+        Me.lblTotalOnceOff.AutoSize = True
+        Me.lblTotalOnceOff.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalOnceOff.Location = New System.Drawing.Point(1007, 373)
+        Me.lblTotalOnceOff.Name = "lblTotalOnceOff"
+        Me.lblTotalOnceOff.Size = New System.Drawing.Size(68, 25)
+        Me.lblTotalOnceOff.TabIndex = 38
+        Me.lblTotalOnceOff.Text = "R0.00"
         '
-        'Label11
+        'lblTotalMonthly
         '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(1007, 418)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(68, 25)
-        Me.Label11.TabIndex = 39
-        Me.Label11.Text = "R0.00"
+        Me.lblTotalMonthly.AutoSize = True
+        Me.lblTotalMonthly.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalMonthly.Location = New System.Drawing.Point(1007, 418)
+        Me.lblTotalMonthly.Name = "lblTotalMonthly"
+        Me.lblTotalMonthly.Size = New System.Drawing.Size(68, 25)
+        Me.lblTotalMonthly.TabIndex = 39
+        Me.lblTotalMonthly.Text = "R0.00"
         '
-        'Button4
+        'btnPlaceOrder
         '
-        Me.Button4.Location = New System.Drawing.Point(1134, 373)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(212, 70)
-        Me.Button4.TabIndex = 40
-        Me.Button4.Text = "Place Order"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.btnPlaceOrder.Location = New System.Drawing.Point(1134, 373)
+        Me.btnPlaceOrder.Name = "btnPlaceOrder"
+        Me.btnPlaceOrder.Size = New System.Drawing.Size(212, 70)
+        Me.btnPlaceOrder.TabIndex = 40
+        Me.btnPlaceOrder.Text = "Place Order"
+        Me.btnPlaceOrder.UseVisualStyleBackColor = True
+        '
+        'TblProductsTableAdapter
+        '
+        Me.TblProductsTableAdapter.ClearBeforeFill = True
         '
         'NEW_SALE
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1365, 505)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Label11)
-        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.btnPlaceOrder)
+        Me.Controls.Add(Me.lblTotalMonthly)
+        Me.Controls.Add(Me.lblTotalOnceOff)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.txbContractLength)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.ComboBox2)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.DataGridView2)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.cmbSaleType)
+        Me.Controls.Add(Me.txbClientID)
+        Me.Controls.Add(Me.tblCart)
+        Me.Controls.Add(Me.btnRemove)
+        Me.Controls.Add(Me.btnAddToCart)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.txbSearch)
+        Me.Controls.Add(Me.tblProducts)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.DateTimePicker1)
+        Me.Controls.Add(Me.dtSaleDate)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.cmbEmployeeID)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button8)
         Me.Name = "NEW_SALE"
         Me.Text = "NEW_SALE"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Group26DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.tblProducts, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TblProductsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PRODUCTSBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Group26DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.tblCart, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -366,13 +387,13 @@ Partial Class NEW_SALE
 
     Friend WithEvents Button8 As Button
     Friend WithEvents Label1 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cmbEmployeeID As ComboBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents dtSaleDate As DateTimePicker
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents tblProducts As DataGridView
     Friend WithEvents Group26DataSet1 As group26DataSet1
     Friend WithEvents PRODUCTSBindingSource As BindingSource
     Friend WithEvents PRODUCTSTableAdapter As group26DataSet1TableAdapters.PRODUCTSTableAdapter
@@ -382,19 +403,22 @@ Partial Class NEW_SALE
     Friend WithEvents ColourDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents SalePriceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents CurrentStockDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txbSearch As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents DataGridView2 As DataGridView
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents btnAddToCart As Button
+    Friend WithEvents btnRemove As Button
+    Friend WithEvents tblCart As DataGridView
+    Friend WithEvents txbClientID As TextBox
+    Friend WithEvents cmbSaleType As ComboBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txbContractLength As TextBox
     Friend WithEvents Button3 As Button
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
-    Friend WithEvents Label10 As Label
-    Friend WithEvents Label11 As Label
-    Friend WithEvents Button4 As Button
+    Friend WithEvents lblTotalOnceOff As Label
+    Friend WithEvents lblTotalMonthly As Label
+    Friend WithEvents btnPlaceOrder As Button
+    Friend WithEvents SkyliteDB As SkyliteDB
+    Friend WithEvents TblProductsBindingSource As BindingSource
+    Friend WithEvents TblProductsTableAdapter As SkyliteDBTableAdapters.tblProductsTableAdapter
 End Class

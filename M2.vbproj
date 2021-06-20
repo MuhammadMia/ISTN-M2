@@ -128,6 +128,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>group26DataSet3.xsd</DependentUpon>
     </Compile>
+    <Compile Include="IST3SkyliteDB.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IST3SkyliteDB.xsd</DependentUpon>
+    </Compile>
     <Compile Include="LOGIN.Designer.vb">
       <DependentUpon>LOGIN.vb</DependentUpon>
     </Compile>
@@ -173,6 +178,11 @@
     </Compile>
     <Compile Include="SALE.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkyliteDB.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SkyliteDB.xsd</DependentUpon>
     </Compile>
     <Compile Include="SUPPLIERS.Designer.vb">
       <DependentUpon>SUPPLIERS.vb</DependentUpon>
@@ -284,6 +294,17 @@
     <None Include="group26DataSet3.xss">
       <DependentUpon>group26DataSet3.xsd</DependentUpon>
     </None>
+    <None Include="IST3SkyliteDB.xsc">
+      <DependentUpon>IST3SkyliteDB.xsd</DependentUpon>
+    </None>
+    <None Include="IST3SkyliteDB.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IST3SkyliteDB.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="IST3SkyliteDB.xss">
+      <DependentUpon>IST3SkyliteDB.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -294,6 +315,17 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="SkyliteDB.xsc">
+      <DependentUpon>SkyliteDB.xsd</DependentUpon>
+    </None>
+    <None Include="SkyliteDB.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SkyliteDB.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SkyliteDB.xss">
+      <DependentUpon>SkyliteDB.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
