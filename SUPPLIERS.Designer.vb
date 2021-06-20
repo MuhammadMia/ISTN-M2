@@ -27,9 +27,7 @@ Partial Class SUPPLIERS
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Group26DataSet2 = New M2.group26DataSet2()
         Me.SUPPLIERSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.SUPPLIERSTableAdapter = New M2.group26DataSet2TableAdapters.SUPPLIERSTableAdapter()
         Me.SupplierIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SupplierNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SupplierEmailDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -37,7 +35,6 @@ Partial Class SUPPLIERS
         Me.SupplierAddressDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Group26DataSet2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SUPPLIERSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -83,17 +80,13 @@ Partial Class SUPPLIERS
         '
         'Group26DataSet2
         '
-        Me.Group26DataSet2.DataSetName = "group26DataSet2"
-        Me.Group26DataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'SUPPLIERSBindingSource
         '
         Me.SUPPLIERSBindingSource.DataMember = "SUPPLIERS"
-        Me.SUPPLIERSBindingSource.DataSource = Me.Group26DataSet2
         '
         'SUPPLIERSTableAdapter
         '
-        Me.SUPPLIERSTableAdapter.ClearBeforeFill = True
         '
         'SupplierIDDataGridViewTextBoxColumn
         '
@@ -136,7 +129,6 @@ Partial Class SUPPLIERS
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Group26DataSet2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SUPPLIERSBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -146,9 +138,7 @@ Partial Class SUPPLIERS
     Friend WithEvents Button8 As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Group26DataSet2 As group26DataSet2
     Friend WithEvents SUPPLIERSBindingSource As BindingSource
-    Friend WithEvents SUPPLIERSTableAdapter As group26DataSet2TableAdapters.SUPPLIERSTableAdapter
     Friend WithEvents SupplierIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents SupplierNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents SupplierEmailDataGridViewTextBoxColumn As DataGridViewTextBoxColumn

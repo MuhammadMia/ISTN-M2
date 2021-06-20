@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class NEW_SALE
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class NEW_SALE
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Button8 = New System.Windows.Forms.Button()
@@ -41,8 +41,6 @@ Partial Class NEW_SALE
         Me.TblProductsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SkyliteDB = New M2.SkyliteDB()
         Me.PRODUCTSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Group26DataSet1 = New M2.group26DataSet1()
-        Me.PRODUCTSTableAdapter = New M2.group26DataSet1TableAdapters.PRODUCTSTableAdapter()
         Me.txbSearch = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.btnAddToCart = New System.Windows.Forms.Button()
@@ -59,12 +57,22 @@ Partial Class NEW_SALE
         Me.lblTotalMonthly = New System.Windows.Forms.Label()
         Me.btnPlaceOrder = New System.Windows.Forms.Button()
         Me.TblProductsTableAdapter = New M2.SkyliteDBTableAdapters.tblProductsTableAdapter()
+        Me.TblProductsBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ProductIDDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SupplierIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ProductNameDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ProductDescriptionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ManufacturerDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColourDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CostPriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SalePriceDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CurrentStockDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.tblProducts, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblProductsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PRODUCTSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Group26DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.tblCart, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TblProductsBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button8
@@ -197,16 +205,9 @@ Partial Class NEW_SALE
         'PRODUCTSBindingSource
         '
         Me.PRODUCTSBindingSource.DataMember = "PRODUCTS"
-        Me.PRODUCTSBindingSource.DataSource = Me.Group26DataSet1
-        '
-        'Group26DataSet1
-        '
-        Me.Group26DataSet1.DataSetName = "group26DataSet1"
-        Me.Group26DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'PRODUCTSTableAdapter
         '
-        Me.PRODUCTSTableAdapter.ClearBeforeFill = True
         '
         'txbSearch
         '
@@ -244,7 +245,10 @@ Partial Class NEW_SALE
         '
         'tblCart
         '
+        Me.tblCart.AutoGenerateColumns = False
         Me.tblCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.tblCart.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ProductIDDataGridViewTextBoxColumn1, Me.SupplierIDDataGridViewTextBoxColumn, Me.ProductNameDataGridViewTextBoxColumn1, Me.ProductDescriptionDataGridViewTextBoxColumn, Me.ManufacturerDataGridViewTextBoxColumn1, Me.ColourDataGridViewTextBoxColumn1, Me.CostPriceDataGridViewTextBoxColumn, Me.SalePriceDataGridViewTextBoxColumn1, Me.CurrentStockDataGridViewTextBoxColumn1})
+        Me.tblCart.DataSource = Me.TblProductsBindingSource1
         Me.tblCart.Location = New System.Drawing.Point(798, 101)
         Me.tblCart.Name = "tblCart"
         Me.tblCart.Size = New System.Drawing.Size(453, 182)
@@ -343,6 +347,67 @@ Partial Class NEW_SALE
         '
         Me.TblProductsTableAdapter.ClearBeforeFill = True
         '
+        'TblProductsBindingSource1
+        '
+        Me.TblProductsBindingSource1.DataMember = "tblProducts"
+        Me.TblProductsBindingSource1.DataSource = Me.SkyliteDB
+        '
+        'ProductIDDataGridViewTextBoxColumn1
+        '
+        Me.ProductIDDataGridViewTextBoxColumn1.DataPropertyName = "Product_ID"
+        Me.ProductIDDataGridViewTextBoxColumn1.HeaderText = "Product_ID"
+        Me.ProductIDDataGridViewTextBoxColumn1.Name = "ProductIDDataGridViewTextBoxColumn1"
+        '
+        'SupplierIDDataGridViewTextBoxColumn
+        '
+        Me.SupplierIDDataGridViewTextBoxColumn.DataPropertyName = "Supplier_ID"
+        Me.SupplierIDDataGridViewTextBoxColumn.HeaderText = "Supplier_ID"
+        Me.SupplierIDDataGridViewTextBoxColumn.Name = "SupplierIDDataGridViewTextBoxColumn"
+        '
+        'ProductNameDataGridViewTextBoxColumn1
+        '
+        Me.ProductNameDataGridViewTextBoxColumn1.DataPropertyName = "Product_Name"
+        Me.ProductNameDataGridViewTextBoxColumn1.HeaderText = "Product_Name"
+        Me.ProductNameDataGridViewTextBoxColumn1.Name = "ProductNameDataGridViewTextBoxColumn1"
+        '
+        'ProductDescriptionDataGridViewTextBoxColumn
+        '
+        Me.ProductDescriptionDataGridViewTextBoxColumn.DataPropertyName = "Product_Description"
+        Me.ProductDescriptionDataGridViewTextBoxColumn.HeaderText = "Product_Description"
+        Me.ProductDescriptionDataGridViewTextBoxColumn.Name = "ProductDescriptionDataGridViewTextBoxColumn"
+        '
+        'ManufacturerDataGridViewTextBoxColumn1
+        '
+        Me.ManufacturerDataGridViewTextBoxColumn1.DataPropertyName = "Manufacturer"
+        Me.ManufacturerDataGridViewTextBoxColumn1.HeaderText = "Manufacturer"
+        Me.ManufacturerDataGridViewTextBoxColumn1.Name = "ManufacturerDataGridViewTextBoxColumn1"
+        '
+        'ColourDataGridViewTextBoxColumn1
+        '
+        Me.ColourDataGridViewTextBoxColumn1.DataPropertyName = "Colour"
+        Me.ColourDataGridViewTextBoxColumn1.HeaderText = "Colour"
+        Me.ColourDataGridViewTextBoxColumn1.Name = "ColourDataGridViewTextBoxColumn1"
+        '
+        'CostPriceDataGridViewTextBoxColumn
+        '
+        Me.CostPriceDataGridViewTextBoxColumn.DataPropertyName = "Cost_Price"
+        Me.CostPriceDataGridViewTextBoxColumn.HeaderText = "Cost_Price"
+        Me.CostPriceDataGridViewTextBoxColumn.Name = "CostPriceDataGridViewTextBoxColumn"
+        '
+        'SalePriceDataGridViewTextBoxColumn1
+        '
+        Me.SalePriceDataGridViewTextBoxColumn1.DataPropertyName = "Sale_Price"
+        Me.SalePriceDataGridViewTextBoxColumn1.HeaderText = "Sale_Price"
+        Me.SalePriceDataGridViewTextBoxColumn1.Name = "SalePriceDataGridViewTextBoxColumn1"
+        '
+        'CurrentStockDataGridViewTextBoxColumn1
+        '
+        Me.CurrentStockDataGridViewTextBoxColumn1.DataPropertyName = "Current_Stock"
+        Me.CurrentStockDataGridViewTextBoxColumn1.HeaderText = "Current_Stock"
+        Me.CurrentStockDataGridViewTextBoxColumn1.Name = "CurrentStockDataGridViewTextBoxColumn1"
+        '
+        '
+        '
         'NEW_SALE
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -378,8 +443,8 @@ Partial Class NEW_SALE
         CType(Me.TblProductsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PRODUCTSBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Group26DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.tblCart, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TblProductsBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -394,9 +459,7 @@ Partial Class NEW_SALE
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents tblProducts As DataGridView
-    Friend WithEvents Group26DataSet1 As group26DataSet1
     Friend WithEvents PRODUCTSBindingSource As BindingSource
-    Friend WithEvents PRODUCTSTableAdapter As group26DataSet1TableAdapters.PRODUCTSTableAdapter
     Friend WithEvents ProductIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ProductNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ManufacturerDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
@@ -421,4 +484,14 @@ Partial Class NEW_SALE
     Friend WithEvents SkyliteDB As SkyliteDB
     Friend WithEvents TblProductsBindingSource As BindingSource
     Friend WithEvents TblProductsTableAdapter As SkyliteDBTableAdapters.tblProductsTableAdapter
+    Friend WithEvents ProductIDDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents SupplierIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ProductNameDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents ProductDescriptionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ManufacturerDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents ColourDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents CostPriceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents SalePriceDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents CurrentStockDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents TblProductsBindingSource1 As BindingSource
 End Class

@@ -24,12 +24,7 @@ Partial Class PRODUCTS
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button8 = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Group26DataSet1 = New M2.group26DataSet1()
-        Me.PRODUCTSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PRODUCTSTableAdapter = New M2.group26DataSet1TableAdapters.PRODUCTSTableAdapter()
+        Me.tblProducts = New System.Windows.Forms.DataGridView()
         Me.ProductIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SupplierIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ProductNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -39,15 +34,26 @@ Partial Class PRODUCTS
         Me.CostPriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SalePriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CurrentStockDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PRODUCTSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Button8 = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.SkyliteDB = New M2.SkyliteDB()
+        Me.TblProductsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TblProductsTableAdapter = New M2.SkyliteDBTableAdapters.tblProductsTableAdapter()
+        Me.btnAddProduct = New System.Windows.Forms.Button()
+        Me.btnRemoveProduct = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Group26DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.tblProducts, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PRODUCTSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TblProductsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.DataGridView1)
+        Me.Panel1.Controls.Add(Me.btnRemoveProduct)
+        Me.Panel1.Controls.Add(Me.btnAddProduct)
+        Me.Panel1.Controls.Add(Me.tblProducts)
         Me.Panel1.Controls.Add(Me.Button8)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Location = New System.Drawing.Point(12, 12)
@@ -55,49 +61,16 @@ Partial Class PRODUCTS
         Me.Panel1.Size = New System.Drawing.Size(776, 426)
         Me.Panel1.TabIndex = 10
         '
-        'Button8
+        'tblProducts
         '
-        Me.Button8.Location = New System.Drawing.Point(3, 3)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(79, 28)
-        Me.Button8.TabIndex = 14
-        Me.Button8.Text = "BACK"
-        Me.Button8.UseVisualStyleBackColor = True
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Yu Gothic", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(230, 3)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(303, 61)
-        Me.Label1.TabIndex = 8
-        Me.Label1.Text = "PRODUCTS"
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.AutoGenerateColumns = False
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ProductIDDataGridViewTextBoxColumn, Me.SupplierIDDataGridViewTextBoxColumn, Me.ProductNameDataGridViewTextBoxColumn, Me.ProductDescriptionDataGridViewTextBoxColumn, Me.ManufacturerDataGridViewTextBoxColumn, Me.ColourDataGridViewTextBoxColumn, Me.CostPriceDataGridViewTextBoxColumn, Me.SalePriceDataGridViewTextBoxColumn, Me.CurrentStockDataGridViewTextBoxColumn})
-        Me.DataGridView1.DataSource = Me.PRODUCTSBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(3, 97)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(770, 326)
-        Me.DataGridView1.TabIndex = 15
-        '
-        'Group26DataSet1
-        '
-        Me.Group26DataSet1.DataSetName = "group26DataSet1"
-        Me.Group26DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'PRODUCTSBindingSource
-        '
-        Me.PRODUCTSBindingSource.DataMember = "PRODUCTS"
-        Me.PRODUCTSBindingSource.DataSource = Me.Group26DataSet1
-        '
-        'PRODUCTSTableAdapter
-        '
-        Me.PRODUCTSTableAdapter.ClearBeforeFill = True
+        Me.tblProducts.AutoGenerateColumns = False
+        Me.tblProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.tblProducts.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ProductIDDataGridViewTextBoxColumn, Me.SupplierIDDataGridViewTextBoxColumn, Me.ProductNameDataGridViewTextBoxColumn, Me.ProductDescriptionDataGridViewTextBoxColumn, Me.ManufacturerDataGridViewTextBoxColumn, Me.ColourDataGridViewTextBoxColumn, Me.CostPriceDataGridViewTextBoxColumn, Me.SalePriceDataGridViewTextBoxColumn, Me.CurrentStockDataGridViewTextBoxColumn})
+        Me.tblProducts.DataSource = Me.TblProductsBindingSource
+        Me.tblProducts.Location = New System.Drawing.Point(3, 97)
+        Me.tblProducts.Name = "tblProducts"
+        Me.tblProducts.Size = New System.Drawing.Size(770, 326)
+        Me.tblProducts.TabIndex = 15
         '
         'ProductIDDataGridViewTextBoxColumn
         '
@@ -153,6 +126,67 @@ Partial Class PRODUCTS
         Me.CurrentStockDataGridViewTextBoxColumn.HeaderText = "Current_Stock"
         Me.CurrentStockDataGridViewTextBoxColumn.Name = "CurrentStockDataGridViewTextBoxColumn"
         '
+        'PRODUCTSBindingSource
+        '
+        Me.PRODUCTSBindingSource.DataMember = "PRODUCTS"
+        '
+        'Group26DataSet1
+        '
+        '
+        'Button8
+        '
+        Me.Button8.Location = New System.Drawing.Point(3, 3)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(79, 28)
+        Me.Button8.TabIndex = 14
+        Me.Button8.Text = "BACK"
+        Me.Button8.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Yu Gothic", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(230, 3)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(303, 61)
+        Me.Label1.TabIndex = 8
+        Me.Label1.Text = "PRODUCTS"
+        '
+        'PRODUCTSTableAdapter
+        '
+        '
+        'SkyliteDB
+        '
+        Me.SkyliteDB.DataSetName = "SkyliteDB"
+        Me.SkyliteDB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'TblProductsBindingSource
+        '
+        Me.TblProductsBindingSource.DataMember = "tblProducts"
+        Me.TblProductsBindingSource.DataSource = Me.SkyliteDB
+        '
+        'TblProductsTableAdapter
+        '
+        Me.TblProductsTableAdapter.ClearBeforeFill = True
+        '
+        'btnAddProduct
+        '
+        Me.btnAddProduct.Location = New System.Drawing.Point(654, 3)
+        Me.btnAddProduct.Name = "btnAddProduct"
+        Me.btnAddProduct.Size = New System.Drawing.Size(119, 28)
+        Me.btnAddProduct.TabIndex = 16
+        Me.btnAddProduct.Text = "Add Product"
+        Me.btnAddProduct.UseVisualStyleBackColor = True
+        '
+        'btnRemoveProduct
+        '
+        Me.btnRemoveProduct.Location = New System.Drawing.Point(654, 37)
+        Me.btnRemoveProduct.Name = "btnRemoveProduct"
+        Me.btnRemoveProduct.Size = New System.Drawing.Size(119, 28)
+        Me.btnRemoveProduct.TabIndex = 17
+        Me.btnRemoveProduct.Text = "Remove Product"
+        Me.btnRemoveProduct.UseVisualStyleBackColor = True
+        '
         'PRODUCTS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -163,9 +197,10 @@ Partial Class PRODUCTS
         Me.Text = "PRODUCTS"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Group26DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.tblProducts, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PRODUCTSBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TblProductsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -173,10 +208,8 @@ Partial Class PRODUCTS
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Button8 As Button
     Friend WithEvents Label1 As Label
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Group26DataSet1 As group26DataSet1
+    Friend WithEvents tblProducts As DataGridView
     Friend WithEvents PRODUCTSBindingSource As BindingSource
-    Friend WithEvents PRODUCTSTableAdapter As group26DataSet1TableAdapters.PRODUCTSTableAdapter
     Friend WithEvents ProductIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents SupplierIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ProductNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
@@ -186,4 +219,9 @@ Partial Class PRODUCTS
     Friend WithEvents CostPriceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents SalePriceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents CurrentStockDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents SkyliteDB As SkyliteDB
+    Friend WithEvents TblProductsBindingSource As BindingSource
+    Friend WithEvents TblProductsTableAdapter As SkyliteDBTableAdapters.tblProductsTableAdapter
+    Friend WithEvents btnRemoveProduct As Button
+    Friend WithEvents btnAddProduct As Button
 End Class

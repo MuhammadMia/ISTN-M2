@@ -22,39 +22,26 @@ Partial Class LOGIN
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button8 = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button8 = New System.Windows.Forms.Button()
+        Me.txbEmployeeNum = New System.Windows.Forms.TextBox()
+        Me.txbPassword = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.TblEmployeesTableAdapter1 = New M2.SkyliteDBTableAdapters.tblEmployeesTableAdapter()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Panel1
+        'Button2
         '
-        Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Controls.Add(Me.TextBox2)
-        Me.Panel1.Controls.Add(Me.TextBox1)
-        Me.Panel1.Controls.Add(Me.Button8)
-        Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Controls.Add(Me.Button2)
-        Me.Panel1.Location = New System.Drawing.Point(12, 12)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(776, 426)
-        Me.Panel1.TabIndex = 6
-        '
-        'Button8
-        '
-        Me.Button8.Location = New System.Drawing.Point(672, 3)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(101, 28)
-        Me.Button8.TabIndex = 12
-        Me.Button8.Text = "ADMIN LOG IN"
-        Me.Button8.UseVisualStyleBackColor = True
+        Me.Button2.Location = New System.Drawing.Point(313, 300)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(163, 41)
+        Me.Button2.TabIndex = 2
+        Me.Button2.Text = "LOG IN"
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -66,37 +53,37 @@ Partial Class LOGIN
         Me.Label1.TabIndex = 7
         Me.Label1.Text = "SKYLITE"
         '
-        'Button2
+        'Button8
         '
-        Me.Button2.Location = New System.Drawing.Point(313, 300)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(163, 41)
-        Me.Button2.TabIndex = 2
-        Me.Button2.Text = "LOG IN"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Button8.Location = New System.Drawing.Point(672, 3)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(101, 28)
+        Me.Button8.TabIndex = 12
+        Me.Button8.Text = "ADMIN LOG IN"
+        Me.Button8.UseVisualStyleBackColor = True
         '
-        'TextBox1
+        'txbEmployeeNum
         '
-        Me.TextBox1.Location = New System.Drawing.Point(313, 182)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(163, 20)
-        Me.TextBox1.TabIndex = 13
+        Me.txbEmployeeNum.Location = New System.Drawing.Point(313, 182)
+        Me.txbEmployeeNum.Name = "txbEmployeeNum"
+        Me.txbEmployeeNum.Size = New System.Drawing.Size(163, 20)
+        Me.txbEmployeeNum.TabIndex = 13
         '
-        'TextBox2
+        'txbPassword
         '
-        Me.TextBox2.Location = New System.Drawing.Point(313, 240)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(163, 20)
-        Me.TextBox2.TabIndex = 14
+        Me.txbPassword.Location = New System.Drawing.Point(313, 240)
+        Me.txbPassword.Name = "txbPassword"
+        Me.txbPassword.Size = New System.Drawing.Size(163, 20)
+        Me.txbPassword.TabIndex = 14
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(338, 166)
+        Me.Label2.Location = New System.Drawing.Point(353, 166)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(115, 13)
+        Me.Label2.Size = New System.Drawing.Size(79, 13)
         Me.Label2.TabIndex = 15
-        Me.Label2.Text = "EMPLOYEE NUMBER"
+        Me.Label2.Text = "EMPLOYEE ID"
         '
         'Label3
         '
@@ -106,6 +93,24 @@ Partial Class LOGIN
         Me.Label3.Size = New System.Drawing.Size(70, 13)
         Me.Label3.TabIndex = 16
         Me.Label3.Text = "PASSWORD"
+        '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.Label3)
+        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.txbPassword)
+        Me.Panel1.Controls.Add(Me.txbEmployeeNum)
+        Me.Panel1.Controls.Add(Me.Button8)
+        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Controls.Add(Me.Button2)
+        Me.Panel1.Location = New System.Drawing.Point(12, 12)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(776, 426)
+        Me.Panel1.TabIndex = 6
+        '
+        'TblEmployeesTableAdapter1
+        '
+        Me.TblEmployeesTableAdapter1.ClearBeforeFill = True
         '
         'LOGIN
         '
@@ -121,12 +126,13 @@ Partial Class LOGIN
 
     End Sub
 
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Button8 As Button
-    Friend WithEvents Label1 As Label
     Friend WithEvents Button2 As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Button8 As Button
+    Friend WithEvents txbEmployeeNum As TextBox
+    Friend WithEvents txbPassword As TextBox
+    Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents TblEmployeesTableAdapter1 As SkyliteDBTableAdapters.tblEmployeesTableAdapter
 End Class

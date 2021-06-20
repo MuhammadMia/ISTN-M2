@@ -28,9 +28,7 @@ Partial Class VIEW_SALES
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Group26DataSet3 = New M2.group26DataSet3()
         Me.SALESBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.SALESTableAdapter = New M2.group26DataSet3TableAdapters.SALESTableAdapter()
         Me.SaleNumberDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ClientIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.EmployeeIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -39,7 +37,6 @@ Partial Class VIEW_SALES
         Me.AmountDueDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Group26DataSet3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SALESBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -95,17 +92,13 @@ Partial Class VIEW_SALES
         '
         'Group26DataSet3
         '
-        Me.Group26DataSet3.DataSetName = "group26DataSet3"
-        Me.Group26DataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'SALESBindingSource
         '
         Me.SALESBindingSource.DataMember = "SALES"
-        Me.SALESBindingSource.DataSource = Me.Group26DataSet3
         '
         'SALESTableAdapter
         '
-        Me.SALESTableAdapter.ClearBeforeFill = True
         '
         'SaleNumberDataGridViewTextBoxColumn
         '
@@ -154,7 +147,6 @@ Partial Class VIEW_SALES
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Group26DataSet3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SALESBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -165,9 +157,7 @@ Partial Class VIEW_SALES
     Friend WithEvents Label1 As Label
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Button1 As Button
-    Friend WithEvents Group26DataSet3 As group26DataSet3
     Friend WithEvents SALESBindingSource As BindingSource
-    Friend WithEvents SALESTableAdapter As group26DataSet3TableAdapters.SALESTableAdapter
     Friend WithEvents SaleNumberDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ClientIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents EmployeeIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn

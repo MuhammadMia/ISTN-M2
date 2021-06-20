@@ -15,6 +15,7 @@
         'TODO: This line of code loads data into the 'SkyliteDB.tblProducts' table. You can move, or remove it, as needed.
         Me.TblProductsTableAdapter.Fill(Me.SkyliteDB.tblProducts)
 
+        tblCart.DataSource = SkyliteDB.tblProducts
     End Sub
 
     Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
@@ -30,32 +31,32 @@
     End Sub
 
     Private Sub btnAddToCart_Click(sender As Object, e As EventArgs) Handles btnAddToCart.Click
-        Dim productsTable As DataTable
-        productsTable = SkyliteDB.tblProducts
+        Dim productsTable As DataTable = SkyliteDB.tblProducts
 
-        Dim selectedProduct As DataRow
-        selectedProduct = productsTable.NewRow()
-        'selectedProduct = tblProducts.SelectedRows()
+        Dim selectedProducts As DataGridViewRow
 
-        selectedProduct("Product_ID") = "123"
+        selectedProducts = tblProducts.CurrentRow()
+
+        Dim cart As DataTable = SkyliteDB.tblSaleItems
+        cart.Rows.Clear()
+
+        cart.Rows.Add(selectedProducts)
+
+        tblCart.Rows.Add(selectedProducts)
+
 
     End Sub
 
     Private Sub txbSearch_TextChanged(sender As Object, e As EventArgs) Handles txbSearch.TextChanged
-        Dim resultTable As DataTable
-        resultTable = SkyliteDB.tblProducts
-        resultTable.Rows.Clear()
+        Dim productTable As DataTable = SkyliteDB.tblProducts
+        Dim resultTable As DataTable = SkyliteDB.tblProducts
+        resultTable.Clear()
 
-        For Each row As DataRow In SkyliteDB.tblProducts.Rows
+        For Each row As DataRow In resultTable.Rows
             If row.Field(Of String)("Product_Name").Contains(txbSearch.Text) Then
                 resultTable.Rows.Add(row)
             End If
         Next
 
-        If txbSearch.Text = "" Then
-            tblProducts.DataSource = SkyliteDB.tblProducts
-        End If
-
-        tblProducts.DataSource = resultTable
     End Sub
 End Class

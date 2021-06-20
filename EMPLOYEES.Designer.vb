@@ -27,9 +27,7 @@ Partial Class EMPLOYEES
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Group26DataSet6 = New M2.group26DataSet6()
         Me.EMPLOYEESBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.EMPLOYEESTableAdapter = New M2.group26DataSet6TableAdapters.EMPLOYEESTableAdapter()
         Me.EmployeeIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.EmployeeNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.EmployeeCellDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -38,7 +36,6 @@ Partial Class EMPLOYEES
         Me.EmployeePositionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Group26DataSet6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EMPLOYEESBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -82,19 +79,13 @@ Partial Class EMPLOYEES
         Me.DataGridView1.Size = New System.Drawing.Size(643, 273)
         Me.DataGridView1.TabIndex = 15
         '
-        'Group26DataSet6
-        '
-        Me.Group26DataSet6.DataSetName = "group26DataSet6"
-        Me.Group26DataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'EMPLOYEESBindingSource
         '
         Me.EMPLOYEESBindingSource.DataMember = "EMPLOYEES"
-        Me.EMPLOYEESBindingSource.DataSource = Me.Group26DataSet6
         '
         'EMPLOYEESTableAdapter
         '
-        Me.EMPLOYEESTableAdapter.ClearBeforeFill = True
         '
         'EmployeeIDDataGridViewTextBoxColumn
         '
@@ -143,7 +134,6 @@ Partial Class EMPLOYEES
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Group26DataSet6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EMPLOYEESBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -153,9 +143,7 @@ Partial Class EMPLOYEES
     Friend WithEvents Button8 As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Group26DataSet6 As group26DataSet6
     Friend WithEvents EMPLOYEESBindingSource As BindingSource
-    Friend WithEvents EMPLOYEESTableAdapter As group26DataSet6TableAdapters.EMPLOYEESTableAdapter
     Friend WithEvents EmployeeIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents EmployeeNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents EmployeeCellDataGridViewTextBoxColumn As DataGridViewTextBoxColumn

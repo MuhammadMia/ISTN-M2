@@ -26,23 +26,17 @@ Partial Class CONTRACTS
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button8 = New System.Windows.Forms.Button()
-        Me.Group26Contracts = New M2.group26Contracts()
         Me.CONTRACTSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.CONTRACTSTableAdapter = New M2.group26ContractsTableAdapters.CONTRACTSTableAdapter()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Group26DataSet = New M2.group26DataSet()
         Me.CONTRACTSBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.CONTRACTSTableAdapter1 = New M2.group26DataSetTableAdapters.CONTRACTSTableAdapter()
         Me.ContractIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ClientIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SaleNumberDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ContractAmountDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ContractLengthDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
-        CType(Me.Group26Contracts, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CONTRACTSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Group26DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CONTRACTSBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -77,17 +71,13 @@ Partial Class CONTRACTS
         '
         'Group26Contracts
         '
-        Me.Group26Contracts.DataSetName = "group26Contracts"
-        Me.Group26Contracts.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'CONTRACTSBindingSource
         '
         Me.CONTRACTSBindingSource.DataMember = "CONTRACTS"
-        Me.CONTRACTSBindingSource.DataSource = Me.Group26Contracts
         '
         'CONTRACTSTableAdapter
         '
-        Me.CONTRACTSTableAdapter.ClearBeforeFill = True
         '
         'DataGridView1
         '
@@ -102,17 +92,13 @@ Partial Class CONTRACTS
         '
         'Group26DataSet
         '
-        Me.Group26DataSet.DataSetName = "group26DataSet"
-        Me.Group26DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'CONTRACTSBindingSource1
         '
         Me.CONTRACTSBindingSource1.DataMember = "CONTRACTS"
-        Me.CONTRACTSBindingSource1.DataSource = Me.Group26DataSet
         '
         'CONTRACTSTableAdapter1
         '
-        Me.CONTRACTSTableAdapter1.ClearBeforeFill = True
         '
         'ContractIDDataGridViewTextBoxColumn
         '
@@ -154,10 +140,8 @@ Partial Class CONTRACTS
         Me.Text = "CONTRACTS"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.Group26Contracts, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CONTRACTSBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Group26DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CONTRACTSBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -166,13 +150,9 @@ Partial Class CONTRACTS
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Button8 As Button
     Friend WithEvents Label1 As Label
-    Friend WithEvents Group26Contracts As group26Contracts
     Friend WithEvents CONTRACTSBindingSource As BindingSource
-    Friend WithEvents CONTRACTSTableAdapter As group26ContractsTableAdapters.CONTRACTSTableAdapter
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Group26DataSet As group26DataSet
     Friend WithEvents CONTRACTSBindingSource1 As BindingSource
-    Friend WithEvents CONTRACTSTableAdapter1 As group26DataSetTableAdapters.CONTRACTSTableAdapter
     Friend WithEvents ContractIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ClientIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents SaleNumberDataGridViewTextBoxColumn As DataGridViewTextBoxColumn

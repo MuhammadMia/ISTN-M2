@@ -28,9 +28,7 @@ Partial Class BUSINESS_CLIENTS
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Group26DataSet4 = New M2.group26DataSet4()
         Me.BUSINESSCLIENTSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.BUSINESS_CLIENTSTableAdapter = New M2.group26DataSet4TableAdapters.BUSINESS_CLIENTSTableAdapter()
         Me.ClientIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.EmployeeIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.BusinessNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -39,7 +37,6 @@ Partial Class BUSINESS_CLIENTS
         Me.BusinessAddressDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Group26DataSet4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BUSINESSCLIENTSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -93,19 +90,13 @@ Partial Class BUSINESS_CLIENTS
         Me.DataGridView1.Size = New System.Drawing.Size(644, 269)
         Me.DataGridView1.TabIndex = 16
         '
-        'Group26DataSet4
-        '
-        Me.Group26DataSet4.DataSetName = "group26DataSet4"
-        Me.Group26DataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
+
         'BUSINESSCLIENTSBindingSource
         '
         Me.BUSINESSCLIENTSBindingSource.DataMember = "BUSINESS CLIENTS"
-        Me.BUSINESSCLIENTSBindingSource.DataSource = Me.Group26DataSet4
         '
         'BUSINESS_CLIENTSTableAdapter
         '
-        Me.BUSINESS_CLIENTSTableAdapter.ClearBeforeFill = True
         '
         'ClientIDDataGridViewTextBoxColumn
         '
@@ -154,7 +145,6 @@ Partial Class BUSINESS_CLIENTS
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Group26DataSet4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BUSINESSCLIENTSBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -165,9 +155,7 @@ Partial Class BUSINESS_CLIENTS
     Friend WithEvents Button8 As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Group26DataSet4 As group26DataSet4
     Friend WithEvents BUSINESSCLIENTSBindingSource As BindingSource
-    Friend WithEvents BUSINESS_CLIENTSTableAdapter As group26DataSet4TableAdapters.BUSINESS_CLIENTSTableAdapter
     Friend WithEvents ClientIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents EmployeeIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents BusinessNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
