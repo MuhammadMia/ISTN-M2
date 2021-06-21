@@ -22,17 +22,21 @@ Partial Class LOGIN
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
-        Me.txbEmployeeNum = New System.Windows.Forms.TextBox()
         Me.txbPassword = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.SkyliteDB = New M2.SkyliteDB()
+        Me.cmbUser = New System.Windows.Forms.ComboBox()
+        Me.TblEmployeesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TblEmployeesTableAdapter = New M2.SkyliteDBTableAdapters.tblEmployeesTableAdapter()
         Me.Panel1.SuspendLayout()
         CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TblEmployeesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button2
@@ -60,14 +64,6 @@ Partial Class LOGIN
         Me.Button8.TabIndex = 12
         Me.Button8.Text = "ADMIN LOG IN"
         Me.Button8.UseVisualStyleBackColor = False
-        '
-        'txbEmployeeNum
-        '
-        Me.txbEmployeeNum.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.txbEmployeeNum.Location = New System.Drawing.Point(313, 182)
-        Me.txbEmployeeNum.Name = "txbEmployeeNum"
-        Me.txbEmployeeNum.Size = New System.Drawing.Size(163, 20)
-        Me.txbEmployeeNum.TabIndex = 13
         '
         'txbPassword
         '
@@ -102,11 +98,11 @@ Partial Class LOGIN
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.cmbUser)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.txbPassword)
-        Me.Panel1.Controls.Add(Me.txbEmployeeNum)
         Me.Panel1.Controls.Add(Me.Button8)
         Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.ForeColor = System.Drawing.SystemColors.ControlText
@@ -131,6 +127,26 @@ Partial Class LOGIN
         Me.SkyliteDB.DataSetName = "SkyliteDB"
         Me.SkyliteDB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
+        'cmbUser
+        '
+        Me.cmbUser.DataSource = Me.TblEmployeesBindingSource
+        Me.cmbUser.DisplayMember = "Employee_Name"
+        Me.cmbUser.FormattingEnabled = True
+        Me.cmbUser.Location = New System.Drawing.Point(313, 181)
+        Me.cmbUser.Name = "cmbUser"
+        Me.cmbUser.Size = New System.Drawing.Size(163, 21)
+        Me.cmbUser.TabIndex = 18
+        Me.cmbUser.ValueMember = "Employee_ID"
+        '
+        'TblEmployeesBindingSource
+        '
+        Me.TblEmployeesBindingSource.DataMember = "tblEmployees"
+        Me.TblEmployeesBindingSource.DataSource = Me.SkyliteDB
+        '
+        'TblEmployeesTableAdapter
+        '
+        Me.TblEmployeesTableAdapter.ClearBeforeFill = True
+        '
         'LOGIN
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -142,17 +158,20 @@ Partial Class LOGIN
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TblEmployeesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents Button2 As Button
     Friend WithEvents Button8 As Button
-    Friend WithEvents txbEmployeeNum As TextBox
     Friend WithEvents txbPassword As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents SkyliteDB As SkyliteDB
+    Friend WithEvents cmbUser As ComboBox
+    Friend WithEvents TblEmployeesBindingSource As BindingSource
+    Friend WithEvents TblEmployeesTableAdapter As SkyliteDBTableAdapters.tblEmployeesTableAdapter
 End Class
