@@ -24,7 +24,6 @@ Partial Class NEW_SALE
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Button8 = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.cmbEmployeeID = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -42,10 +41,19 @@ Partial Class NEW_SALE
         Me.SkyliteDB = New M2.SkyliteDB()
         Me.PRODUCTSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.txbSearch = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.btnAddToCart = New System.Windows.Forms.Button()
         Me.btnRemove = New System.Windows.Forms.Button()
         Me.tblCart = New System.Windows.Forms.DataGridView()
+        Me.ProductIDDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SupplierIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ProductNameDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ProductDescriptionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ManufacturerDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColourDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CostPriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SalePriceDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CurrentStockDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TblProductsBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.txbClientID = New System.Windows.Forms.TextBox()
         Me.cmbSaleType = New System.Windows.Forms.ComboBox()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -57,47 +65,35 @@ Partial Class NEW_SALE
         Me.lblTotalMonthly = New System.Windows.Forms.Label()
         Me.btnPlaceOrder = New System.Windows.Forms.Button()
         Me.TblProductsTableAdapter = New M2.SkyliteDBTableAdapters.tblProductsTableAdapter()
-        Me.TblProductsBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ProductIDDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SupplierIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ProductNameDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ProductDescriptionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ManufacturerDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColourDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CostPriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SalePriceDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CurrentStockDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.tblProducts, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblProductsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PRODUCTSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.tblCart, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblProductsBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Button8
         '
-        Me.Button8.Location = New System.Drawing.Point(12, 12)
+        Me.Button8.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button8.Font = New System.Drawing.Font("Corbel", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button8.ForeColor = System.Drawing.Color.White
+        Me.Button8.Location = New System.Drawing.Point(3, 3)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(79, 28)
         Me.Button8.TabIndex = 15
         Me.Button8.Text = "BACK"
-        Me.Button8.UseVisualStyleBackColor = True
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Yu Gothic", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(1067, 12)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(279, 61)
-        Me.Label1.TabIndex = 16
-        Me.Label1.Text = "NEW SALE"
+        Me.Button8.UseVisualStyleBackColor = False
         '
         'cmbEmployeeID
         '
         Me.cmbEmployeeID.FormattingEnabled = True
-        Me.cmbEmployeeID.Location = New System.Drawing.Point(99, 365)
+        Me.cmbEmployeeID.Location = New System.Drawing.Point(148, 353)
         Me.cmbEmployeeID.Name = "cmbEmployeeID"
         Me.cmbEmployeeID.Size = New System.Drawing.Size(200, 21)
         Me.cmbEmployeeID.TabIndex = 17
@@ -105,24 +101,30 @@ Partial Class NEW_SALE
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 336)
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Corbel", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(28, 321)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(47, 13)
+        Me.Label2.Size = New System.Drawing.Size(54, 15)
         Me.Label2.TabIndex = 18
         Me.Label2.Text = "Client ID"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(12, 373)
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Corbel", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label3.Location = New System.Drawing.Point(30, 359)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(67, 13)
+        Me.Label3.Size = New System.Drawing.Size(75, 15)
         Me.Label3.TabIndex = 19
         Me.Label3.Text = "Employee ID"
         '
         'dtSaleDate
         '
-        Me.dtSaleDate.Location = New System.Drawing.Point(99, 405)
+        Me.dtSaleDate.Location = New System.Drawing.Point(148, 392)
         Me.dtSaleDate.Name = "dtSaleDate"
         Me.dtSaleDate.Size = New System.Drawing.Size(200, 20)
         Me.dtSaleDate.TabIndex = 20
@@ -130,18 +132,24 @@ Partial Class NEW_SALE
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(12, 411)
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.Font = New System.Drawing.Font("Corbel", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label4.Location = New System.Drawing.Point(28, 397)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(54, 13)
+        Me.Label4.Size = New System.Drawing.Size(58, 15)
         Me.Label4.TabIndex = 21
         Me.Label4.Text = "Sale Date"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(12, 449)
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.Font = New System.Drawing.Font("Corbel", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label5.Location = New System.Drawing.Point(30, 433)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(55, 13)
+        Me.Label5.Size = New System.Drawing.Size(56, 15)
         Me.Label5.TabIndex = 22
         Me.Label5.Text = "Sale Type"
         '
@@ -151,9 +159,9 @@ Partial Class NEW_SALE
         Me.tblProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.tblProducts.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ProductIDDataGridViewTextBoxColumn, Me.ProductNameDataGridViewTextBoxColumn, Me.ManufacturerDataGridViewTextBoxColumn, Me.ColourDataGridViewTextBoxColumn, Me.SalePriceDataGridViewTextBoxColumn, Me.CurrentStockDataGridViewTextBoxColumn})
         Me.tblProducts.DataSource = Me.TblProductsBindingSource
-        Me.tblProducts.Location = New System.Drawing.Point(12, 101)
+        Me.tblProducts.Location = New System.Drawing.Point(3, 89)
         Me.tblProducts.Name = "tblProducts"
-        Me.tblProducts.Size = New System.Drawing.Size(649, 182)
+        Me.tblProducts.Size = New System.Drawing.Size(529, 182)
         Me.tblProducts.TabIndex = 23
         '
         'ProductIDDataGridViewTextBoxColumn
@@ -206,42 +214,39 @@ Partial Class NEW_SALE
         '
         Me.PRODUCTSBindingSource.DataMember = "PRODUCTS"
         '
-        'PRODUCTSTableAdapter
-        '
-        '
         'txbSearch
         '
-        Me.txbSearch.Location = New System.Drawing.Point(66, 70)
+        Me.txbSearch.Location = New System.Drawing.Point(3, 63)
         Me.txbSearch.Name = "txbSearch"
-        Me.txbSearch.Size = New System.Drawing.Size(227, 20)
+        Me.txbSearch.Size = New System.Drawing.Size(244, 20)
         Me.txbSearch.TabIndex = 25
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(12, 73)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(41, 13)
-        Me.Label6.TabIndex = 26
-        Me.Label6.Text = "Search"
+        Me.txbSearch.Text = "Search..."
         '
         'btnAddToCart
         '
-        Me.btnAddToCart.Location = New System.Drawing.Point(667, 101)
+        Me.btnAddToCart.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnAddToCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAddToCart.Font = New System.Drawing.Font("Corbel", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAddToCart.ForeColor = System.Drawing.Color.White
+        Me.btnAddToCart.Location = New System.Drawing.Point(538, 89)
         Me.btnAddToCart.Name = "btnAddToCart"
         Me.btnAddToCart.Size = New System.Drawing.Size(91, 182)
         Me.btnAddToCart.TabIndex = 27
         Me.btnAddToCart.Text = "Add to Cart"
-        Me.btnAddToCart.UseVisualStyleBackColor = True
+        Me.btnAddToCart.UseVisualStyleBackColor = False
         '
         'btnRemove
         '
-        Me.btnRemove.Location = New System.Drawing.Point(1257, 101)
+        Me.btnRemove.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnRemove.Font = New System.Drawing.Font("Corbel", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRemove.ForeColor = System.Drawing.Color.White
+        Me.btnRemove.Location = New System.Drawing.Point(1081, 89)
         Me.btnRemove.Name = "btnRemove"
         Me.btnRemove.Size = New System.Drawing.Size(89, 182)
         Me.btnRemove.TabIndex = 28
         Me.btnRemove.Text = "Remove"
-        Me.btnRemove.UseVisualStyleBackColor = True
+        Me.btnRemove.UseVisualStyleBackColor = False
         '
         'tblCart
         '
@@ -249,108 +254,10 @@ Partial Class NEW_SALE
         Me.tblCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.tblCart.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ProductIDDataGridViewTextBoxColumn1, Me.SupplierIDDataGridViewTextBoxColumn, Me.ProductNameDataGridViewTextBoxColumn1, Me.ProductDescriptionDataGridViewTextBoxColumn, Me.ManufacturerDataGridViewTextBoxColumn1, Me.ColourDataGridViewTextBoxColumn1, Me.CostPriceDataGridViewTextBoxColumn, Me.SalePriceDataGridViewTextBoxColumn1, Me.CurrentStockDataGridViewTextBoxColumn1})
         Me.tblCart.DataSource = Me.TblProductsBindingSource1
-        Me.tblCart.Location = New System.Drawing.Point(798, 101)
+        Me.tblCart.Location = New System.Drawing.Point(658, 89)
         Me.tblCart.Name = "tblCart"
-        Me.tblCart.Size = New System.Drawing.Size(453, 182)
+        Me.tblCart.Size = New System.Drawing.Size(417, 182)
         Me.tblCart.TabIndex = 29
-        '
-        'txbClientID
-        '
-        Me.txbClientID.Location = New System.Drawing.Point(99, 328)
-        Me.txbClientID.Name = "txbClientID"
-        Me.txbClientID.Size = New System.Drawing.Size(200, 20)
-        Me.txbClientID.TabIndex = 30
-        '
-        'cmbSaleType
-        '
-        Me.cmbSaleType.FormattingEnabled = True
-        Me.cmbSaleType.Location = New System.Drawing.Point(99, 446)
-        Me.cmbSaleType.Name = "cmbSaleType"
-        Me.cmbSaleType.Size = New System.Drawing.Size(200, 21)
-        Me.cmbSaleType.TabIndex = 31
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(386, 331)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(127, 13)
-        Me.Label7.TabIndex = 32
-        Me.Label7.Text = "Contract Length (Months)"
-        '
-        'txbContractLength
-        '
-        Me.txbContractLength.Location = New System.Drawing.Point(541, 328)
-        Me.txbContractLength.Name = "txbContractLength"
-        Me.txbContractLength.Size = New System.Drawing.Size(60, 20)
-        Me.txbContractLength.TabIndex = 33
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(389, 365)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(212, 102)
-        Me.Button3.TabIndex = 34
-        Me.Button3.Text = "Calculate Total"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(793, 373)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(189, 25)
-        Me.Label8.TabIndex = 36
-        Me.Label8.Text = "Total Due Once-Off:"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(795, 418)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(177, 25)
-        Me.Label9.TabIndex = 37
-        Me.Label9.Text = "Total Due Monthly:"
-        '
-        'lblTotalOnceOff
-        '
-        Me.lblTotalOnceOff.AutoSize = True
-        Me.lblTotalOnceOff.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTotalOnceOff.Location = New System.Drawing.Point(1007, 373)
-        Me.lblTotalOnceOff.Name = "lblTotalOnceOff"
-        Me.lblTotalOnceOff.Size = New System.Drawing.Size(68, 25)
-        Me.lblTotalOnceOff.TabIndex = 38
-        Me.lblTotalOnceOff.Text = "R0.00"
-        '
-        'lblTotalMonthly
-        '
-        Me.lblTotalMonthly.AutoSize = True
-        Me.lblTotalMonthly.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTotalMonthly.Location = New System.Drawing.Point(1007, 418)
-        Me.lblTotalMonthly.Name = "lblTotalMonthly"
-        Me.lblTotalMonthly.Size = New System.Drawing.Size(68, 25)
-        Me.lblTotalMonthly.TabIndex = 39
-        Me.lblTotalMonthly.Text = "R0.00"
-        '
-        'btnPlaceOrder
-        '
-        Me.btnPlaceOrder.Location = New System.Drawing.Point(1134, 373)
-        Me.btnPlaceOrder.Name = "btnPlaceOrder"
-        Me.btnPlaceOrder.Size = New System.Drawing.Size(212, 70)
-        Me.btnPlaceOrder.TabIndex = 40
-        Me.btnPlaceOrder.Text = "Place Order"
-        Me.btnPlaceOrder.UseVisualStyleBackColor = True
-        '
-        'TblProductsTableAdapter
-        '
-        Me.TblProductsTableAdapter.ClearBeforeFill = True
-        '
-        'TblProductsBindingSource1
-        '
-        Me.TblProductsBindingSource1.DataMember = "tblProducts"
-        Me.TblProductsBindingSource1.DataSource = Me.SkyliteDB
         '
         'ProductIDDataGridViewTextBoxColumn1
         '
@@ -406,37 +313,181 @@ Partial Class NEW_SALE
         Me.CurrentStockDataGridViewTextBoxColumn1.HeaderText = "Current_Stock"
         Me.CurrentStockDataGridViewTextBoxColumn1.Name = "CurrentStockDataGridViewTextBoxColumn1"
         '
+        'TblProductsBindingSource1
         '
+        Me.TblProductsBindingSource1.DataMember = "tblProducts"
+        Me.TblProductsBindingSource1.DataSource = Me.SkyliteDB
+        '
+        'txbClientID
+        '
+        Me.txbClientID.Location = New System.Drawing.Point(148, 316)
+        Me.txbClientID.Name = "txbClientID"
+        Me.txbClientID.Size = New System.Drawing.Size(200, 20)
+        Me.txbClientID.TabIndex = 30
+        '
+        'cmbSaleType
+        '
+        Me.cmbSaleType.FormattingEnabled = True
+        Me.cmbSaleType.Location = New System.Drawing.Point(148, 431)
+        Me.cmbSaleType.Name = "cmbSaleType"
+        Me.cmbSaleType.Size = New System.Drawing.Size(200, 21)
+        Me.cmbSaleType.TabIndex = 31
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Font = New System.Drawing.Font("Corbel", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label7.Location = New System.Drawing.Point(414, 318)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(150, 15)
+        Me.Label7.TabIndex = 32
+        Me.Label7.Text = "Contract Length (Months)"
+        '
+        'txbContractLength
+        '
+        Me.txbContractLength.Location = New System.Drawing.Point(569, 316)
+        Me.txbContractLength.Name = "txbContractLength"
+        Me.txbContractLength.Size = New System.Drawing.Size(60, 20)
+        Me.txbContractLength.TabIndex = 33
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Corbel", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.Color.White
+        Me.Button3.Location = New System.Drawing.Point(417, 353)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(212, 102)
+        Me.Button3.TabIndex = 34
+        Me.Button3.Text = "Calculate Total"
+        Me.Button3.UseVisualStyleBackColor = False
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Corbel", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label8.Location = New System.Drawing.Point(670, 369)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(177, 24)
+        Me.Label8.TabIndex = 36
+        Me.Label8.Text = "Total Due Once-Off:"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Corbel", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label9.Location = New System.Drawing.Point(672, 414)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(170, 24)
+        Me.Label9.TabIndex = 37
+        Me.Label9.Text = "Total Due Monthly:"
+        '
+        'lblTotalOnceOff
+        '
+        Me.lblTotalOnceOff.AutoSize = True
+        Me.lblTotalOnceOff.Font = New System.Drawing.Font("Corbel", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalOnceOff.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.lblTotalOnceOff.Location = New System.Drawing.Point(884, 369)
+        Me.lblTotalOnceOff.Name = "lblTotalOnceOff"
+        Me.lblTotalOnceOff.Size = New System.Drawing.Size(59, 24)
+        Me.lblTotalOnceOff.TabIndex = 38
+        Me.lblTotalOnceOff.Text = "R0.00"
+        '
+        'lblTotalMonthly
+        '
+        Me.lblTotalMonthly.AutoSize = True
+        Me.lblTotalMonthly.Font = New System.Drawing.Font("Corbel", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalMonthly.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.lblTotalMonthly.Location = New System.Drawing.Point(884, 414)
+        Me.lblTotalMonthly.Name = "lblTotalMonthly"
+        Me.lblTotalMonthly.Size = New System.Drawing.Size(59, 24)
+        Me.lblTotalMonthly.TabIndex = 39
+        Me.lblTotalMonthly.Text = "R0.00"
+        '
+        'btnPlaceOrder
+        '
+        Me.btnPlaceOrder.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnPlaceOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPlaceOrder.Font = New System.Drawing.Font("Corbel", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPlaceOrder.ForeColor = System.Drawing.Color.White
+        Me.btnPlaceOrder.Location = New System.Drawing.Point(958, 353)
+        Me.btnPlaceOrder.Name = "btnPlaceOrder"
+        Me.btnPlaceOrder.Size = New System.Drawing.Size(212, 102)
+        Me.btnPlaceOrder.TabIndex = 40
+        Me.btnPlaceOrder.Text = "Place Order"
+        Me.btnPlaceOrder.UseVisualStyleBackColor = False
+        '
+        'TblProductsTableAdapter
+        '
+        Me.TblProductsTableAdapter.ClearBeforeFill = True
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.Label5)
+        Me.Panel1.Controls.Add(Me.txbClientID)
+        Me.Panel1.Controls.Add(Me.Label4)
+        Me.Panel1.Controls.Add(Me.cmbSaleType)
+        Me.Panel1.Controls.Add(Me.Label3)
+        Me.Panel1.Controls.Add(Me.tblProducts)
+        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.Button1)
+        Me.Panel1.Controls.Add(Me.dtSaleDate)
+        Me.Panel1.Controls.Add(Me.txbSearch)
+        Me.Panel1.Controls.Add(Me.cmbEmployeeID)
+        Me.Panel1.Controls.Add(Me.Label7)
+        Me.Panel1.Controls.Add(Me.txbContractLength)
+        Me.Panel1.Controls.Add(Me.Button3)
+        Me.Panel1.Controls.Add(Me.btnPlaceOrder)
+        Me.Panel1.Controls.Add(Me.lblTotalMonthly)
+        Me.Panel1.Controls.Add(Me.Label10)
+        Me.Panel1.Controls.Add(Me.lblTotalOnceOff)
+        Me.Panel1.Controls.Add(Me.Button8)
+        Me.Panel1.Controls.Add(Me.Label9)
+        Me.Panel1.Controls.Add(Me.btnAddToCart)
+        Me.Panel1.Controls.Add(Me.Label8)
+        Me.Panel1.Controls.Add(Me.tblCart)
+        Me.Panel1.Controls.Add(Me.btnRemove)
+        Me.Panel1.Location = New System.Drawing.Point(12, 12)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1176, 481)
+        Me.Panel1.TabIndex = 41
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Corbel Light", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label10.Location = New System.Drawing.Point(488, 3)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(237, 59)
+        Me.Label10.TabIndex = 64
+        Me.Label10.Text = "NEW SALE"
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Corbel", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(1091, 3)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(79, 28)
+        Me.Button1.TabIndex = 65
+        Me.Button1.Text = "HOME"
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'NEW_SALE
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1365, 505)
-        Me.Controls.Add(Me.btnPlaceOrder)
-        Me.Controls.Add(Me.lblTotalMonthly)
-        Me.Controls.Add(Me.lblTotalOnceOff)
-        Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.txbContractLength)
-        Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.cmbSaleType)
-        Me.Controls.Add(Me.txbClientID)
-        Me.Controls.Add(Me.tblCart)
-        Me.Controls.Add(Me.btnRemove)
-        Me.Controls.Add(Me.btnAddToCart)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.txbSearch)
-        Me.Controls.Add(Me.tblProducts)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.dtSaleDate)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.cmbEmployeeID)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Button8)
+        Me.ClientSize = New System.Drawing.Size(1200, 505)
+        Me.Controls.Add(Me.Panel1)
         Me.Name = "NEW_SALE"
         Me.Text = "NEW_SALE"
         CType(Me.tblProducts, System.ComponentModel.ISupportInitialize).EndInit()
@@ -445,13 +496,13 @@ Partial Class NEW_SALE
         CType(Me.PRODUCTSBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.tblCart, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TblProductsBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents Button8 As Button
-    Friend WithEvents Label1 As Label
     Friend WithEvents cmbEmployeeID As ComboBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
@@ -467,7 +518,6 @@ Partial Class NEW_SALE
     Friend WithEvents SalePriceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents CurrentStockDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents txbSearch As TextBox
-    Friend WithEvents Label6 As Label
     Friend WithEvents btnAddToCart As Button
     Friend WithEvents btnRemove As Button
     Friend WithEvents tblCart As DataGridView
@@ -494,4 +544,7 @@ Partial Class NEW_SALE
     Friend WithEvents SalePriceDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents CurrentStockDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents TblProductsBindingSource1 As BindingSource
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Button1 As Button
 End Class

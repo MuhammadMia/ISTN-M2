@@ -25,19 +25,16 @@ Partial Class EMPLOYEES
         Me.components = New System.ComponentModel.Container()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.tblEmployees = New System.Windows.Forms.DataGridView()
-        Me.EMPLOYEESBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Button8 = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.SkyliteDB = New M2.SkyliteDB()
-        Me.SkyliteDBBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TblEmployeesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TblEmployeesTableAdapter = New M2.SkyliteDBTableAdapters.tblEmployeesTableAdapter()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TblEmployeesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SkyliteDBBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SkyliteDB = New M2.SkyliteDB()
+        Me.EMPLOYEESBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TblEmployeesTableAdapter = New M2.SkyliteDBTableAdapters.tblEmployeesTableAdapter()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -48,29 +45,53 @@ Partial Class EMPLOYEES
         Me.txbEmpID = New System.Windows.Forms.TextBox()
         Me.txbPass = New System.Windows.Forms.TextBox()
         Me.txbEmail = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txbPosition = New System.Windows.Forms.TextBox()
+        Me.Button8 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.tblEmployees, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.EMPLOYEESBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SkyliteDBBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblEmployeesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SkyliteDBBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EMPLOYEESBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.Button2)
-        Me.Panel1.Controls.Add(Me.tblEmployees)
-        Me.Panel1.Controls.Add(Me.Button8)
+        Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.Label5)
+        Me.Panel1.Controls.Add(Me.Button3)
+        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.TextBox1)
+        Me.Panel1.Controls.Add(Me.txbPosition)
         Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Controls.Add(Me.Label10)
+        Me.Panel1.Controls.Add(Me.Button1)
+        Me.Panel1.Controls.Add(Me.Label9)
+        Me.Panel1.Controls.Add(Me.Button8)
+        Me.Panel1.Controls.Add(Me.Label7)
+        Me.Panel1.Controls.Add(Me.Button2)
+        Me.Panel1.Controls.Add(Me.txbCell)
+        Me.Panel1.Controls.Add(Me.tblEmployees)
+        Me.Panel1.Controls.Add(Me.txbLName)
+        Me.Panel1.Controls.Add(Me.txbFName)
+        Me.Panel1.Controls.Add(Me.Label6)
+        Me.Panel1.Controls.Add(Me.txbEmpID)
+        Me.Panel1.Controls.Add(Me.Label3)
+        Me.Panel1.Controls.Add(Me.txbPass)
+        Me.Panel1.Controls.Add(Me.Label4)
+        Me.Panel1.Controls.Add(Me.txbEmail)
         Me.Panel1.Location = New System.Drawing.Point(12, 12)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(776, 426)
+        Me.Panel1.Size = New System.Drawing.Size(897, 426)
         Me.Panel1.TabIndex = 13
         '
         'tblEmployees
@@ -79,61 +100,10 @@ Partial Class EMPLOYEES
         Me.tblEmployees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.tblEmployees.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn6})
         Me.tblEmployees.DataSource = Me.TblEmployeesBindingSource
-        Me.tblEmployees.Location = New System.Drawing.Point(22, 94)
+        Me.tblEmployees.Location = New System.Drawing.Point(29, 100)
         Me.tblEmployees.Name = "tblEmployees"
-        Me.tblEmployees.Size = New System.Drawing.Size(733, 312)
+        Me.tblEmployees.Size = New System.Drawing.Size(543, 302)
         Me.tblEmployees.TabIndex = 15
-        '
-        'EMPLOYEESBindingSource
-        '
-        Me.EMPLOYEESBindingSource.DataMember = "EMPLOYEES"
-        '
-        'Button8
-        '
-        Me.Button8.Location = New System.Drawing.Point(3, 3)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(79, 28)
-        Me.Button8.TabIndex = 14
-        Me.Button8.Text = "BACK"
-        Me.Button8.UseVisualStyleBackColor = True
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Yu Gothic", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(224, 3)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(330, 61)
-        Me.Label1.TabIndex = 8
-        Me.Label1.Text = "EMPLOYEES"
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(694, 3)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(79, 28)
-        Me.Button2.TabIndex = 17
-        Me.Button2.Text = "REMOVE"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'SkyliteDB
-        '
-        Me.SkyliteDB.DataSetName = "SkyliteDB"
-        Me.SkyliteDB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'SkyliteDBBindingSource
-        '
-        Me.SkyliteDBBindingSource.DataSource = Me.SkyliteDB
-        Me.SkyliteDBBindingSource.Position = 0
-        '
-        'TblEmployeesBindingSource
-        '
-        Me.TblEmployeesBindingSource.DataMember = "tblEmployees"
-        Me.TblEmployeesBindingSource.DataSource = Me.SkyliteDBBindingSource
-        '
-        'TblEmployeesTableAdapter
-        '
-        Me.TblEmployeesTableAdapter.ClearBeforeFill = True
         '
         'DataGridViewTextBoxColumn1
         '
@@ -165,19 +135,46 @@ Partial Class EMPLOYEES
         Me.DataGridViewTextBoxColumn6.HeaderText = "Employee_Position"
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
         '
+        'TblEmployeesBindingSource
+        '
+        Me.TblEmployeesBindingSource.DataMember = "tblEmployees"
+        Me.TblEmployeesBindingSource.DataSource = Me.SkyliteDBBindingSource
+        '
+        'SkyliteDBBindingSource
+        '
+        Me.SkyliteDBBindingSource.DataSource = Me.SkyliteDB
+        Me.SkyliteDBBindingSource.Position = 0
+        '
+        'SkyliteDB
+        '
+        Me.SkyliteDB.DataSetName = "SkyliteDB"
+        Me.SkyliteDB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'EMPLOYEESBindingSource
+        '
+        Me.EMPLOYEESBindingSource.DataMember = "EMPLOYEES"
+        '
+        'TblEmployeesTableAdapter
+        '
+        Me.TblEmployeesTableAdapter.ClearBeforeFill = True
+        '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(810, 382)
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Corbel", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(601, 284)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(265, 56)
         Me.Button1.TabIndex = 58
         Me.Button1.Text = "Add Employee"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(807, 284)
+        Me.Label10.Location = New System.Drawing.Point(598, 235)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(53, 13)
         Me.Label10.TabIndex = 57
@@ -186,7 +183,7 @@ Partial Class EMPLOYEES
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(807, 240)
+        Me.Label9.Location = New System.Drawing.Point(598, 209)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(32, 13)
         Me.Label9.TabIndex = 56
@@ -195,7 +192,7 @@ Partial Class EMPLOYEES
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(807, 197)
+        Me.Label7.Location = New System.Drawing.Point(598, 183)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(54, 13)
         Me.Label7.TabIndex = 54
@@ -203,35 +200,35 @@ Partial Class EMPLOYEES
         '
         'txbCell
         '
-        Me.txbCell.Location = New System.Drawing.Point(897, 194)
+        Me.txbCell.Location = New System.Drawing.Point(687, 180)
         Me.txbCell.Name = "txbCell"
         Me.txbCell.Size = New System.Drawing.Size(178, 20)
         Me.txbCell.TabIndex = 53
         '
         'txbLName
         '
-        Me.txbLName.Location = New System.Drawing.Point(897, 109)
+        Me.txbLName.Location = New System.Drawing.Point(688, 128)
         Me.txbLName.Name = "txbLName"
         Me.txbLName.Size = New System.Drawing.Size(178, 20)
         Me.txbLName.TabIndex = 52
         '
         'txbFName
         '
-        Me.txbFName.Location = New System.Drawing.Point(897, 71)
+        Me.txbFName.Location = New System.Drawing.Point(687, 102)
         Me.txbFName.Name = "txbFName"
         Me.txbFName.Size = New System.Drawing.Size(178, 20)
         Me.txbFName.TabIndex = 51
         '
         'txbEmpID
         '
-        Me.txbEmpID.Location = New System.Drawing.Point(897, 150)
+        Me.txbEmpID.Location = New System.Drawing.Point(687, 154)
         Me.txbEmpID.Name = "txbEmpID"
         Me.txbEmpID.Size = New System.Drawing.Size(178, 20)
         Me.txbEmpID.TabIndex = 50
         '
         'txbPass
         '
-        Me.txbPass.Location = New System.Drawing.Point(897, 281)
+        Me.txbPass.Location = New System.Drawing.Point(688, 232)
         Me.txbPass.Name = "txbPass"
         Me.txbPass.Size = New System.Drawing.Size(178, 20)
         Me.txbPass.TabIndex = 48
@@ -239,25 +236,15 @@ Partial Class EMPLOYEES
         '
         'txbEmail
         '
-        Me.txbEmail.Location = New System.Drawing.Point(897, 237)
+        Me.txbEmail.Location = New System.Drawing.Point(687, 206)
         Me.txbEmail.Name = "txbEmail"
         Me.txbEmail.Size = New System.Drawing.Size(178, 20)
         Me.txbEmail.TabIndex = 47
         '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Yu Gothic", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(835, 15)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(182, 31)
-        Me.Label5.TabIndex = 46
-        Me.Label5.Text = "Add Employee"
-        '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(807, 153)
+        Me.Label4.Location = New System.Drawing.Point(598, 157)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(67, 13)
         Me.Label4.TabIndex = 45
@@ -266,7 +253,7 @@ Partial Class EMPLOYEES
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(807, 74)
+        Me.Label3.Location = New System.Drawing.Point(598, 105)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(57, 13)
         Me.Label3.TabIndex = 44
@@ -275,7 +262,7 @@ Partial Class EMPLOYEES
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(807, 112)
+        Me.Label6.Location = New System.Drawing.Point(598, 131)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(58, 13)
         Me.Label6.TabIndex = 43
@@ -284,7 +271,7 @@ Partial Class EMPLOYEES
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(807, 326)
+        Me.Label2.Location = New System.Drawing.Point(598, 261)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(44, 13)
         Me.Label2.TabIndex = 60
@@ -292,50 +279,100 @@ Partial Class EMPLOYEES
         '
         'txbPosition
         '
-        Me.txbPosition.Location = New System.Drawing.Point(897, 323)
+        Me.txbPosition.Location = New System.Drawing.Point(687, 258)
         Me.txbPosition.Name = "txbPosition"
         Me.txbPosition.Size = New System.Drawing.Size(178, 20)
         Me.txbPosition.TabIndex = 59
+        '
+        'Button8
+        '
+        Me.Button8.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button8.Font = New System.Drawing.Font("Corbel", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button8.ForeColor = System.Drawing.Color.White
+        Me.Button8.Location = New System.Drawing.Point(3, 3)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(79, 28)
+        Me.Button8.TabIndex = 18
+        Me.Button8.Text = "BACK"
+        Me.Button8.UseVisualStyleBackColor = False
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.ForeColor = System.Drawing.Color.Red
+        Me.Button2.Location = New System.Drawing.Point(545, 70)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(27, 20)
+        Me.Button2.TabIndex = 17
+        Me.Button2.Text = "X"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'TextBox1
+        '
+        Me.TextBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.TextBox1.Location = New System.Drawing.Point(123, 71)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(328, 20)
+        Me.TextBox1.TabIndex = 62
+        Me.TextBox1.Text = "Search..."
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Corbel Light", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(152, 16)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(276, 59)
+        Me.Label1.TabIndex = 61
+        Me.Label1.Text = "EMPLOYEES"
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Corbel", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.Color.White
+        Me.Button3.Location = New System.Drawing.Point(601, 346)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(265, 56)
+        Me.Button3.TabIndex = 63
+        Me.Button3.Text = "Edit Employee"
+        Me.Button3.UseVisualStyleBackColor = False
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Corbel Light", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label5.Location = New System.Drawing.Point(637, 39)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(197, 29)
+        Me.Label5.TabIndex = 64
+        Me.Label5.Text = "Add/Edit Employee"
         '
         'EMPLOYEES
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1089, 450)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.txbPosition)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.txbCell)
-        Me.Controls.Add(Me.txbLName)
-        Me.Controls.Add(Me.txbFName)
-        Me.Controls.Add(Me.txbEmpID)
-        Me.Controls.Add(Me.txbPass)
-        Me.Controls.Add(Me.txbEmail)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label6)
+        Me.ClientSize = New System.Drawing.Size(921, 450)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "EMPLOYEES"
         Me.Text = "EMPLOYEE"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.tblEmployees, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EMPLOYEESBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SkyliteDBBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TblEmployeesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SkyliteDBBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EMPLOYEESBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents Button8 As Button
-    Friend WithEvents Label1 As Label
     Friend WithEvents tblEmployees As DataGridView
     Friend WithEvents EMPLOYEESBindingSource As BindingSource
     Friend WithEvents EmployeeIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
@@ -344,7 +381,6 @@ Partial Class EMPLOYEES
     Friend WithEvents EmployeeEmailDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents EmployeePasswordDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents EmployeePositionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents Button2 As Button
     Friend WithEvents SkyliteDBBindingSource As BindingSource
     Friend WithEvents SkyliteDB As SkyliteDB
     Friend WithEvents TblEmployeesBindingSource As BindingSource
@@ -364,10 +400,15 @@ Partial Class EMPLOYEES
     Friend WithEvents txbEmpID As TextBox
     Friend WithEvents txbPass As TextBox
     Friend WithEvents txbEmail As TextBox
-    Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents txbPosition As TextBox
+    Friend WithEvents Button8 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Label5 As Label
 End Class

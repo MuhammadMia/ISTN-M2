@@ -3,7 +3,7 @@
         Me.Close()
     End Sub
 
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+    Private Sub Label1_Click(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -18,7 +18,7 @@
         tblCart.DataSource = SkyliteDB.tblProducts
     End Sub
 
-    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
+    Private Sub Label6_Click(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -57,6 +57,18 @@
                 resultTable.Rows.Add(row)
             End If
         Next
+
+    End Sub
+
+    Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
+
+    End Sub
+
+    Private Sub txbContractLength_TextChanged(sender As Object, e As EventArgs) Handles txbContractLength.TextChanged
+
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
 
     End Sub
 End Class

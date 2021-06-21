@@ -22,7 +22,7 @@
         TblEmployeesTableAdapter.Update(empTable)
     End Sub
 
-    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+    Private Sub Button8_Click(sender As Object, e As EventArgs)
         Me.Close()
     End Sub
 
@@ -48,5 +48,9 @@
 
         SkyliteDB.tblEmployees.Rows.Add(row)
         SkyliteDB.AcceptChanges()
+    End Sub
+
+    Private Sub txbLName_TextChanged(sender As Object, e As EventArgs) Handles txbLName.TextChanged
+
     End Sub
 End Class
