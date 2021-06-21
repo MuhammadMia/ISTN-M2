@@ -7,12 +7,23 @@
         Dim uname As String = txbEmployeeNum.Text
         Dim pass As String = txbPassword.Text
 
-        'Hash pword
-        Dim hashedPass As String
-        hashedPass = pass.GetHashCode()
+        Dim empTable As DataTable = SkyliteDB.tblEmployees
 
-        'Check if uname is in employees database
-        'Check if hashed pword is same as employee password in database
+        Dim userIndex As Int16
+
+        For Each row As DataRow In empTable.Rows
+            If row.ItemArray(0) = uname Then
+                Exit For
+            End If
+            userIndex = userIndex + 1
+        Next
+
+        If empTable.Rows(userIndex)("Employee_Password") = pass Then
+            Me.Close()
+        Else
+            MessageBox.Show("Incorrect Username / Password Combination!")
+        End If
+
 
 
     End Sub

@@ -29,9 +29,10 @@ Partial Class LOGIN
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.TblEmployeesTableAdapter1 = New M2.SkyliteDBTableAdapters.tblEmployeesTableAdapter()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.SkyliteDB = New M2.SkyliteDB()
         Me.Panel1.SuspendLayout()
+        CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button2
@@ -114,10 +115,6 @@ Partial Class LOGIN
         Me.Panel1.Size = New System.Drawing.Size(776, 426)
         Me.Panel1.TabIndex = 6
         '
-        'TblEmployeesTableAdapter1
-        '
-        Me.TblEmployeesTableAdapter1.ClearBeforeFill = True
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -129,6 +126,11 @@ Partial Class LOGIN
         Me.Label1.TabIndex = 17
         Me.Label1.Text = "SKYLITE"
         '
+        'SkyliteDB
+        '
+        Me.SkyliteDB.DataSetName = "SkyliteDB"
+        Me.SkyliteDB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'LOGIN
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -139,6 +141,7 @@ Partial Class LOGIN
         Me.Text = "LOGIN"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -150,6 +153,6 @@ Partial Class LOGIN
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents TblEmployeesTableAdapter1 As SkyliteDBTableAdapters.tblEmployeesTableAdapter
     Friend WithEvents Label1 As Label
+    Friend WithEvents SkyliteDB As SkyliteDB
 End Class

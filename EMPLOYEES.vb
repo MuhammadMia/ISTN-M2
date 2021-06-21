@@ -77,4 +77,8 @@
         SkyliteDB.AcceptChanges()
         TblEmployeesTableAdapter.Update(SkyliteDB.tblEmployees)
     End Sub
+
+    Private Sub Button8_Click_1(sender As Object, e As EventArgs) Handles Button8.Click
+        Me.Close()
+    End Sub
 End Class
