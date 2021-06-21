@@ -14,22 +14,33 @@
         Dim selectedProduct As String = tblProducts.SelectedCells(0).Value
 
         lblSelectedProduct.Text = selectedProduct
+
+        Dim rowNum As Int16 = tblProducts.CurrentCell.RowIndex
+
+
+        txbProdName.Text = tblProducts.Rows(rowNum).Cells(2).Value
+        txbSuppID.Text = tblProducts.Rows(rowNum).Cells(1).Value
+        txbManufacturer.Text = tblProducts.Rows(rowNum).Cells(4).Value
+        txbColor.Text = tblProducts.Rows(rowNum).Cells(5).Value
+        txbCost.Text = tblProducts.Rows(rowNum).Cells(6).Value
+        txbPrice.Text = tblProducts.Rows(rowNum).Cells(7).Value
+        txbQuantity.Text = tblProducts.Rows(rowNum).Cells(8).Value
+
     End Sub
 
     Private Sub btnRemoveProduct_Click(sender As Object, e As EventArgs) Handles btnRemoveProduct.Click
         Dim selectedProduct As String = tblProducts.SelectedCells(0).Value
-        Dim productsTable As DataTable = SkyliteDB.tblProducts
 
-        For Each row As DataRow In productsTable.Rows
+        For Each row As DataRow In SkyliteDB.tblProducts.Rows
             If row.ItemArray(0) = selectedProduct Then
-                productsTable.Rows.Remove(row)
+                SkyliteDB.tblProducts.Rows.Remove(row)
                 Exit For
             End If
         Next
 
         SkyliteDB.AcceptChanges()
 
-        TblProductsTableAdapter.Update(productsTable)
+        TblProductsTableAdapter.Update(SkyliteDB.tblProducts)
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -57,11 +68,28 @@
         row("Current_Stock") = stock
 
         SkyliteDB.tblProducts.Rows.Add(row)
-        SkyliteDB.AcceptChanges()
+        SkyliteDB.tblProducts.AcceptChanges()
     End Sub
 
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
         Me.Close()
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim rowNum As Int16 = tblProducts.CurrentCell.RowIndex
+
+        SkyliteDB.tblProducts.Rows(rowNum)("Product_Name") = txbProdName.Text
+        SkyliteDB.tblProducts.Rows(rowNum)("Supplier_ID") = txbSuppID.Text
+        SkyliteDB.tblProducts.Rows(rowNum)("Product_Description") = "Lorum Ipsum"
+        SkyliteDB.tblProducts.Rows(rowNum)("Manufacturer") = txbManufacturer.Text
+        SkyliteDB.tblProducts.Rows(rowNum)("Colour") = txbColor.Text
+        SkyliteDB.tblProducts.Rows(rowNum)("Cost_Price") = txbCost.Text
+        SkyliteDB.tblProducts.Rows(rowNum)("Sale_Price") = txbPrice.Text
+        SkyliteDB.tblProducts.Rows(rowNum)("Current_Stock") = txbQuantity.Text
+
+        SkyliteDB.AcceptChanges()
+        TblProductsTableAdapter.Update(SkyliteDB.tblProducts)
 
     End Sub
 End Class

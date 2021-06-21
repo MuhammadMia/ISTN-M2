@@ -24,8 +24,21 @@ Partial Class PRODUCTS
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txbColor = New System.Windows.Forms.TextBox()
         Me.lblSelectedProduct = New System.Windows.Forms.Label()
+        Me.txbSuppID = New System.Windows.Forms.TextBox()
         Me.btnRemoveProduct = New System.Windows.Forms.Button()
+        Me.txbProdName = New System.Windows.Forms.TextBox()
+        Me.txbManufacturer = New System.Windows.Forms.TextBox()
         Me.tblProducts = New System.Windows.Forms.DataGridView()
         Me.ProductIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SupplierIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -37,28 +50,15 @@ Partial Class PRODUCTS
         Me.CurrentStockDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TblProductsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SkyliteDB = New M2.SkyliteDB()
+        Me.txbQuantity = New System.Windows.Forms.TextBox()
         Me.Button8 = New System.Windows.Forms.Button()
+        Me.txbPrice = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.txbCost = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.PRODUCTSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TblProductsTableAdapter = New M2.SkyliteDBTableAdapters.tblProductsTableAdapter()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.txbColor = New System.Windows.Forms.TextBox()
-        Me.txbSuppID = New System.Windows.Forms.TextBox()
-        Me.txbProdName = New System.Windows.Forms.TextBox()
-        Me.txbManufacturer = New System.Windows.Forms.TextBox()
-        Me.txbQuantity = New System.Windows.Forms.TextBox()
-        Me.txbPrice = New System.Windows.Forms.TextBox()
-        Me.txbCost = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.tblProducts, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblProductsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -97,6 +97,109 @@ Partial Class PRODUCTS
         Me.Panel1.Size = New System.Drawing.Size(900, 426)
         Me.Panel1.TabIndex = 10
         '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.ForeColor = System.Drawing.Color.White
+        Me.Button2.Location = New System.Drawing.Point(606, 346)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(265, 56)
+        Me.Button2.TabIndex = 62
+        Me.Button2.Text = "Edit Product List"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label10.Location = New System.Drawing.Point(603, 235)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(55, 13)
+        Me.Label10.TabIndex = 41
+        Me.Label10.Text = "Sale Price"
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(606, 284)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(265, 56)
+        Me.Button1.TabIndex = 42
+        Me.Button1.Text = "Add to Product List"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label9.Location = New System.Drawing.Point(603, 209)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(55, 13)
+        Me.Label9.TabIndex = 40
+        Me.Label9.Text = "Cost Price"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Corbel Light", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label5.Location = New System.Drawing.Point(653, 39)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(176, 29)
+        Me.Label5.TabIndex = 61
+        Me.Label5.Text = "Add/Edit Product"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label8.Location = New System.Drawing.Point(603, 261)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(46, 13)
+        Me.Label8.TabIndex = 39
+        Me.Label8.Text = "Quantity"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.TextBox1.Location = New System.Drawing.Point(129, 71)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(328, 20)
+        Me.TextBox1.TabIndex = 60
+        Me.TextBox1.Text = "Search..."
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label7.Location = New System.Drawing.Point(603, 183)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(37, 13)
+        Me.Label7.TabIndex = 38
+        Me.Label7.Text = "Colour"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Corbel Light", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(169, 16)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(255, 59)
+        Me.Label1.TabIndex = 20
+        Me.Label1.Text = "PRODUCTS"
+        '
+        'txbColor
+        '
+        Me.txbColor.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.txbColor.Location = New System.Drawing.Point(693, 180)
+        Me.txbColor.Name = "txbColor"
+        Me.txbColor.Size = New System.Drawing.Size(178, 20)
+        Me.txbColor.TabIndex = 37
+        '
         'lblSelectedProduct
         '
         Me.lblSelectedProduct.AutoSize = True
@@ -104,6 +207,14 @@ Partial Class PRODUCTS
         Me.lblSelectedProduct.Name = "lblSelectedProduct"
         Me.lblSelectedProduct.Size = New System.Drawing.Size(0, 13)
         Me.lblSelectedProduct.TabIndex = 19
+        '
+        'txbSuppID
+        '
+        Me.txbSuppID.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.txbSuppID.Location = New System.Drawing.Point(693, 128)
+        Me.txbSuppID.Name = "txbSuppID"
+        Me.txbSuppID.Size = New System.Drawing.Size(178, 20)
+        Me.txbSuppID.TabIndex = 36
         '
         'btnRemoveProduct
         '
@@ -116,6 +227,22 @@ Partial Class PRODUCTS
         Me.btnRemoveProduct.TabIndex = 17
         Me.btnRemoveProduct.Text = "X"
         Me.btnRemoveProduct.UseVisualStyleBackColor = False
+        '
+        'txbProdName
+        '
+        Me.txbProdName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.txbProdName.Location = New System.Drawing.Point(693, 100)
+        Me.txbProdName.Name = "txbProdName"
+        Me.txbProdName.Size = New System.Drawing.Size(178, 20)
+        Me.txbProdName.TabIndex = 35
+        '
+        'txbManufacturer
+        '
+        Me.txbManufacturer.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.txbManufacturer.Location = New System.Drawing.Point(693, 154)
+        Me.txbManufacturer.Name = "txbManufacturer"
+        Me.txbManufacturer.Size = New System.Drawing.Size(178, 20)
+        Me.txbManufacturer.TabIndex = 34
         '
         'tblProducts
         '
@@ -186,6 +313,14 @@ Partial Class PRODUCTS
         Me.SkyliteDB.DataSetName = "SkyliteDB"
         Me.SkyliteDB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
+        'txbQuantity
+        '
+        Me.txbQuantity.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.txbQuantity.Location = New System.Drawing.Point(693, 258)
+        Me.txbQuantity.Name = "txbQuantity"
+        Me.txbQuantity.Size = New System.Drawing.Size(178, 20)
+        Me.txbQuantity.TabIndex = 33
+        '
         'Button8
         '
         Me.Button8.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
@@ -198,106 +333,6 @@ Partial Class PRODUCTS
         Me.Button8.Text = "BACK"
         Me.Button8.UseVisualStyleBackColor = False
         '
-        'PRODUCTSBindingSource
-        '
-        Me.PRODUCTSBindingSource.DataMember = "PRODUCTS"
-        '
-        'TblProductsTableAdapter
-        '
-        Me.TblProductsTableAdapter.ClearBeforeFill = True
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(606, 284)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(265, 56)
-        Me.Button1.TabIndex = 42
-        Me.Button1.Text = "Add to Product List"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label10.Location = New System.Drawing.Point(603, 235)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(55, 13)
-        Me.Label10.TabIndex = 41
-        Me.Label10.Text = "Sale Price"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label9.Location = New System.Drawing.Point(603, 209)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(55, 13)
-        Me.Label9.TabIndex = 40
-        Me.Label9.Text = "Cost Price"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label8.Location = New System.Drawing.Point(603, 261)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(46, 13)
-        Me.Label8.TabIndex = 39
-        Me.Label8.Text = "Quantity"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(603, 183)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(37, 13)
-        Me.Label7.TabIndex = 38
-        Me.Label7.Text = "Colour"
-        '
-        'txbColor
-        '
-        Me.txbColor.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.txbColor.Location = New System.Drawing.Point(693, 180)
-        Me.txbColor.Name = "txbColor"
-        Me.txbColor.Size = New System.Drawing.Size(178, 20)
-        Me.txbColor.TabIndex = 37
-        '
-        'txbSuppID
-        '
-        Me.txbSuppID.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.txbSuppID.Location = New System.Drawing.Point(693, 128)
-        Me.txbSuppID.Name = "txbSuppID"
-        Me.txbSuppID.Size = New System.Drawing.Size(178, 20)
-        Me.txbSuppID.TabIndex = 36
-        '
-        'txbProdName
-        '
-        Me.txbProdName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.txbProdName.Location = New System.Drawing.Point(693, 100)
-        Me.txbProdName.Name = "txbProdName"
-        Me.txbProdName.Size = New System.Drawing.Size(178, 20)
-        Me.txbProdName.TabIndex = 35
-        '
-        'txbManufacturer
-        '
-        Me.txbManufacturer.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.txbManufacturer.Location = New System.Drawing.Point(693, 154)
-        Me.txbManufacturer.Name = "txbManufacturer"
-        Me.txbManufacturer.Size = New System.Drawing.Size(178, 20)
-        Me.txbManufacturer.TabIndex = 34
-        '
-        'txbQuantity
-        '
-        Me.txbQuantity.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.txbQuantity.Location = New System.Drawing.Point(693, 258)
-        Me.txbQuantity.Name = "txbQuantity"
-        Me.txbQuantity.Size = New System.Drawing.Size(178, 20)
-        Me.txbQuantity.TabIndex = 33
-        '
         'txbPrice
         '
         Me.txbPrice.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
@@ -305,34 +340,6 @@ Partial Class PRODUCTS
         Me.txbPrice.Name = "txbPrice"
         Me.txbPrice.Size = New System.Drawing.Size(178, 20)
         Me.txbPrice.TabIndex = 32
-        '
-        'txbCost
-        '
-        Me.txbCost.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.txbCost.Location = New System.Drawing.Point(693, 206)
-        Me.txbCost.Name = "txbCost"
-        Me.txbCost.Size = New System.Drawing.Size(178, 20)
-        Me.txbCost.TabIndex = 31
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(603, 157)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(70, 13)
-        Me.Label4.TabIndex = 28
-        Me.Label4.Text = "Manufacturer"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(603, 103)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(75, 13)
-        Me.Label3.TabIndex = 27
-        Me.Label3.Text = "Product Name"
         '
         'Label6
         '
@@ -344,48 +351,41 @@ Partial Class PRODUCTS
         Me.Label6.TabIndex = 26
         Me.Label6.Text = "Supplier ID"
         '
-        'Label1
+        'txbCost
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Corbel Light", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(169, 16)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(255, 59)
-        Me.Label1.TabIndex = 20
-        Me.Label1.Text = "PRODUCTS"
+        Me.txbCost.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.txbCost.Location = New System.Drawing.Point(693, 206)
+        Me.txbCost.Name = "txbCost"
+        Me.txbCost.Size = New System.Drawing.Size(178, 20)
+        Me.txbCost.TabIndex = 31
         '
-        'TextBox1
+        'Label3
         '
-        Me.TextBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.TextBox1.Location = New System.Drawing.Point(129, 71)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(328, 20)
-        Me.TextBox1.TabIndex = 60
-        Me.TextBox1.Text = "Search..."
+        Me.Label3.AutoSize = True
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label3.Location = New System.Drawing.Point(603, 103)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(75, 13)
+        Me.Label3.TabIndex = 27
+        Me.Label3.Text = "Product Name"
         '
-        'Label5
+        'Label4
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Corbel Light", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(653, 39)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(176, 29)
-        Me.Label5.TabIndex = 61
-        Me.Label5.Text = "Add/Edit Product"
+        Me.Label4.AutoSize = True
+        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label4.Location = New System.Drawing.Point(603, 157)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(70, 13)
+        Me.Label4.TabIndex = 28
+        Me.Label4.Text = "Manufacturer"
         '
-        'Button2
+        'PRODUCTSBindingSource
         '
-        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(606, 346)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(265, 56)
-        Me.Button2.TabIndex = 62
-        Me.Button2.Text = "Edit Product List"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.PRODUCTSBindingSource.DataMember = "PRODUCTS"
+        '
+        'TblProductsTableAdapter
+        '
+        Me.TblProductsTableAdapter.ClearBeforeFill = True
         '
         'PRODUCTS
         '
