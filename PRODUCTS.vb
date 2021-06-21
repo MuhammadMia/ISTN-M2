@@ -32,14 +32,6 @@
         TblProductsTableAdapter.Update(productsTable)
     End Sub
 
-    Private Sub btnAddProduct_Click(sender As Object, e As EventArgs) 
-        Dim form As NEWPRODUCT
-        form = New NEWPRODUCT
-        form.ShowDialog()
-
-        Me.TblProductsTableAdapter.Fill(SkyliteDB.tblProducts)
-    End Sub
-
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim prodID As String
         Dim suppID As String = txbSuppID.Text
