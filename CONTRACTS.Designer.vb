@@ -24,17 +24,27 @@ Partial Class CONTRACTS
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.CONTRACTSBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.CONTRACTSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Button8 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button8 = New System.Windows.Forms.Button()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.CONTRACTSBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CONTRACTSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SkyliteDB = New M2.SkyliteDB()
+        Me.TblContractsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TblContractsTableAdapter = New M2.SkyliteDBTableAdapters.tblContractsTableAdapter()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CONTRACTSBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CONTRACTSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TblContractsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -49,37 +59,6 @@ Partial Class CONTRACTS
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(776, 426)
         Me.Panel1.TabIndex = 9
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.AutoGenerateColumns = False
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.DataSource = Me.CONTRACTSBindingSource1
-        Me.DataGridView1.Location = New System.Drawing.Point(69, 109)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(632, 269)
-        Me.DataGridView1.TabIndex = 15
-        '
-        'CONTRACTSBindingSource1
-        '
-        Me.CONTRACTSBindingSource1.DataMember = "CONTRACTS"
-        '
-        'CONTRACTSBindingSource
-        '
-        Me.CONTRACTSBindingSource.DataMember = "CONTRACTS"
-        '
-        'Button8
-        '
-        Me.Button8.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button8.Font = New System.Drawing.Font("Corbel", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button8.ForeColor = System.Drawing.Color.White
-        Me.Button8.Location = New System.Drawing.Point(3, 3)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(79, 28)
-        Me.Button8.TabIndex = 16
-        Me.Button8.Text = "BACK"
-        Me.Button8.UseVisualStyleBackColor = False
         '
         'TextBox1
         '
@@ -113,6 +92,82 @@ Partial Class CONTRACTS
         Me.Label1.TabIndex = 62
         Me.Label1.Text = "CONTRACTS"
         '
+        'Button8
+        '
+        Me.Button8.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button8.Font = New System.Drawing.Font("Corbel", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button8.ForeColor = System.Drawing.Color.White
+        Me.Button8.Location = New System.Drawing.Point(3, 3)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(79, 28)
+        Me.Button8.TabIndex = 16
+        Me.Button8.Text = "BACK"
+        Me.Button8.UseVisualStyleBackColor = False
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.AutoGenerateColumns = False
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5})
+        Me.DataGridView1.DataSource = Me.TblContractsBindingSource
+        Me.DataGridView1.Location = New System.Drawing.Point(69, 109)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(632, 269)
+        Me.DataGridView1.TabIndex = 15
+        '
+        'CONTRACTSBindingSource1
+        '
+        Me.CONTRACTSBindingSource1.DataMember = "CONTRACTS"
+        '
+        'CONTRACTSBindingSource
+        '
+        Me.CONTRACTSBindingSource.DataMember = "CONTRACTS"
+        '
+        'SkyliteDB
+        '
+        Me.SkyliteDB.DataSetName = "SkyliteDB"
+        Me.SkyliteDB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'TblContractsBindingSource
+        '
+        Me.TblContractsBindingSource.DataMember = "tblContracts"
+        Me.TblContractsBindingSource.DataSource = Me.SkyliteDB
+        '
+        'TblContractsTableAdapter
+        '
+        Me.TblContractsTableAdapter.ClearBeforeFill = True
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "Contract_ID"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "Contract_ID"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "Client_ID"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Client_ID"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "Sale_Number"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Sale_Number"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "Contract_Amount"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Contract_Amount"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "Contract_Length"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "Contract_Length"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        '
         'CONTRACTS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -126,6 +181,8 @@ Partial Class CONTRACTS
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CONTRACTSBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CONTRACTSBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TblContractsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -143,4 +200,12 @@ Partial Class CONTRACTS
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Button2 As Button
     Friend WithEvents Label1 As Label
+    Friend WithEvents SkyliteDB As SkyliteDB
+    Friend WithEvents TblContractsBindingSource As BindingSource
+    Friend WithEvents TblContractsTableAdapter As SkyliteDBTableAdapters.tblContractsTableAdapter
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
 End Class

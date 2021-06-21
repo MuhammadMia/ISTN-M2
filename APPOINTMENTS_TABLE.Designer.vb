@@ -22,9 +22,15 @@ Partial Class APPOINTMENTS_TABLE
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button8 = New System.Windows.Forms.Button()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -36,15 +42,22 @@ Partial Class APPOINTMENTS_TABLE
         Me.tblSuppliers = New System.Windows.Forms.DataGridView()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button8 = New System.Windows.Forms.Button()
+        Me.SkyliteDB = New M2.SkyliteDB()
+        Me.APPOINTMENTSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.APPOINTMENTSTableAdapter = New M2.SkyliteDBTableAdapters.APPOINTMENTSTableAdapter()
+        Me.AppNumberDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ClientIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmployeeIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AppDateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AppTimeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AppDetailsDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AppStatusDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
         CType(Me.tblSuppliers, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.APPOINTMENTSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -75,29 +88,57 @@ Partial Class APPOINTMENTS_TABLE
         Me.Panel1.Size = New System.Drawing.Size(894, 426)
         Me.Panel1.TabIndex = 9
         '
-        'Label1
+        'TextBox6
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Corbel Light", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(120, 9)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(358, 59)
-        Me.Label1.TabIndex = 63
-        Me.Label1.Text = "APPOINTMENTS"
+        Me.TextBox6.Location = New System.Drawing.Point(689, 230)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(173, 20)
+        Me.TextBox6.TabIndex = 88
         '
-        'Button8
+        'TextBox4
         '
-        Me.Button8.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button8.Font = New System.Drawing.Font("Corbel", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button8.ForeColor = System.Drawing.Color.White
-        Me.Button8.Location = New System.Drawing.Point(3, 3)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(79, 28)
-        Me.Button8.TabIndex = 18
-        Me.Button8.Text = "BACK"
-        Me.Button8.UseVisualStyleBackColor = False
+        Me.TextBox4.Location = New System.Drawing.Point(689, 204)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(173, 20)
+        Me.TextBox4.TabIndex = 87
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Location = New System.Drawing.Point(689, 152)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(173, 20)
+        Me.DateTimePicker1.TabIndex = 86
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Location = New System.Drawing.Point(689, 178)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(173, 20)
+        Me.TextBox5.TabIndex = 85
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(689, 126)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(173, 20)
+        Me.TextBox3.TabIndex = 83
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(689, 100)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(173, 20)
+        Me.TextBox2.TabIndex = 82
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(595, 237)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(37, 13)
+        Me.Label2.TabIndex = 81
+        Me.Label2.Text = "Status"
         '
         'Button3
         '
@@ -189,7 +230,10 @@ Partial Class APPOINTMENTS_TABLE
         '
         'tblSuppliers
         '
+        Me.tblSuppliers.AutoGenerateColumns = False
         Me.tblSuppliers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.tblSuppliers.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.AppNumberDataGridViewTextBoxColumn, Me.ClientIDDataGridViewTextBoxColumn, Me.EmployeeIDDataGridViewTextBoxColumn, Me.AppDateDataGridViewTextBoxColumn, Me.AppTimeDataGridViewTextBoxColumn, Me.AppDetailsDataGridViewTextBoxColumn, Me.AppStatusDataGridViewTextBoxColumn})
+        Me.tblSuppliers.DataSource = Me.APPOINTMENTSBindingSource
         Me.tblSuppliers.Location = New System.Drawing.Point(29, 100)
         Me.tblSuppliers.Name = "tblSuppliers"
         Me.tblSuppliers.Size = New System.Drawing.Size(543, 302)
@@ -215,57 +259,85 @@ Partial Class APPOINTMENTS_TABLE
         Me.Label4.TabIndex = 68
         Me.Label4.Text = "Employee ID"
         '
-        'Label2
+        'Label1
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(595, 237)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(37, 13)
-        Me.Label2.TabIndex = 81
-        Me.Label2.Text = "Status"
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Corbel Light", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(120, 9)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(358, 59)
+        Me.Label1.TabIndex = 63
+        Me.Label1.Text = "APPOINTMENTS"
         '
-        'TextBox2
+        'Button8
         '
-        Me.TextBox2.Location = New System.Drawing.Point(689, 100)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(173, 20)
-        Me.TextBox2.TabIndex = 82
+        Me.Button8.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button8.Font = New System.Drawing.Font("Corbel", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button8.ForeColor = System.Drawing.Color.White
+        Me.Button8.Location = New System.Drawing.Point(3, 3)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(79, 28)
+        Me.Button8.TabIndex = 18
+        Me.Button8.Text = "BACK"
+        Me.Button8.UseVisualStyleBackColor = False
         '
-        'TextBox3
+        'SkyliteDB
         '
-        Me.TextBox3.Location = New System.Drawing.Point(689, 126)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(173, 20)
-        Me.TextBox3.TabIndex = 83
+        Me.SkyliteDB.DataSetName = "SkyliteDB"
+        Me.SkyliteDB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'TextBox5
+        'APPOINTMENTSBindingSource
         '
-        Me.TextBox5.Location = New System.Drawing.Point(689, 178)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(173, 20)
-        Me.TextBox5.TabIndex = 85
+        Me.APPOINTMENTSBindingSource.DataMember = "APPOINTMENTS"
+        Me.APPOINTMENTSBindingSource.DataSource = Me.SkyliteDB
         '
-        'DateTimePicker1
+        'APPOINTMENTSTableAdapter
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(689, 152)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(173, 20)
-        Me.DateTimePicker1.TabIndex = 86
+        Me.APPOINTMENTSTableAdapter.ClearBeforeFill = True
         '
-        'TextBox4
+        'AppNumberDataGridViewTextBoxColumn
         '
-        Me.TextBox4.Location = New System.Drawing.Point(689, 204)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(173, 20)
-        Me.TextBox4.TabIndex = 87
+        Me.AppNumberDataGridViewTextBoxColumn.DataPropertyName = "App_Number"
+        Me.AppNumberDataGridViewTextBoxColumn.HeaderText = "App_Number"
+        Me.AppNumberDataGridViewTextBoxColumn.Name = "AppNumberDataGridViewTextBoxColumn"
         '
-        'TextBox6
+        'ClientIDDataGridViewTextBoxColumn
         '
-        Me.TextBox6.Location = New System.Drawing.Point(689, 230)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(173, 20)
-        Me.TextBox6.TabIndex = 88
+        Me.ClientIDDataGridViewTextBoxColumn.DataPropertyName = "Client_ID"
+        Me.ClientIDDataGridViewTextBoxColumn.HeaderText = "Client_ID"
+        Me.ClientIDDataGridViewTextBoxColumn.Name = "ClientIDDataGridViewTextBoxColumn"
+        '
+        'EmployeeIDDataGridViewTextBoxColumn
+        '
+        Me.EmployeeIDDataGridViewTextBoxColumn.DataPropertyName = "Employee_ID"
+        Me.EmployeeIDDataGridViewTextBoxColumn.HeaderText = "Employee_ID"
+        Me.EmployeeIDDataGridViewTextBoxColumn.Name = "EmployeeIDDataGridViewTextBoxColumn"
+        '
+        'AppDateDataGridViewTextBoxColumn
+        '
+        Me.AppDateDataGridViewTextBoxColumn.DataPropertyName = "App_Date"
+        Me.AppDateDataGridViewTextBoxColumn.HeaderText = "App_Date"
+        Me.AppDateDataGridViewTextBoxColumn.Name = "AppDateDataGridViewTextBoxColumn"
+        '
+        'AppTimeDataGridViewTextBoxColumn
+        '
+        Me.AppTimeDataGridViewTextBoxColumn.DataPropertyName = "App_Time"
+        Me.AppTimeDataGridViewTextBoxColumn.HeaderText = "App_Time"
+        Me.AppTimeDataGridViewTextBoxColumn.Name = "AppTimeDataGridViewTextBoxColumn"
+        '
+        'AppDetailsDataGridViewTextBoxColumn
+        '
+        Me.AppDetailsDataGridViewTextBoxColumn.DataPropertyName = "App_Details"
+        Me.AppDetailsDataGridViewTextBoxColumn.HeaderText = "App_Details"
+        Me.AppDetailsDataGridViewTextBoxColumn.Name = "AppDetailsDataGridViewTextBoxColumn"
+        '
+        'AppStatusDataGridViewTextBoxColumn
+        '
+        Me.AppStatusDataGridViewTextBoxColumn.DataPropertyName = "App_Status"
+        Me.AppStatusDataGridViewTextBoxColumn.HeaderText = "App_Status"
+        Me.AppStatusDataGridViewTextBoxColumn.Name = "AppStatusDataGridViewTextBoxColumn"
         '
         'APPOINTMENTS_TABLE
         '
@@ -278,6 +350,8 @@ Partial Class APPOINTMENTS_TABLE
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.tblSuppliers, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.APPOINTMENTSBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -303,4 +377,14 @@ Partial Class APPOINTMENTS_TABLE
     Friend WithEvents TextBox6 As TextBox
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents SkyliteDB As SkyliteDB
+    Friend WithEvents APPOINTMENTSBindingSource As BindingSource
+    Friend WithEvents APPOINTMENTSTableAdapter As SkyliteDBTableAdapters.APPOINTMENTSTableAdapter
+    Friend WithEvents AppNumberDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ClientIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents EmployeeIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents AppDateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents AppTimeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents AppDetailsDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents AppStatusDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class

@@ -20,11 +20,11 @@
 
         txbProdName.Text = tblProducts.Rows(rowNum).Cells(2).Value
         txbSuppID.Text = tblProducts.Rows(rowNum).Cells(1).Value
-        txbManufacturer.Text = tblProducts.Rows(rowNum).Cells(4).Value
-        txbColor.Text = tblProducts.Rows(rowNum).Cells(5).Value
-        txbCost.Text = tblProducts.Rows(rowNum).Cells(6).Value
-        txbPrice.Text = tblProducts.Rows(rowNum).Cells(7).Value
-        txbQuantity.Text = tblProducts.Rows(rowNum).Cells(8).Value
+        txbManufacturer.Text = tblProducts.Rows(rowNum).Cells(3).Value
+        txbColor.Text = tblProducts.Rows(rowNum).Cells(4).Value
+        txbCost.Text = tblProducts.Rows(rowNum).Cells(5).Value
+        txbPrice.Text = tblProducts.Rows(rowNum).Cells(6).Value
+        txbQuantity.Text = tblProducts.Rows(rowNum).Cells(7).Value
 
     End Sub
 
