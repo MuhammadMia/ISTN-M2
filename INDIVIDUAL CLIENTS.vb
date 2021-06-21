@@ -31,7 +31,7 @@
         Dim fname As String = txbFName.Text
         Dim lname As String = txbLName.Text
         Dim email As String = txbEmail.Text
-        Dim cell As String = txbClientID.Text
+        Dim cell As String = txbCell.Text
 
         Dim row As DataRow = SkyliteDB.tblClientsIndividual.NewRow()
 
