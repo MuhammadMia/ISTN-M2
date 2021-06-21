@@ -24,7 +24,14 @@ Partial Class SUPPLIERS
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.tblSuppliers = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -33,24 +40,17 @@ Partial Class SUPPLIERS
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TblSuplliersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SkyliteDB = New M2.SkyliteDB()
-        Me.Button8 = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.SUPPLIERSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TblSuplliersTableAdapter = New M2.SkyliteDBTableAdapters.tblSuplliersTableAdapter()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.txbSuppID = New System.Windows.Forms.TextBox()
+        Me.Button8 = New System.Windows.Forms.Button()
         Me.txbSuppName = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.txbAddress = New System.Windows.Forms.TextBox()
         Me.txbPhone = New System.Windows.Forms.TextBox()
-        Me.txbEmail = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.txbEmail = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.TblSuplliersTableAdapter = New M2.SkyliteDBTableAdapters.tblSuplliersTableAdapter()
+        Me.SUPPLIERSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Panel1.SuspendLayout()
         CType(Me.tblSuppliers, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblSuplliersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -84,6 +84,72 @@ Partial Class SUPPLIERS
         Me.Panel1.Size = New System.Drawing.Size(895, 426)
         Me.Panel1.TabIndex = 11
         '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Corbel", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.Color.White
+        Me.Button3.Location = New System.Drawing.Point(597, 346)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(265, 56)
+        Me.Button3.TabIndex = 60
+        Me.Button3.Text = "Edit Suppliers"
+        Me.Button3.UseVisualStyleBackColor = False
+        '
+        'TextBox1
+        '
+        Me.TextBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.TextBox1.Location = New System.Drawing.Point(130, 71)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(328, 20)
+        Me.TextBox1.TabIndex = 59
+        Me.TextBox1.Text = "Search..."
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Corbel Light", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label5.Location = New System.Drawing.Point(635, 38)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(179, 29)
+        Me.Label5.TabIndex = 46
+        Me.Label5.Text = "Add/Edit Supplier"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label10.Location = New System.Drawing.Point(595, 208)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(58, 13)
+        Me.Label10.TabIndex = 57
+        Me.Label10.Text = "Telephone"
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Corbel", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(597, 284)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(265, 56)
+        Me.Button1.TabIndex = 58
+        Me.Button1.Text = "Add to Suppliers"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label9.Location = New System.Drawing.Point(595, 173)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(32, 13)
+        Me.Label9.TabIndex = 56
+        Me.Label9.Text = "Email"
+        '
         'Button2
         '
         Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
@@ -95,6 +161,16 @@ Partial Class SUPPLIERS
         Me.Button2.TabIndex = 16
         Me.Button2.Text = "X"
         Me.Button2.UseVisualStyleBackColor = False
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label8.Location = New System.Drawing.Point(595, 241)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(45, 13)
+        Me.Label8.TabIndex = 55
+        Me.Label8.Text = "Address"
         '
         'tblSuppliers
         '
@@ -147,6 +223,14 @@ Partial Class SUPPLIERS
         Me.SkyliteDB.DataSetName = "SkyliteDB"
         Me.SkyliteDB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
+        'txbSuppID
+        '
+        Me.txbSuppID.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.txbSuppID.Location = New System.Drawing.Point(684, 100)
+        Me.txbSuppID.Name = "txbSuppID"
+        Me.txbSuppID.Size = New System.Drawing.Size(178, 20)
+        Me.txbSuppID.TabIndex = 52
+        '
         'Button8
         '
         Me.Button8.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
@@ -159,6 +243,14 @@ Partial Class SUPPLIERS
         Me.Button8.Text = "BACK"
         Me.Button8.UseVisualStyleBackColor = False
         '
+        'txbSuppName
+        '
+        Me.txbSuppName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.txbSuppName.Location = New System.Drawing.Point(684, 135)
+        Me.txbSuppName.Name = "txbSuppName"
+        Me.txbSuppName.Size = New System.Drawing.Size(178, 20)
+        Me.txbSuppName.TabIndex = 50
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -169,72 +261,6 @@ Partial Class SUPPLIERS
         Me.Label1.Size = New System.Drawing.Size(245, 59)
         Me.Label1.TabIndex = 8
         Me.Label1.Text = "SUPPLIERS"
-        '
-        'SUPPLIERSBindingSource
-        '
-        Me.SUPPLIERSBindingSource.DataMember = "SUPPLIERS"
-        '
-        'TblSuplliersTableAdapter
-        '
-        Me.TblSuplliersTableAdapter.ClearBeforeFill = True
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(597, 284)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(265, 56)
-        Me.Button1.TabIndex = 58
-        Me.Button1.Text = "Add to Suppliers"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label10.Location = New System.Drawing.Point(595, 208)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(58, 13)
-        Me.Label10.TabIndex = 57
-        Me.Label10.Text = "Telephone"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label9.Location = New System.Drawing.Point(595, 173)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(32, 13)
-        Me.Label9.TabIndex = 56
-        Me.Label9.Text = "Email"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label8.Location = New System.Drawing.Point(595, 241)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(45, 13)
-        Me.Label8.TabIndex = 55
-        Me.Label8.Text = "Address"
-        '
-        'txbSuppID
-        '
-        Me.txbSuppID.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.txbSuppID.Location = New System.Drawing.Point(684, 100)
-        Me.txbSuppID.Name = "txbSuppID"
-        Me.txbSuppID.Size = New System.Drawing.Size(178, 20)
-        Me.txbSuppID.TabIndex = 52
-        '
-        'txbSuppName
-        '
-        Me.txbSuppName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.txbSuppName.Location = New System.Drawing.Point(684, 135)
-        Me.txbSuppName.Name = "txbSuppName"
-        Me.txbSuppName.Size = New System.Drawing.Size(178, 20)
-        Me.txbSuppName.TabIndex = 50
         '
         'txbAddress
         '
@@ -252,6 +278,16 @@ Partial Class SUPPLIERS
         Me.txbPhone.Size = New System.Drawing.Size(178, 20)
         Me.txbPhone.TabIndex = 48
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label6.Location = New System.Drawing.Point(595, 103)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(59, 13)
+        Me.Label6.TabIndex = 43
+        Me.Label6.Text = "Supplier ID"
+        '
         'txbEmail
         '
         Me.txbEmail.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
@@ -259,17 +295,6 @@ Partial Class SUPPLIERS
         Me.txbEmail.Name = "txbEmail"
         Me.txbEmail.Size = New System.Drawing.Size(178, 20)
         Me.txbEmail.TabIndex = 47
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Corbel Light", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(635, 38)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(179, 29)
-        Me.Label5.TabIndex = 46
-        Me.Label5.Text = "Add/Edit Supplier"
         '
         'Label4
         '
@@ -281,36 +306,13 @@ Partial Class SUPPLIERS
         Me.Label4.TabIndex = 45
         Me.Label4.Text = "Supplier Name"
         '
-        'Label6
+        'TblSuplliersTableAdapter
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(595, 103)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(59, 13)
-        Me.Label6.TabIndex = 43
-        Me.Label6.Text = "Supplier ID"
+        Me.TblSuplliersTableAdapter.ClearBeforeFill = True
         '
-        'TextBox1
+        'SUPPLIERSBindingSource
         '
-        Me.TextBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.TextBox1.Location = New System.Drawing.Point(130, 71)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(328, 20)
-        Me.TextBox1.TabIndex = 59
-        Me.TextBox1.Text = "Search..."
-        '
-        'Button3
-        '
-        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.Location = New System.Drawing.Point(597, 346)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(265, 56)
-        Me.Button3.TabIndex = 60
-        Me.Button3.Text = "Edit Suppliers"
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.SUPPLIERSBindingSource.DataMember = "SUPPLIERS"
         '
         'SUPPLIERS
         '

@@ -24,22 +24,19 @@ Partial Class APPOINTMENTS
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.Button2)
-        Me.Panel1.Controls.Add(Me.DateTimePicker1)
-        Me.Panel1.Controls.Add(Me.MonthCalendar1)
-        Me.Panel1.Controls.Add(Me.Button8)
+        Me.Panel1.BackColor = System.Drawing.Color.White
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Controls.Add(Me.Button1)
+        Me.Panel1.Controls.Add(Me.Button8)
+        Me.Panel1.Controls.Add(Me.Button2)
+        Me.Panel1.Controls.Add(Me.MonthCalendar1)
         Me.Panel1.Location = New System.Drawing.Point(12, 12)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(776, 426)
@@ -47,19 +44,16 @@ Partial Class APPOINTMENTS
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(344, 72)
+        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Corbel", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.Color.White
+        Me.Button2.Location = New System.Drawing.Point(274, 72)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(123, 20)
+        Me.Button2.Size = New System.Drawing.Size(214, 30)
         Me.Button2.TabIndex = 17
-        Me.Button2.Text = "NEW APPOINTMENT"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(138, 72)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
-        Me.DateTimePicker1.TabIndex = 16
+        Me.Button2.Text = "NEW/VIEW APPOINTMENTS"
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'MonthCalendar1
         '
@@ -70,31 +64,27 @@ Partial Class APPOINTMENTS
         '
         'Button8
         '
+        Me.Button8.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button8.Font = New System.Drawing.Font("Corbel", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button8.ForeColor = System.Drawing.Color.White
         Me.Button8.Location = New System.Drawing.Point(3, 3)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(79, 28)
-        Me.Button8.TabIndex = 14
+        Me.Button8.TabIndex = 18
         Me.Button8.Text = "BACK"
-        Me.Button8.UseVisualStyleBackColor = True
+        Me.Button8.UseVisualStyleBackColor = False
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Yu Gothic", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(172, 10)
+        Me.Label1.Font = New System.Drawing.Font("Corbel Light", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(205, 10)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(425, 61)
-        Me.Label1.TabIndex = 8
+        Me.Label1.Size = New System.Drawing.Size(358, 59)
+        Me.Label1.TabIndex = 63
         Me.Label1.Text = "APPOINTMENTS"
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(473, 72)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(133, 20)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "VIEW APPOINTMENTS"
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'APPOINTMENTS
         '
@@ -111,10 +101,8 @@ Partial Class APPOINTMENTS
     End Sub
 
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents Button2 As Button
+    Friend WithEvents MonthCalendar1 As MonthCalendar
     Friend WithEvents Button8 As Button
     Friend WithEvents Label1 As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents MonthCalendar1 As MonthCalendar
 End Class
