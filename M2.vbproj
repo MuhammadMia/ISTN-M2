@@ -79,6 +79,7 @@
     <Compile Include="ADMIN LOGIN.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ApplicationEvents.vb" />
     <Compile Include="APPOINTMENTS.Designer.vb">
       <DependentUpon>APPOINTMENTS.vb</DependentUpon>
     </Compile>
