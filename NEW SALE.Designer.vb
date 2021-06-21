@@ -66,8 +66,8 @@ Partial Class NEW_SALE
         Me.btnPlaceOrder = New System.Windows.Forms.Button()
         Me.TblProductsTableAdapter = New M2.SkyliteDBTableAdapters.tblProductsTableAdapter()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label10 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label10 = New System.Windows.Forms.Label()
         CType(Me.tblProducts, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblProductsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -458,17 +458,6 @@ Partial Class NEW_SALE
         Me.Panel1.Size = New System.Drawing.Size(1176, 481)
         Me.Panel1.TabIndex = 41
         '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Corbel Light", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label10.Location = New System.Drawing.Point(488, 3)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(237, 59)
-        Me.Label10.TabIndex = 64
-        Me.Label10.Text = "NEW SALE"
-        '
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
@@ -481,6 +470,17 @@ Partial Class NEW_SALE
         Me.Button1.TabIndex = 65
         Me.Button1.Text = "HOME"
         Me.Button1.UseVisualStyleBackColor = False
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Corbel Light", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label10.Location = New System.Drawing.Point(488, 3)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(237, 59)
+        Me.Label10.TabIndex = 64
+        Me.Label10.Text = "NEW SALE"
         '
         'NEW_SALE
         '
