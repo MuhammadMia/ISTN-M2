@@ -29,25 +29,25 @@ Partial Class VIEW_SALES
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.SALESBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button8 = New System.Windows.Forms.Button()
-        Me.SkyliteDB = New M2.SkyliteDB()
-        Me.SkyliteDBBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TblSalesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TblSalesTableAdapter = New M2.SkyliteDBTableAdapters.tblSalesTableAdapter()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TblSalesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SkyliteDBBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SkyliteDB = New M2.SkyliteDB()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button8 = New System.Windows.Forms.Button()
+        Me.SALESBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TblSalesTableAdapter = New M2.SkyliteDBTableAdapters.tblSalesTableAdapter()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SALESBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SkyliteDBBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblSalesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SkyliteDBBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SALESBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -80,7 +80,7 @@ Partial Class VIEW_SALES
         'TextBox1
         '
         Me.TextBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.TextBox1.Location = New System.Drawing.Point(233, 85)
+        Me.TextBox1.Location = New System.Drawing.Point(226, 85)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(328, 20)
         Me.TextBox1.TabIndex = 61
@@ -120,55 +120,6 @@ Partial Class VIEW_SALES
         Me.DataGridView1.Size = New System.Drawing.Size(643, 283)
         Me.DataGridView1.TabIndex = 16
         '
-        'SALESBindingSource
-        '
-        Me.SALESBindingSource.DataMember = "SALES"
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Corbel", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(694, 3)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(79, 28)
-        Me.Button1.TabIndex = 15
-        Me.Button1.Text = "HOME"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
-        'Button8
-        '
-        Me.Button8.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button8.Font = New System.Drawing.Font("Corbel", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button8.ForeColor = System.Drawing.Color.White
-        Me.Button8.Location = New System.Drawing.Point(3, 3)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(79, 28)
-        Me.Button8.TabIndex = 14
-        Me.Button8.Text = "BACK"
-        Me.Button8.UseVisualStyleBackColor = False
-        '
-        'SkyliteDB
-        '
-        Me.SkyliteDB.DataSetName = "SkyliteDB"
-        Me.SkyliteDB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'SkyliteDBBindingSource
-        '
-        Me.SkyliteDBBindingSource.DataSource = Me.SkyliteDB
-        Me.SkyliteDBBindingSource.Position = 0
-        '
-        'TblSalesBindingSource
-        '
-        Me.TblSalesBindingSource.DataMember = "tblSales"
-        Me.TblSalesBindingSource.DataSource = Me.SkyliteDBBindingSource
-        '
-        'TblSalesTableAdapter
-        '
-        Me.TblSalesTableAdapter.ClearBeforeFill = True
-        '
         'DataGridViewTextBoxColumn1
         '
         Me.DataGridViewTextBoxColumn1.DataPropertyName = "Sale_Number"
@@ -205,6 +156,55 @@ Partial Class VIEW_SALES
         Me.DataGridViewTextBoxColumn6.HeaderText = "Amount_Due"
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
         '
+        'TblSalesBindingSource
+        '
+        Me.TblSalesBindingSource.DataMember = "tblSales"
+        Me.TblSalesBindingSource.DataSource = Me.SkyliteDBBindingSource
+        '
+        'SkyliteDBBindingSource
+        '
+        Me.SkyliteDBBindingSource.DataSource = Me.SkyliteDB
+        Me.SkyliteDBBindingSource.Position = 0
+        '
+        'SkyliteDB
+        '
+        Me.SkyliteDB.DataSetName = "SkyliteDB"
+        Me.SkyliteDB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Corbel", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(694, 3)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(79, 28)
+        Me.Button1.TabIndex = 15
+        Me.Button1.Text = "HOME"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'Button8
+        '
+        Me.Button8.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button8.Font = New System.Drawing.Font("Corbel", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button8.ForeColor = System.Drawing.Color.White
+        Me.Button8.Location = New System.Drawing.Point(3, 3)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(79, 28)
+        Me.Button8.TabIndex = 14
+        Me.Button8.Text = "BACK"
+        Me.Button8.UseVisualStyleBackColor = False
+        '
+        'SALESBindingSource
+        '
+        Me.SALESBindingSource.DataMember = "SALES"
+        '
+        'TblSalesTableAdapter
+        '
+        Me.TblSalesTableAdapter.ClearBeforeFill = True
+        '
         'VIEW_SALES
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -216,10 +216,10 @@ Partial Class VIEW_SALES
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SALESBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SkyliteDBBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TblSalesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SkyliteDBBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SALESBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

@@ -1,7 +1,9 @@
 ﻿Public Class APPOINTMENTS_TABLE
-    Private Sub APPOINTMENTS_TABLE_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'SkyliteDB.APPOINTMENTS' table. You can move, or remove it, as needed.
-        Me.APPOINTMENTSTableAdapter.Fill(Me.SkyliteDB.APPOINTMENTS)
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs)
 
+    End Sub
+
+    Private Sub Button8_Click(sender As Object, e As EventArgs)
+        Me.Close()
     End Sub
 End Class

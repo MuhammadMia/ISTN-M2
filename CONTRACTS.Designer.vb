@@ -29,22 +29,22 @@ Partial Class CONTRACTS
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.CONTRACTSBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.CONTRACTSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.SkyliteDB = New M2.SkyliteDB()
-        Me.TblContractsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TblContractsTableAdapter = New M2.SkyliteDBTableAdapters.tblContractsTableAdapter()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TblContractsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SkyliteDB = New M2.SkyliteDB()
+        Me.CONTRACTSBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CONTRACTSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TblContractsTableAdapter = New M2.SkyliteDBTableAdapters.tblContractsTableAdapter()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TblContractsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CONTRACTSBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CONTRACTSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TblContractsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -63,7 +63,7 @@ Partial Class CONTRACTS
         'TextBox1
         '
         Me.TextBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.TextBox1.Location = New System.Drawing.Point(229, 83)
+        Me.TextBox1.Location = New System.Drawing.Point(229, 84)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(328, 20)
         Me.TextBox1.TabIndex = 64
@@ -74,7 +74,7 @@ Partial Class CONTRACTS
         Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.ForeColor = System.Drawing.Color.Red
-        Me.Button2.Location = New System.Drawing.Point(677, 83)
+        Me.Button2.Location = New System.Drawing.Point(646, 84)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(24, 20)
         Me.Button2.TabIndex = 63
@@ -86,7 +86,7 @@ Partial Class CONTRACTS
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Corbel Light", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(259, 21)
+        Me.Label1.Location = New System.Drawing.Point(252, 22)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(284, 59)
         Me.Label1.TabIndex = 62
@@ -111,32 +111,10 @@ Partial Class CONTRACTS
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5})
         Me.DataGridView1.DataSource = Me.TblContractsBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(69, 109)
+        Me.DataGridView1.Location = New System.Drawing.Point(127, 109)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(632, 269)
+        Me.DataGridView1.Size = New System.Drawing.Size(543, 269)
         Me.DataGridView1.TabIndex = 15
-        '
-        'CONTRACTSBindingSource1
-        '
-        Me.CONTRACTSBindingSource1.DataMember = "CONTRACTS"
-        '
-        'CONTRACTSBindingSource
-        '
-        Me.CONTRACTSBindingSource.DataMember = "CONTRACTS"
-        '
-        'SkyliteDB
-        '
-        Me.SkyliteDB.DataSetName = "SkyliteDB"
-        Me.SkyliteDB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'TblContractsBindingSource
-        '
-        Me.TblContractsBindingSource.DataMember = "tblContracts"
-        Me.TblContractsBindingSource.DataSource = Me.SkyliteDB
-        '
-        'TblContractsTableAdapter
-        '
-        Me.TblContractsTableAdapter.ClearBeforeFill = True
         '
         'DataGridViewTextBoxColumn1
         '
@@ -168,6 +146,28 @@ Partial Class CONTRACTS
         Me.DataGridViewTextBoxColumn5.HeaderText = "Contract_Length"
         Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
         '
+        'TblContractsBindingSource
+        '
+        Me.TblContractsBindingSource.DataMember = "tblContracts"
+        Me.TblContractsBindingSource.DataSource = Me.SkyliteDB
+        '
+        'SkyliteDB
+        '
+        Me.SkyliteDB.DataSetName = "SkyliteDB"
+        Me.SkyliteDB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'CONTRACTSBindingSource1
+        '
+        Me.CONTRACTSBindingSource1.DataMember = "CONTRACTS"
+        '
+        'CONTRACTSBindingSource
+        '
+        Me.CONTRACTSBindingSource.DataMember = "CONTRACTS"
+        '
+        'TblContractsTableAdapter
+        '
+        Me.TblContractsTableAdapter.ClearBeforeFill = True
+        '
         'CONTRACTS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -179,10 +179,10 @@ Partial Class CONTRACTS
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TblContractsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CONTRACTSBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CONTRACTSBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TblContractsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
