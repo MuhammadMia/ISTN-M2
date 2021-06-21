@@ -49,7 +49,29 @@
         SkyliteDB.AcceptChanges()
     End Sub
 
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+    Private Sub tblSuppliers_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles tblSuppliers.CellContentClick
+        Dim selectedProduct As String = tblSuppliers.SelectedCells(0).Value
 
+        Dim rowNum As Int16 = tblSuppliers.CurrentCell.RowIndex
+
+
+        txbSuppID.Text = tblSuppliers.Rows(rowNum).Cells(0).Value
+        txbSuppName.Text = tblSuppliers.Rows(rowNum).Cells(1).Value
+        txbEmail.Text = tblSuppliers.Rows(rowNum).Cells(2).Value
+        txbPhone.Text = tblSuppliers.Rows(rowNum).Cells(3).Value
+        txbAddress.Text = tblSuppliers.Rows(rowNum).Cells(4).Value
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim rowNum As Int16 = tblSuppliers.CurrentCell.RowIndex
+
+        SkyliteDB.tblSuplliers.Rows(rowNum)("Supplier_ID") = txbSuppID.Text
+        SkyliteDB.tblSuplliers.Rows(rowNum)("Supplier_Name") = txbSuppName.Text
+        SkyliteDB.tblSuplliers.Rows(rowNum)("Supplier_Email") = txbEmail.Text
+        SkyliteDB.tblSuplliers.Rows(rowNum)("Supplier_Telephone") = txbPhone.Text
+        SkyliteDB.tblSuplliers.Rows(rowNum)("Supplier_Address") = txbAddress.Text
+
+        SkyliteDB.AcceptChanges()
+        TblSuplliersTableAdapter.Update(SkyliteDB.tblSuplliers)
     End Sub
 End Class
