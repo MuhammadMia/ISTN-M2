@@ -8,18 +8,10 @@
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Dim selectedEmp As String = tblEmployees.SelectedCells(0).Value
-        Dim empTable As DataTable = SkyliteDB.tblEmployees
 
-        For Each row As DataRow In empTable.Rows
-            If row.ItemArray(0) = selectedEmp Then
-                empTable.Rows.Remove(row)
-                Exit For
-            End If
-        Next
-
-        SkyliteDB.AcceptChanges()
-
-        TblEmployeesTableAdapter.Update(empTable)
+        Dim sql As String
+        sql = "DELETE FROM tblEmployees WHERE Employee_ID = '" & selectedEmp & "';"
+        saveData(sql)
     End Sub
 
     Private Sub Button8_Click(sender As Object, e As EventArgs)
@@ -34,23 +26,10 @@
         Dim position As String = txbPosition.Text
         Dim cell As String = txbCell.Text
 
-        Dim row As DataRow = SkyliteDB.tblEmployees.NewRow()
-
-        row("Employee_ID") = empID
-        row("Employee_Name") = name
-        row("Employee_Email") = email
-        row("Employee_Cell") = cell
-        row("Employee_Password") = password
-        row("Employee_Position") = position
-
-        SkyliteDB.tblEmployees.Rows.Add(row)
-        SkyliteDB.AcceptChanges()
-
         Dim sql As String
         sql = "INSERT INTO tblEmployees (Employee_ID, Employee_Name, Employee_Email, Employee_Cell, Employee_Password, Employee_Position) VALUES ('" & empID & "','" & name & "','" & email & "','" & cell & "','" & password & "','" & position & "')"
 
         saveData(sql)
-
     End Sub
 
     Private Sub saveData(sql As String)
@@ -94,17 +73,17 @@
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Dim rowNum As Int16 = tblEmployees.CurrentCell.RowIndex
+        Dim name As String = txbName.Text
+        Dim empID As String = txbEmpID.Text
+        Dim email As String = txbEmail.Text
+        Dim password As String = txbPass.Text
+        Dim position As String = txbPosition.Text
+        Dim cell As String = txbCell.Text
 
-        SkyliteDB.tblEmployees.Rows(rowNum)("Employee_ID") = txbEmpID.Text
-        SkyliteDB.tblEmployees.Rows(rowNum)("Employee_Name") = txbName.Text
-        SkyliteDB.tblEmployees.Rows(rowNum)("Employee_Email") = txbEmail.Text
-        SkyliteDB.tblEmployees.Rows(rowNum)("Employee_Telephone") = txbCell.Text
-        SkyliteDB.tblEmployees.Rows(rowNum)("Employee_Position") = txbPosition.Text
-        SkyliteDB.tblEmployees.Rows(rowNum)("Employee_Password") = txbPass.Text
+        Dim sql As String
+        sql = "UPDATE tblEmployees SET Employee_Name = '" & name & "', Employee_ID = '" & empID & "', " & "Employee_Email = '" & email & "', " & "Employee_Cell = '" & cell & "', " & "Employee_Password = '" & password & "', " & "Employee_Position = '" & position & "' WHERE Employee_ID = '" & empID & "';"
 
-        SkyliteDB.AcceptChanges()
-        TblEmployeesTableAdapter.Update(SkyliteDB.tblEmployees)
+        saveData(sql)
     End Sub
 
     Private Sub Button8_Click_1(sender As Object, e As EventArgs) Handles Button8.Click
