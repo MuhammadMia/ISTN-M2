@@ -28,7 +28,7 @@ Partial Class CONTRACTS
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button8 = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.tblContracts = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -40,7 +40,7 @@ Partial Class CONTRACTS
         Me.CONTRACTSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TblContractsTableAdapter = New M2.SkyliteDBTableAdapters.tblContractsTableAdapter()
         Me.Panel1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.tblContracts, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblContractsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CONTRACTSBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -54,7 +54,7 @@ Partial Class CONTRACTS
         Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.Button8)
-        Me.Panel1.Controls.Add(Me.DataGridView1)
+        Me.Panel1.Controls.Add(Me.tblContracts)
         Me.Panel1.Location = New System.Drawing.Point(12, 12)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(776, 426)
@@ -105,16 +105,16 @@ Partial Class CONTRACTS
         Me.Button8.Text = "BACK"
         Me.Button8.UseVisualStyleBackColor = False
         '
-        'DataGridView1
+        'tblContracts
         '
-        Me.DataGridView1.AutoGenerateColumns = False
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5})
-        Me.DataGridView1.DataSource = Me.TblContractsBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(127, 109)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(543, 269)
-        Me.DataGridView1.TabIndex = 15
+        Me.tblContracts.AutoGenerateColumns = False
+        Me.tblContracts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.tblContracts.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5})
+        Me.tblContracts.DataSource = Me.TblContractsBindingSource
+        Me.tblContracts.Location = New System.Drawing.Point(127, 109)
+        Me.tblContracts.Name = "tblContracts"
+        Me.tblContracts.Size = New System.Drawing.Size(543, 269)
+        Me.tblContracts.TabIndex = 15
         '
         'DataGridViewTextBoxColumn1
         '
@@ -178,7 +178,7 @@ Partial Class CONTRACTS
         Me.Text = "CONTRACTS"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.tblContracts, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TblContractsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CONTRACTSBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -189,7 +189,7 @@ Partial Class CONTRACTS
 
     Friend WithEvents Panel1 As Panel
     Friend WithEvents CONTRACTSBindingSource As BindingSource
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents tblContracts As DataGridView
     Friend WithEvents CONTRACTSBindingSource1 As BindingSource
     Friend WithEvents ContractIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ClientIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
