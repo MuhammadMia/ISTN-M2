@@ -56,9 +56,9 @@
             With cmd
                 .Connection = con
                 .CommandText = sql
-                Result = .ExecuteNonQuery()
+                result = .ExecuteNonQuery()
             End With
-            If Result > 0 Then
+            If result > 0 Then
                 MsgBox("Data has been saved in the databse")
             End If
 

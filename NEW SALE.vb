@@ -31,18 +31,7 @@
     End Sub
 
     Private Sub btnAddToCart_Click(sender As Object, e As EventArgs) Handles btnAddToCart.Click
-        Dim productsTable As DataTable = SkyliteDB.tblProducts
 
-        Dim selectedProducts As DataGridViewRow
-
-        selectedProducts = tblProducts.CurrentRow()
-
-        Dim cart As DataTable = SkyliteDB.tblSaleItems
-        cart.Rows.Clear()
-
-        cart.Rows.Add(selectedProducts)
-
-        tblCart.Rows.Add(selectedProducts)
 
 
     End Sub
@@ -52,12 +41,21 @@
         Dim resultTable As DataTable = SkyliteDB.tblProducts
         resultTable.Clear()
 
-        For Each row As DataRow In resultTable.Rows
-            If row.Field(Of String)("Product_Name").Contains(txbSearch.Text) Then
-                resultTable.Rows.Add(row)
-            End If
-        Next
+        If txbSearch.Text = Nothing Then
+            Me.tblProducts.DataSource = Nothing
+            Me.tblProducts.DataSource = SkyliteDB.tblProducts
+            Me.TblProductsTableAdapter.Fill(SkyliteDB.tblProducts)
+        Else
+            For Each row As DataRow In productTable.Rows
+                If row.Field(Of String)("Product_Name").Contains(txbSearch.Text) Then
+                    resultTable.Rows.Add(row)
+                End If
+            Next
 
+            Me.tblProducts.DataSource = Nothing
+            Me.tblProducts.DataSource = resultTable
+            Me.TblProductsTableAdapter.Fill(resultTable)
+        End If
     End Sub
 
     Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click

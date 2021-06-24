@@ -68,6 +68,7 @@ Partial Class NEW_SALE
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.tblProducts, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblProductsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -429,6 +430,7 @@ Partial Class NEW_SALE
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.Label5)
         Me.Panel1.Controls.Add(Me.txbClientID)
         Me.Panel1.Controls.Add(Me.Label4)
@@ -481,6 +483,15 @@ Partial Class NEW_SALE
         Me.Label10.Size = New System.Drawing.Size(237, 59)
         Me.Label10.TabIndex = 64
         Me.Label10.Text = "NEW SALE"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(417, 70)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(115, 13)
+        Me.Label1.TabIndex = 66
+        Me.Label1.Text = "(Select the Product ID)"
         '
         'NEW_SALE
         '
@@ -547,4 +558,5 @@ Partial Class NEW_SALE
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label10 As Label
     Friend WithEvents Button1 As Button
+    Friend WithEvents Label1 As Label
 End Class
