@@ -38,7 +38,7 @@ Partial Class BUSINESS_CLIENTS
         Me.Button8 = New System.Windows.Forms.Button()
         Me.txbClientID = New System.Windows.Forms.TextBox()
         Me.txbBName = New System.Windows.Forms.TextBox()
-        Me.tblBusClients = New System.Windows.Forms.DataGridView()
+        Me.tblClientsBusiness = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -56,7 +56,7 @@ Partial Class BUSINESS_CLIENTS
         Me.BUSINESSCLIENTSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TblClientsBusinessTableAdapter = New M2.SkyliteDBTableAdapters.tblClientsBusinessTableAdapter()
         Me.Panel1.SuspendLayout()
-        CType(Me.tblBusClients, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.tblClientsBusiness, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblClientsBusinessBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BUSINESSCLIENTSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -79,7 +79,7 @@ Partial Class BUSINESS_CLIENTS
         Me.Panel1.Controls.Add(Me.Button8)
         Me.Panel1.Controls.Add(Me.txbClientID)
         Me.Panel1.Controls.Add(Me.txbBName)
-        Me.Panel1.Controls.Add(Me.tblBusClients)
+        Me.Panel1.Controls.Add(Me.tblClientsBusiness)
         Me.Panel1.Controls.Add(Me.txbAddress)
         Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.txbEmail)
@@ -235,16 +235,16 @@ Partial Class BUSINESS_CLIENTS
         Me.txbBName.Size = New System.Drawing.Size(178, 20)
         Me.txbBName.TabIndex = 65
         '
-        'tblBusClients
+        'tblClientsBusiness
         '
-        Me.tblBusClients.AutoGenerateColumns = False
-        Me.tblBusClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.tblBusClients.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
-        Me.tblBusClients.DataSource = Me.TblClientsBusinessBindingSource
-        Me.tblBusClients.Location = New System.Drawing.Point(40, 100)
-        Me.tblBusClients.Name = "tblBusClients"
-        Me.tblBusClients.Size = New System.Drawing.Size(543, 302)
-        Me.tblBusClients.TabIndex = 16
+        Me.tblClientsBusiness.AutoGenerateColumns = False
+        Me.tblClientsBusiness.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.tblClientsBusiness.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
+        Me.tblClientsBusiness.DataSource = Me.TblClientsBusinessBindingSource
+        Me.tblClientsBusiness.Location = New System.Drawing.Point(40, 100)
+        Me.tblClientsBusiness.Name = "tblClientsBusiness"
+        Me.tblClientsBusiness.Size = New System.Drawing.Size(543, 302)
+        Me.tblClientsBusiness.TabIndex = 16
         '
         'DataGridViewTextBoxColumn1
         '
@@ -370,7 +370,7 @@ Partial Class BUSINESS_CLIENTS
         Me.Text = "BUSINESS_CLIENTS"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.tblBusClients, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.tblClientsBusiness, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TblClientsBusinessBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BUSINESSCLIENTSBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -380,7 +380,7 @@ Partial Class BUSINESS_CLIENTS
 
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Button1 As Button
-    Friend WithEvents tblBusClients As DataGridView
+    Friend WithEvents tblClientsBusiness As DataGridView
     Friend WithEvents BUSINESSCLIENTSBindingSource As BindingSource
     Friend WithEvents ClientIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents EmployeeIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn

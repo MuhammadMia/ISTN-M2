@@ -117,7 +117,7 @@ Partial Class EMPLOYEES
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(598, 261)
+        Me.Label2.Location = New System.Drawing.Point(598, 239)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(44, 13)
         Me.Label2.TabIndex = 60
@@ -134,7 +134,7 @@ Partial Class EMPLOYEES
         '
         'txbPosition
         '
-        Me.txbPosition.Location = New System.Drawing.Point(687, 258)
+        Me.txbPosition.Location = New System.Drawing.Point(687, 232)
         Me.txbPosition.Name = "txbPosition"
         Me.txbPosition.Size = New System.Drawing.Size(178, 20)
         Me.txbPosition.TabIndex = 59
@@ -153,7 +153,7 @@ Partial Class EMPLOYEES
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(598, 235)
+        Me.Label10.Location = New System.Drawing.Point(598, 209)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(53, 13)
         Me.Label10.TabIndex = 57
@@ -175,7 +175,7 @@ Partial Class EMPLOYEES
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(598, 209)
+        Me.Label9.Location = New System.Drawing.Point(598, 183)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(32, 13)
         Me.Label9.TabIndex = 56
@@ -197,7 +197,7 @@ Partial Class EMPLOYEES
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(598, 183)
+        Me.Label7.Location = New System.Drawing.Point(598, 157)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(54, 13)
         Me.Label7.TabIndex = 54
@@ -217,7 +217,7 @@ Partial Class EMPLOYEES
         '
         'txbCell
         '
-        Me.txbCell.Location = New System.Drawing.Point(687, 180)
+        Me.txbCell.Location = New System.Drawing.Point(688, 154)
         Me.txbCell.Name = "txbCell"
         Me.txbCell.Size = New System.Drawing.Size(178, 20)
         Me.txbCell.TabIndex = 53
@@ -287,7 +287,7 @@ Partial Class EMPLOYEES
         '
         'txbEmpID
         '
-        Me.txbEmpID.Location = New System.Drawing.Point(687, 154)
+        Me.txbEmpID.Location = New System.Drawing.Point(688, 128)
         Me.txbEmpID.Name = "txbEmpID"
         Me.txbEmpID.Size = New System.Drawing.Size(178, 20)
         Me.txbEmpID.TabIndex = 50
@@ -303,7 +303,7 @@ Partial Class EMPLOYEES
         '
         'txbPass
         '
-        Me.txbPass.Location = New System.Drawing.Point(688, 232)
+        Me.txbPass.Location = New System.Drawing.Point(687, 206)
         Me.txbPass.Name = "txbPass"
         Me.txbPass.Size = New System.Drawing.Size(178, 20)
         Me.txbPass.TabIndex = 48
@@ -312,7 +312,7 @@ Partial Class EMPLOYEES
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(598, 157)
+        Me.Label4.Location = New System.Drawing.Point(598, 131)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(67, 13)
         Me.Label4.TabIndex = 45
@@ -320,7 +320,7 @@ Partial Class EMPLOYEES
         '
         'txbEmail
         '
-        Me.txbEmail.Location = New System.Drawing.Point(687, 206)
+        Me.txbEmail.Location = New System.Drawing.Point(687, 180)
         Me.txbEmail.Name = "txbEmail"
         Me.txbEmail.Size = New System.Drawing.Size(178, 20)
         Me.txbEmail.TabIndex = 47

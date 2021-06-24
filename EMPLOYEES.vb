@@ -7,11 +7,18 @@
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+
         Dim selectedEmp As String = tblEmployees.SelectedCells(0).Value
 
         Dim sql As String
         sql = "DELETE FROM tblEmployees WHERE Employee_ID = '" & selectedEmp & "';"
+
         saveData(sql)
+
+        Me.tblEmployees.DataSource = Nothing
+        Me.tblEmployees.DataSource = SkyliteDB.tblEmployees
+        Me.TblEmployeesTableAdapter.Fill(Me.SkyliteDB.tblEmployees)
+
     End Sub
 
     Private Sub Button8_Click(sender As Object, e As EventArgs)
@@ -19,6 +26,7 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
         Dim name As String = txbName.Text
         Dim empID As String = txbEmpID.Text
         Dim email As String = txbEmail.Text
@@ -30,6 +38,11 @@
         sql = "INSERT INTO tblEmployees (Employee_ID, Employee_Name, Employee_Email, Employee_Cell, Employee_Password, Employee_Position) VALUES ('" & empID & "','" & name & "','" & email & "','" & cell & "','" & password & "','" & position & "')"
 
         saveData(sql)
+
+        Me.tblEmployees.DataSource = Nothing
+        Me.tblEmployees.DataSource = SkyliteDB.tblEmployees
+        Me.TblEmployeesTableAdapter.Fill(Me.SkyliteDB.tblEmployees)
+
     End Sub
 
     Private Sub saveData(sql As String)
@@ -73,6 +86,7 @@
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+
         Dim name As String = txbName.Text
         Dim empID As String = txbEmpID.Text
         Dim email As String = txbEmail.Text
@@ -84,6 +98,11 @@
         sql = "UPDATE tblEmployees SET Employee_Name = '" & name & "', Employee_ID = '" & empID & "', " & "Employee_Email = '" & email & "', " & "Employee_Cell = '" & cell & "', " & "Employee_Password = '" & password & "', " & "Employee_Position = '" & position & "' WHERE Employee_ID = '" & empID & "';"
 
         saveData(sql)
+
+        Me.tblEmployees.DataSource = Nothing
+        Me.tblEmployees.DataSource = SkyliteDB.tblEmployees
+        Me.TblEmployeesTableAdapter.Fill(Me.SkyliteDB.tblEmployees)
+
     End Sub
 
     Private Sub Button8_Click_1(sender As Object, e As EventArgs) Handles Button8.Click

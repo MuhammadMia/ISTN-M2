@@ -10,45 +10,82 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim selectedClient As String = tblIndClients.SelectedCells(0).Value
-        Dim clientTable As DataTable = SkyliteDB.tblClientsIndividual
 
-        For Each row As DataRow In clientTable.Rows
-            If row.ItemArray(0) = selectedClient Then
-                clientTable.Rows.Remove(row)
-                Exit For
-            End If
-        Next
+        Dim selectedCli As String = tblClientsIndividual.SelectedCells(0).Value
 
-        SkyliteDB.AcceptChanges()
+        Dim sql As String
+        sql = "DELETE FROM tblIndClients WHERE Client_ID = '" & selectedCli & "';"
 
-        TblClientsIndividualTableAdapter.Update(clientTable)
+        saveData(sql)
+
+        Me.tblClientsIndividual.DataSource = Nothing
+        Me.tblClientsIndividual.DataSource = SkyliteDB.tblClientsIndividual
+        Me.TblClientsIndividualTableAdapter.Fill(Me.SkyliteDB.tblClientsIndividual)
+
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+
         Dim clientID As String = txbClientID.Text
         Dim indID As String = txbIndID.Text
-        Dim fname As String = txbFName.Text
-        Dim lname As String = txbLName.Text
+        Dim name As String = txbName.Text
         Dim email As String = txbEmail.Text
         Dim cell As String = txbCell.Text
 
-        Dim row As DataRow = SkyliteDB.tblClientsIndividual.NewRow()
+        Dim sql As String
+        sql = "INSERT INTO tblClientsIndividual (Client_ID, Individual_ID, Individual_Name, Individual_Email, Individual_Cell) VALUES ('" & clientID & "','" & indID & "','" & name & "','" & email & "','" & cell & "')"
 
-        Dim fullname As String = fname + " " + lname
+        saveData(sql)
 
-        row("Client_ID") = clientID
-        row("Individual_ID") = indID
-        row("Individual_Name") = fullname
-        row("Individual_Email") = email
-        row("Individual_Cell") = cell
+        Me.tblClientsIndividual.DataSource = Nothing
+        Me.tblClientsIndividual.DataSource = SkyliteDB.tblClientsIndividual
+        Me.TblClientsIndividualTableAdapter.Fill(Me.SkyliteDB.tblClientsIndividual)
 
+    End Sub
 
-        SkyliteDB.tblClientsIndividual.Rows.Add(row)
-        SkyliteDB.AcceptChanges()
+    Private Sub saveData(sql As String)
+        Dim con As System.Data.SqlClient.SqlConnection = New System.Data.SqlClient.SqlConnection("Data Source=34.67.177.192;Initial Catalog=SkyliteDB;Persist Security Info=True;User ID=sqlserver;Password=istn")
+        Dim cmd As System.Data.SqlClient.SqlCommand
+        Dim result As Integer
+        Try
+            con.Open()
+            cmd = New System.Data.SqlClient.SqlCommand
+            With cmd
+                .Connection = con
+                .CommandText = sql
+                result = .ExecuteNonQuery()
+            End With
+            If result > 0 Then
+                MsgBox("Data has been saved in the databse")
+            End If
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            con.Close()
+        End Try
     End Sub
 
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
         Me.Close()
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+
+        Dim clientID As String = txbClientID.Text
+        Dim indID As String = txbIndID.Text
+        Dim name As String = txbName.Text
+        Dim email As String = txbEmail.Text
+        Dim cell As String = txbCell.Text
+
+        Dim sql As String
+        sql = "UPDATE tblIndClients SET Client_ID = '" & clientID & "', Individual_ID = '" & indID & "', " & "Individual_Name = '" & name & "', " & "Individual_Email = '" & email & "', " & "Individual_Cell = '" & cell & "' WHERE Employee_ID = '" & indID & "';"
+
+        saveData(sql)
+
+        Me.tblClientsIndividual.DataSource = Nothing
+        Me.tblClientsIndividual.DataSource = SkyliteDB.tblClientsIndividual
+        Me.TblClientsIndividualTableAdapter.Fill(Me.SkyliteDB.tblClientsIndividual)
+
     End Sub
 End Class
