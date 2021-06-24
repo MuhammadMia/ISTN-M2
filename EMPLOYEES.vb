@@ -46,6 +46,7 @@
     End Sub
 
     Private Sub saveData(sql As String)
+
         Dim con As System.Data.SqlClient.SqlConnection = New System.Data.SqlClient.SqlConnection("Data Source=34.67.177.192;Initial Catalog=SkyliteDB;Persist Security Info=True;User ID=sqlserver;Password=istn")
         Dim cmd As System.Data.SqlClient.SqlCommand
         Dim result As Integer
@@ -66,6 +67,7 @@
         Finally
             con.Close()
         End Try
+
     End Sub
 
     Private Sub txbLName_TextChanged(sender As Object, e As EventArgs)

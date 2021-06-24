@@ -31,7 +31,7 @@
         Dim address As String = txbAddress.Text
 
         Dim sql As String
-        sql = "INSERT INTO tblClientsBusiness (Client_ID, Employee_ID, Busines_Name, Business_Email, Business_Telephone, Business_Address) VALUES ('" & clientID & "','" & salesID & "','" & bname & "','" & phone & "','" & email & "','" & address & "')"
+        sql = "INSERT INTO tblClientsBusiness (Client_ID, Employee_ID, Business_Name, Business_Email, Business_Telephone, Business_Address) VALUES ('" & clientID & "','" & salesID & "','" & bname & "','" & phone & "','" & email & "','" & address & "')"
 
         saveData(sql)
 
@@ -82,7 +82,7 @@
         Dim address As String = txbAddress.Text
 
         Dim sql As String
-        sql = "UPDATE tblClientsBusiness SET Client_ID = '" & clientID & "', Employee_ID = '" & salesID & "', " & "Busines_Name = '" & bname & "', " & "Business_Email = '" & phone & "', " & "Business_Telephone = '" & email & "', " & "Business_Address = '" & address & "' WHERE Client_ID = '" & clientID & "';"
+        sql = "UPDATE tblClientsBusiness SET Client_ID = '" & clientID & "', Employee_ID = '" & salesID & "', " & "Business_Name = '" & bname & "', " & "Business_Email = '" & phone & "', " & "Business_Telephone = '" & email & "', " & "Business_Address = '" & address & "' WHERE Client_ID = '" & clientID & "';"
 
         saveData(sql)
 

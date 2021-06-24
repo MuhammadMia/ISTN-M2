@@ -59,6 +59,10 @@ Partial Class PRODUCTS
         Me.Label4 = New System.Windows.Forms.Label()
         Me.PRODUCTSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TblProductsTableAdapter = New M2.SkyliteDBTableAdapters.tblProductsTableAdapter()
+        Me.txbDescription = New System.Windows.Forms.TextBox()
+        Me.txbProdID = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.tblProducts, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblProductsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -69,6 +73,10 @@ Partial Class PRODUCTS
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.Label11)
+        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.txbProdID)
+        Me.Panel1.Controls.Add(Me.txbDescription)
         Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.Label10)
         Me.Panel1.Controls.Add(Me.Button1)
@@ -113,7 +121,7 @@ Partial Class PRODUCTS
         '
         Me.Label10.AutoSize = True
         Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label10.Location = New System.Drawing.Point(603, 235)
+        Me.Label10.Location = New System.Drawing.Point(603, 205)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(55, 13)
         Me.Label10.TabIndex = 41
@@ -135,7 +143,7 @@ Partial Class PRODUCTS
         '
         Me.Label9.AutoSize = True
         Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label9.Location = New System.Drawing.Point(603, 209)
+        Me.Label9.Location = New System.Drawing.Point(604, 179)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(55, 13)
         Me.Label9.TabIndex = 40
@@ -146,7 +154,7 @@ Partial Class PRODUCTS
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Corbel Light", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(653, 39)
+        Me.Label5.Location = New System.Drawing.Point(650, 3)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(176, 29)
         Me.Label5.TabIndex = 61
@@ -156,7 +164,7 @@ Partial Class PRODUCTS
         '
         Me.Label8.AutoSize = True
         Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label8.Location = New System.Drawing.Point(603, 261)
+        Me.Label8.Location = New System.Drawing.Point(603, 231)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(46, 13)
         Me.Label8.TabIndex = 39
@@ -175,7 +183,7 @@ Partial Class PRODUCTS
         '
         Me.Label7.AutoSize = True
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(603, 183)
+        Me.Label7.Location = New System.Drawing.Point(604, 153)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(37, 13)
         Me.Label7.TabIndex = 38
@@ -195,7 +203,7 @@ Partial Class PRODUCTS
         'txbColor
         '
         Me.txbColor.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.txbColor.Location = New System.Drawing.Point(693, 180)
+        Me.txbColor.Location = New System.Drawing.Point(693, 150)
         Me.txbColor.Name = "txbColor"
         Me.txbColor.Size = New System.Drawing.Size(178, 20)
         Me.txbColor.TabIndex = 37
@@ -211,7 +219,7 @@ Partial Class PRODUCTS
         'txbSuppID
         '
         Me.txbSuppID.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.txbSuppID.Location = New System.Drawing.Point(693, 128)
+        Me.txbSuppID.Location = New System.Drawing.Point(693, 96)
         Me.txbSuppID.Name = "txbSuppID"
         Me.txbSuppID.Size = New System.Drawing.Size(178, 20)
         Me.txbSuppID.TabIndex = 36
@@ -231,7 +239,7 @@ Partial Class PRODUCTS
         'txbProdName
         '
         Me.txbProdName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.txbProdName.Location = New System.Drawing.Point(693, 100)
+        Me.txbProdName.Location = New System.Drawing.Point(693, 70)
         Me.txbProdName.Name = "txbProdName"
         Me.txbProdName.Size = New System.Drawing.Size(178, 20)
         Me.txbProdName.TabIndex = 35
@@ -239,7 +247,7 @@ Partial Class PRODUCTS
         'txbManufacturer
         '
         Me.txbManufacturer.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.txbManufacturer.Location = New System.Drawing.Point(693, 154)
+        Me.txbManufacturer.Location = New System.Drawing.Point(693, 124)
         Me.txbManufacturer.Name = "txbManufacturer"
         Me.txbManufacturer.Size = New System.Drawing.Size(178, 20)
         Me.txbManufacturer.TabIndex = 34
@@ -316,7 +324,7 @@ Partial Class PRODUCTS
         'txbQuantity
         '
         Me.txbQuantity.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.txbQuantity.Location = New System.Drawing.Point(693, 258)
+        Me.txbQuantity.Location = New System.Drawing.Point(693, 228)
         Me.txbQuantity.Name = "txbQuantity"
         Me.txbQuantity.Size = New System.Drawing.Size(178, 20)
         Me.txbQuantity.TabIndex = 33
@@ -336,7 +344,7 @@ Partial Class PRODUCTS
         'txbPrice
         '
         Me.txbPrice.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.txbPrice.Location = New System.Drawing.Point(693, 232)
+        Me.txbPrice.Location = New System.Drawing.Point(693, 202)
         Me.txbPrice.Name = "txbPrice"
         Me.txbPrice.Size = New System.Drawing.Size(178, 20)
         Me.txbPrice.TabIndex = 32
@@ -345,7 +353,7 @@ Partial Class PRODUCTS
         '
         Me.Label6.AutoSize = True
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(603, 131)
+        Me.Label6.Location = New System.Drawing.Point(604, 99)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(59, 13)
         Me.Label6.TabIndex = 26
@@ -354,7 +362,7 @@ Partial Class PRODUCTS
         'txbCost
         '
         Me.txbCost.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.txbCost.Location = New System.Drawing.Point(693, 206)
+        Me.txbCost.Location = New System.Drawing.Point(693, 176)
         Me.txbCost.Name = "txbCost"
         Me.txbCost.Size = New System.Drawing.Size(178, 20)
         Me.txbCost.TabIndex = 31
@@ -363,7 +371,7 @@ Partial Class PRODUCTS
         '
         Me.Label3.AutoSize = True
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(603, 103)
+        Me.Label3.Location = New System.Drawing.Point(603, 74)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(75, 13)
         Me.Label3.TabIndex = 27
@@ -373,7 +381,7 @@ Partial Class PRODUCTS
         '
         Me.Label4.AutoSize = True
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(603, 157)
+        Me.Label4.Location = New System.Drawing.Point(604, 127)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(70, 13)
         Me.Label4.TabIndex = 28
@@ -386,6 +394,42 @@ Partial Class PRODUCTS
         'TblProductsTableAdapter
         '
         Me.TblProductsTableAdapter.ClearBeforeFill = True
+        '
+        'txbDescription
+        '
+        Me.txbDescription.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.txbDescription.Location = New System.Drawing.Point(693, 254)
+        Me.txbDescription.Name = "txbDescription"
+        Me.txbDescription.Size = New System.Drawing.Size(178, 20)
+        Me.txbDescription.TabIndex = 63
+        '
+        'txbProdID
+        '
+        Me.txbProdID.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.txbProdID.Location = New System.Drawing.Point(693, 44)
+        Me.txbProdID.Name = "txbProdID"
+        Me.txbProdID.Size = New System.Drawing.Size(178, 20)
+        Me.txbProdID.TabIndex = 64
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(604, 47)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(58, 13)
+        Me.Label2.TabIndex = 65
+        Me.Label2.Text = "Product ID"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label11.Location = New System.Drawing.Point(603, 257)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(60, 13)
+        Me.Label11.TabIndex = 66
+        Me.Label11.Text = "Description"
         '
         'PRODUCTS
         '
@@ -441,4 +485,8 @@ Partial Class PRODUCTS
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Button2 As Button
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents txbProdID As TextBox
+    Friend WithEvents txbDescription As TextBox
 End Class

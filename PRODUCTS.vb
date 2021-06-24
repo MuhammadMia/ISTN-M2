@@ -29,22 +29,24 @@
     End Sub
 
     Private Sub btnRemoveProduct_Click(sender As Object, e As EventArgs) Handles btnRemoveProduct.Click
-        Dim selectedProduct As String = tblProducts.SelectedCells(0).Value
 
-        For Each row As DataRow In SkyliteDB.tblProducts.Rows
-            If row.ItemArray(0) = selectedProduct Then
-                SkyliteDB.tblProducts.Rows.Remove(row)
-                Exit For
-            End If
-        Next
+        Dim selectedProd As String = tblProducts.SelectedCells(0).Value
 
-        SkyliteDB.AcceptChanges()
+        Dim sql As String
+        sql = "DELETE FROM tblProducts WHERE Product_ID = '" & selectedProd & "';"
 
-        TblProductsTableAdapter.Update(SkyliteDB.tblProducts)
+        saveData(sql)
+
+        Me.tblProducts.DataSource = Nothing
+        Me.tblProducts.DataSource = SkyliteDB.tblProducts
+        Me.TblProductsTableAdapter.Fill(Me.SkyliteDB.tblProducts)
+
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim prodID As String
+
+        Dim prodID As String = txbProdID.Text
+        Dim prodDes As String = txbDescription.Text
         Dim suppID As String = txbSuppID.Text
         Dim prodName As String = txbProdName.Text
         Dim manufacturer As String = txbManufacturer.Text
@@ -53,22 +55,40 @@
         Dim sale As String = txbPrice.Text
         Dim stock As Integer = txbQuantity.Text
 
-        Dim row As DataRow = SkyliteDB.tblProducts.NewRow()
+        Dim sql As String
+        sql = "INSERT INTO tblProducts (Product_ID, Supplier_ID, Product_Name, Product_Description, Manufacturer, Colour, Cost_Price, Sale_Price, Current_Stock) VALUES ('" & prodID & "','" & suppID & "','" & prodName & "','" & prodDes & "','" & manufacturer & "','" & color & "','" & cost & "','" & sale & "','" & stock & "')"
 
-        prodID = "P00000000" + (SkyliteDB.tblProducts.Rows.Count + 1).ToString()
+        saveData(sql)
 
-        row("Product_ID") = prodID
-        row("Supplier_ID") = suppID
-        row("Product_Name") = prodName
-        row("Product_Description") = "lorem Ipsum"
-        row("Manufacturer") = manufacturer
-        row("Colour") = color
-        row("Cost_Price") = cost
-        row("Sale_Price") = sale
-        row("Current_Stock") = stock
+        Me.tblProducts.DataSource = Nothing
+        Me.tblProducts.DataSource = SkyliteDB.tblProducts
+        Me.TblProductsTableAdapter.Fill(Me.SkyliteDB.tblProducts)
 
-        SkyliteDB.tblProducts.Rows.Add(row)
-        SkyliteDB.tblProducts.AcceptChanges()
+    End Sub
+
+    Private Sub saveData(sql As String)
+
+        Dim con As System.Data.SqlClient.SqlConnection = New System.Data.SqlClient.SqlConnection("Data Source=34.67.177.192;Initial Catalog=SkyliteDB;Persist Security Info=True;User ID=sqlserver;Password=istn")
+        Dim cmd As System.Data.SqlClient.SqlCommand
+        Dim result As Integer
+        Try
+            con.Open()
+            cmd = New System.Data.SqlClient.SqlCommand
+            With cmd
+                .Connection = con
+                .CommandText = sql
+                result = .ExecuteNonQuery()
+            End With
+            If result > 0 Then
+                MsgBox("Data has been saved in the databse")
+            End If
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            con.Close()
+        End Try
+
     End Sub
 
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
@@ -77,19 +97,25 @@
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Dim rowNum As Int16 = tblProducts.CurrentCell.RowIndex
 
-        SkyliteDB.tblProducts.Rows(rowNum)("Product_Name") = txbProdName.Text
-        SkyliteDB.tblProducts.Rows(rowNum)("Supplier_ID") = txbSuppID.Text
-        SkyliteDB.tblProducts.Rows(rowNum)("Product_Description") = "Lorum Ipsum"
-        SkyliteDB.tblProducts.Rows(rowNum)("Manufacturer") = txbManufacturer.Text
-        SkyliteDB.tblProducts.Rows(rowNum)("Colour") = txbColor.Text
-        SkyliteDB.tblProducts.Rows(rowNum)("Cost_Price") = txbCost.Text
-        SkyliteDB.tblProducts.Rows(rowNum)("Sale_Price") = txbPrice.Text
-        SkyliteDB.tblProducts.Rows(rowNum)("Current_Stock") = txbQuantity.Text
+        Dim prodID As String = txbProdID.Text
+        Dim prodDes As String = txbDescription.Text
+        Dim suppID As String = txbSuppID.Text
+        Dim prodName As String = txbProdName.Text
+        Dim manufacturer As String = txbManufacturer.Text
+        Dim color As String = txbColor.Text
+        Dim cost As String = txbCost.Text
+        Dim sale As String = txbPrice.Text
+        Dim stock As Integer = txbQuantity.Text
 
-        SkyliteDB.AcceptChanges()
-        TblProductsTableAdapter.Update(SkyliteDB.tblProducts)
+        Dim sql As String
+        sql = "UPDATE tblProducts SET Product_ID = '" & prodID & "', Supplier_ID = '" & suppID & "', " & "Product_Name = '" & prodName & "', " & "Product_Description = '" & prodDes & "', " & "Manufacturer = '" & manufacturer & "', " & "Colour = '" & color & "', " & "Cost_Price = '" & cost & "', " & "Sale_Price = '" & sale & "', " & "Current_Stock = '" & stock & "' WHERE Product_ID = '" & prodID & "';"
+
+        saveData(sql)
+
+        Me.tblProducts.DataSource = Nothing
+        Me.tblProducts.DataSource = SkyliteDB.tblProducts
+        Me.TblProductsTableAdapter.Fill(Me.SkyliteDB.tblProducts)
 
     End Sub
 End Class
