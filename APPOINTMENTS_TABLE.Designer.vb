@@ -23,8 +23,13 @@ Partial Class APPOINTMENTS_TABLE
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button8 = New System.Windows.Forms.Button()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -36,13 +41,8 @@ Partial Class APPOINTMENTS_TABLE
         Me.tblSuppliers = New System.Windows.Forms.DataGridView()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button8 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.tblSuppliers, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -75,29 +75,57 @@ Partial Class APPOINTMENTS_TABLE
         Me.Panel1.Size = New System.Drawing.Size(894, 426)
         Me.Panel1.TabIndex = 9
         '
-        'Label1
+        'TextBox6
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Corbel Light", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(120, 9)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(358, 59)
-        Me.Label1.TabIndex = 63
-        Me.Label1.Text = "APPOINTMENTS"
+        Me.TextBox6.Location = New System.Drawing.Point(689, 230)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(173, 20)
+        Me.TextBox6.TabIndex = 88
         '
-        'Button8
+        'TextBox4
         '
-        Me.Button8.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button8.Font = New System.Drawing.Font("Corbel", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button8.ForeColor = System.Drawing.Color.White
-        Me.Button8.Location = New System.Drawing.Point(3, 3)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(79, 28)
-        Me.Button8.TabIndex = 18
-        Me.Button8.Text = "BACK"
-        Me.Button8.UseVisualStyleBackColor = False
+        Me.TextBox4.Location = New System.Drawing.Point(689, 204)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(173, 20)
+        Me.TextBox4.TabIndex = 87
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Location = New System.Drawing.Point(689, 152)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(173, 20)
+        Me.DateTimePicker1.TabIndex = 86
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Location = New System.Drawing.Point(689, 178)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(173, 20)
+        Me.TextBox5.TabIndex = 85
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(689, 126)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(173, 20)
+        Me.TextBox3.TabIndex = 83
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(689, 100)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(173, 20)
+        Me.TextBox2.TabIndex = 82
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(595, 237)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(37, 13)
+        Me.Label2.TabIndex = 81
+        Me.Label2.Text = "Status"
         '
         'Button3
         '
@@ -213,57 +241,29 @@ Partial Class APPOINTMENTS_TABLE
         Me.Label4.TabIndex = 68
         Me.Label4.Text = "Employee ID"
         '
-        'Label2
+        'Label1
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(595, 237)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(37, 13)
-        Me.Label2.TabIndex = 81
-        Me.Label2.Text = "Status"
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Corbel Light", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(120, 9)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(358, 59)
+        Me.Label1.TabIndex = 63
+        Me.Label1.Text = "APPOINTMENTS"
         '
-        'TextBox2
+        'Button8
         '
-        Me.TextBox2.Location = New System.Drawing.Point(689, 100)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(173, 20)
-        Me.TextBox2.TabIndex = 82
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(689, 126)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(173, 20)
-        Me.TextBox3.TabIndex = 83
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Location = New System.Drawing.Point(689, 178)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(173, 20)
-        Me.TextBox5.TabIndex = 85
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(689, 152)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(173, 20)
-        Me.DateTimePicker1.TabIndex = 86
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(689, 204)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(173, 20)
-        Me.TextBox4.TabIndex = 87
-        '
-        'TextBox6
-        '
-        Me.TextBox6.Location = New System.Drawing.Point(689, 230)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(173, 20)
-        Me.TextBox6.TabIndex = 88
+        Me.Button8.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button8.Font = New System.Drawing.Font("Corbel", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button8.ForeColor = System.Drawing.Color.White
+        Me.Button8.Location = New System.Drawing.Point(3, 3)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(79, 28)
+        Me.Button8.TabIndex = 18
+        Me.Button8.Text = "BACK"
+        Me.Button8.UseVisualStyleBackColor = False
         '
         'APPOINTMENTS_TABLE
         '

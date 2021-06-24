@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class EMPLOYEES
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class EMPLOYEES
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -46,9 +46,7 @@ Partial Class EMPLOYEES
         Me.TblEmployeesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SkyliteDBBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SkyliteDB = New M2.SkyliteDB()
-        Me.txbLName = New System.Windows.Forms.TextBox()
-        Me.txbFName = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.txbName = New System.Windows.Forms.TextBox()
         Me.txbEmpID = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txbPass = New System.Windows.Forms.TextBox()
@@ -81,9 +79,7 @@ Partial Class EMPLOYEES
         Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.txbCell)
         Me.Panel1.Controls.Add(Me.tblEmployees)
-        Me.Panel1.Controls.Add(Me.txbLName)
-        Me.Panel1.Controls.Add(Me.txbFName)
-        Me.Panel1.Controls.Add(Me.Label6)
+        Me.Panel1.Controls.Add(Me.txbName)
         Me.Panel1.Controls.Add(Me.txbEmpID)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.txbPass)
@@ -282,28 +278,12 @@ Partial Class EMPLOYEES
         Me.SkyliteDB.DataSetName = "SkyliteDB"
         Me.SkyliteDB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'txbLName
+        'txbName
         '
-        Me.txbLName.Location = New System.Drawing.Point(688, 128)
-        Me.txbLName.Name = "txbLName"
-        Me.txbLName.Size = New System.Drawing.Size(178, 20)
-        Me.txbLName.TabIndex = 52
-        '
-        'txbFName
-        '
-        Me.txbFName.Location = New System.Drawing.Point(687, 102)
-        Me.txbFName.Name = "txbFName"
-        Me.txbFName.Size = New System.Drawing.Size(178, 20)
-        Me.txbFName.TabIndex = 51
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(598, 131)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(58, 13)
-        Me.Label6.TabIndex = 43
-        Me.Label6.Text = "Last Name"
+        Me.txbName.Location = New System.Drawing.Point(687, 102)
+        Me.txbName.Name = "txbName"
+        Me.txbName.Size = New System.Drawing.Size(178, 20)
+        Me.txbName.TabIndex = 51
         '
         'txbEmpID
         '
@@ -317,9 +297,9 @@ Partial Class EMPLOYEES
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(598, 105)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(57, 13)
+        Me.Label3.Size = New System.Drawing.Size(84, 13)
         Me.Label3.TabIndex = 44
-        Me.Label3.Text = "First Name"
+        Me.Label3.Text = "Employee Name"
         '
         'txbPass
         '
@@ -395,14 +375,12 @@ Partial Class EMPLOYEES
     Friend WithEvents Label9 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents txbCell As TextBox
-    Friend WithEvents txbLName As TextBox
-    Friend WithEvents txbFName As TextBox
+    Friend WithEvents txbName As TextBox
     Friend WithEvents txbEmpID As TextBox
     Friend WithEvents txbPass As TextBox
     Friend WithEvents txbEmail As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label6 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents txbPosition As TextBox
     Friend WithEvents Button8 As Button
