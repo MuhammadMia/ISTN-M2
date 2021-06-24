@@ -32,7 +32,7 @@ Partial Class SUPPLIERS
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.tblSuppliers = New System.Windows.Forms.DataGridView()
+        Me.tblSuplliers = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -52,7 +52,7 @@ Partial Class SUPPLIERS
         Me.TblSuplliersTableAdapter = New M2.SkyliteDBTableAdapters.tblSuplliersTableAdapter()
         Me.SUPPLIERSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Panel1.SuspendLayout()
-        CType(Me.tblSuppliers, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.tblSuplliers, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblSuplliersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SUPPLIERSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -69,7 +69,7 @@ Partial Class SUPPLIERS
         Me.Panel1.Controls.Add(Me.Label9)
         Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.Label8)
-        Me.Panel1.Controls.Add(Me.tblSuppliers)
+        Me.Panel1.Controls.Add(Me.tblSuplliers)
         Me.Panel1.Controls.Add(Me.txbSuppID)
         Me.Panel1.Controls.Add(Me.Button8)
         Me.Panel1.Controls.Add(Me.txbSuppName)
@@ -172,16 +172,16 @@ Partial Class SUPPLIERS
         Me.Label8.TabIndex = 55
         Me.Label8.Text = "Address"
         '
-        'tblSuppliers
+        'tblSuplliers
         '
-        Me.tblSuppliers.AutoGenerateColumns = False
-        Me.tblSuppliers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.tblSuppliers.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5})
-        Me.tblSuppliers.DataSource = Me.TblSuplliersBindingSource
-        Me.tblSuppliers.Location = New System.Drawing.Point(29, 100)
-        Me.tblSuppliers.Name = "tblSuppliers"
-        Me.tblSuppliers.Size = New System.Drawing.Size(543, 302)
-        Me.tblSuppliers.TabIndex = 15
+        Me.tblSuplliers.AutoGenerateColumns = False
+        Me.tblSuplliers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.tblSuplliers.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5})
+        Me.tblSuplliers.DataSource = Me.TblSuplliersBindingSource
+        Me.tblSuplliers.Location = New System.Drawing.Point(29, 100)
+        Me.tblSuplliers.Name = "tblSuplliers"
+        Me.tblSuplliers.Size = New System.Drawing.Size(543, 302)
+        Me.tblSuplliers.TabIndex = 15
         '
         'DataGridViewTextBoxColumn1
         '
@@ -324,7 +324,7 @@ Partial Class SUPPLIERS
         Me.Text = "SUPPLIERS"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.tblSuppliers, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.tblSuplliers, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TblSuplliersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SUPPLIERSBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -335,7 +335,7 @@ Partial Class SUPPLIERS
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Button8 As Button
     Friend WithEvents Label1 As Label
-    Friend WithEvents tblSuppliers As DataGridView
+    Friend WithEvents tblSuplliers As DataGridView
     Friend WithEvents SUPPLIERSBindingSource As BindingSource
     Friend WithEvents SupplierIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents SupplierNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn

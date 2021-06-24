@@ -23,12 +23,12 @@ Partial Class ADMIN_LOGIN
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -45,6 +45,19 @@ Partial Class ADMIN_LOGIN
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(338, 202)
         Me.Panel1.TabIndex = 0
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Corbel", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.Color.White
+        Me.Button2.Location = New System.Drawing.Point(83, 134)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(163, 41)
+        Me.Button2.TabIndex = 5
+        Me.Button2.Text = "LOG IN"
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'TextBox2
         '
@@ -94,19 +107,6 @@ Partial Class ADMIN_LOGIN
         Me.Label1.Size = New System.Drawing.Size(216, 23)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "ADMINISTRATOR LOGIN"
-        '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Corbel", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(83, 146)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(163, 41)
-        Me.Button2.TabIndex = 5
-        Me.Button2.Text = "LOG IN"
-        Me.Button2.UseVisualStyleBackColor = False
         '
         'ADMIN_LOGIN
         '
