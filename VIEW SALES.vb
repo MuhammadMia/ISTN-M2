@@ -11,19 +11,43 @@
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Dim selectedSupp As String = DataGridView1.SelectedCells(0).Value
-        Dim suppTable As DataTable = SkyliteDB.tblSales
 
-        For Each row As DataRow In suppTable.Rows
-            If row.ItemArray(0) = selectedSupp Then
-                suppTable.Rows.Remove(row)
-                Exit For
+        Dim selectedSale As String = tblSales.SelectedCells(0).Value
+
+        Dim sql As String
+        sql = "DELETE FROM tblEmployees WHERE Employee_ID = '" & selectedSale & "';"
+
+        saveData(sql)
+
+        Me.tblSales.DataSource = Nothing
+        Me.tblSales.DataSource = SkyliteDB.tblSales
+        Me.TblSalesTableAdapter.Fill(Me.SkyliteDB.tblSales)
+
+    End Sub
+
+    Private Sub saveData(sql As String)
+
+        Dim con As System.Data.SqlClient.SqlConnection = New System.Data.SqlClient.SqlConnection("Data Source=34.67.177.192;Initial Catalog=SkyliteDB;Persist Security Info=True;User ID=sqlserver;Password=istn")
+        Dim cmd As System.Data.SqlClient.SqlCommand
+        Dim result As Integer
+        Try
+            con.Open()
+            cmd = New System.Data.SqlClient.SqlCommand
+            With cmd
+                .Connection = con
+                .CommandText = sql
+                result = .ExecuteNonQuery()
+            End With
+            If result > 0 Then
+                MsgBox("Data has been saved in the databse")
             End If
-        Next
 
-        SkyliteDB.AcceptChanges()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            con.Close()
+        End Try
 
-        TblSalesTableAdapter.Update(suppTable)
     End Sub
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged

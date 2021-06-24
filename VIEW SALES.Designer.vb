@@ -28,7 +28,7 @@ Partial Class VIEW_SALES
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.tblSales = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -43,7 +43,7 @@ Partial Class VIEW_SALES
         Me.SALESBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TblSalesTableAdapter = New M2.SkyliteDBTableAdapters.tblSalesTableAdapter()
         Me.Panel1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.tblSales, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblSalesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SkyliteDBBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -57,7 +57,7 @@ Partial Class VIEW_SALES
         Me.Panel1.Controls.Add(Me.TextBox1)
         Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Controls.Add(Me.DataGridView1)
+        Me.Panel1.Controls.Add(Me.tblSales)
         Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.Button8)
         Me.Panel1.Location = New System.Drawing.Point(12, 12)
@@ -109,16 +109,16 @@ Partial Class VIEW_SALES
         Me.Label1.TabIndex = 17
         Me.Label1.Text = "SALES"
         '
-        'DataGridView1
+        'tblSales
         '
-        Me.DataGridView1.AutoGenerateColumns = False
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
-        Me.DataGridView1.DataSource = Me.TblSalesBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(62, 111)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(643, 283)
-        Me.DataGridView1.TabIndex = 16
+        Me.tblSales.AutoGenerateColumns = False
+        Me.tblSales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.tblSales.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
+        Me.tblSales.DataSource = Me.TblSalesBindingSource
+        Me.tblSales.Location = New System.Drawing.Point(62, 111)
+        Me.tblSales.Name = "tblSales"
+        Me.tblSales.Size = New System.Drawing.Size(643, 283)
+        Me.tblSales.TabIndex = 16
         '
         'DataGridViewTextBoxColumn1
         '
@@ -215,7 +215,7 @@ Partial Class VIEW_SALES
         Me.Text = "VIEW_SALES"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.tblSales, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TblSalesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SkyliteDBBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).EndInit()
@@ -226,7 +226,7 @@ Partial Class VIEW_SALES
 
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Button8 As Button
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents tblSales As DataGridView
     Friend WithEvents Button1 As Button
     Friend WithEvents SALESBindingSource As BindingSource
     Friend WithEvents SaleNumberDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
