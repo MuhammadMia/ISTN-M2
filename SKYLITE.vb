@@ -112,8 +112,8 @@
     End Sub
 
     Private Sub btnLogOut_Click(sender As Object, e As EventArgs) Handles btnLogOut.Click
-        btnLogIn.Enabled = False
-        btnLogOut.Enabled = True
+        btnLogIn.Enabled = True
+        btnLogOut.Enabled = False
 
         MessageBox.Show("Logged out")
     End Sub

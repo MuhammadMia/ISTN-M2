@@ -39,12 +39,41 @@
         row("Employee_ID") = empID
         row("Employee_Name") = name
         row("Employee_Email") = email
-        row("Employee_Telephone") = cell
+        row("Employee_Cell") = cell
         row("Employee_Password") = password
         row("Employee_Position") = position
 
         SkyliteDB.tblEmployees.Rows.Add(row)
         SkyliteDB.AcceptChanges()
+
+        Dim sql As String
+        sql = "INSERT INTO tblEmployees (Employee_ID, Employee_Name, Employee_Email, Employee_Cell, Employee_Password, Employee_Position) VALUES ('" & empID & "','" & name & "','" & email & "','" & cell & "','" & password & "','" & position & "')"
+
+        saveData(sql)
+
+    End Sub
+
+    Private Sub saveData(sql As String)
+        Dim con As System.Data.SqlClient.SqlConnection = New System.Data.SqlClient.SqlConnection("Data Source=34.67.177.192;Initial Catalog=SkyliteDB;Persist Security Info=True;User ID=sqlserver;Password=istn")
+        Dim cmd As System.Data.SqlClient.SqlCommand
+        Dim result As Integer
+        Try
+            con.Open()
+            cmd = New System.Data.SqlClient.SqlCommand
+            With cmd
+                .Connection = con
+                .CommandText = sql
+                Result = .ExecuteNonQuery()
+            End With
+            If Result > 0 Then
+                MsgBox("Data has been saved in the databse")
+            End If
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            con.Close()
+        End Try
     End Sub
 
     Private Sub txbLName_TextChanged(sender As Object, e As EventArgs)
@@ -76,10 +105,6 @@
 
         SkyliteDB.AcceptChanges()
         TblEmployeesTableAdapter.Update(SkyliteDB.tblEmployees)
-    End Sub
-
-    Private Sub Button8_Click_1(sender As Object, e As EventArgs) Handles Button8.Click
-        Me.Close()
     End Sub
 
     Private Sub Button8_Click_1(sender As Object, e As EventArgs) Handles Button8.Click

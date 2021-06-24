@@ -173,6 +173,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SkyliteDB.xsd</DependentUpon>
     </Compile>
+    <Compile Include="SkyliteDBGCP.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SkyliteDBGCP.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SUPPLIERS.Designer.vb">
       <DependentUpon>SUPPLIERS.vb</DependentUpon>
     </Compile>
@@ -260,6 +265,17 @@
     </None>
     <None Include="SkyliteDB.xss">
       <DependentUpon>SkyliteDB.xsd</DependentUpon>
+    </None>
+    <None Include="SkyliteDBGCP.xsc">
+      <DependentUpon>SkyliteDBGCP.xsd</DependentUpon>
+    </None>
+    <None Include="SkyliteDBGCP.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SkyliteDBGCP.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SkyliteDBGCP.xss">
+      <DependentUpon>SkyliteDBGCP.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
