@@ -38,7 +38,6 @@ Partial Class VIEW_SALES
         Me.TblSalesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SkyliteDBBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SkyliteDB = New M2.SkyliteDB()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.SALESBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TblSalesTableAdapter = New M2.SkyliteDBTableAdapters.tblSalesTableAdapter()
@@ -58,7 +57,6 @@ Partial Class VIEW_SALES
         Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.tblSales)
-        Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.Button8)
         Me.Panel1.Location = New System.Drawing.Point(12, 12)
         Me.Panel1.Name = "Panel1"
@@ -171,19 +169,6 @@ Partial Class VIEW_SALES
         Me.SkyliteDB.DataSetName = "SkyliteDB"
         Me.SkyliteDB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Corbel", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(694, 3)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(79, 28)
-        Me.Button1.TabIndex = 15
-        Me.Button1.Text = "HOME"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
         'Button8
         '
         Me.Button8.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
@@ -227,7 +212,6 @@ Partial Class VIEW_SALES
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Button8 As Button
     Friend WithEvents tblSales As DataGridView
-    Friend WithEvents Button1 As Button
     Friend WithEvents SALESBindingSource As BindingSource
     Friend WithEvents SaleNumberDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ClientIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn

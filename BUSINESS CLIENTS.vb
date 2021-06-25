@@ -91,4 +91,8 @@
         Me.TblClientsBusinessTableAdapter.Fill(Me.SkyliteDB.tblClientsBusiness)
 
     End Sub
+
+    Private Sub tblClientsBusiness_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles tblClientsBusiness.CellContentClick
+
+    End Sub
 End Class

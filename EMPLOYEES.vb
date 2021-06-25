@@ -3,7 +3,6 @@
         'TODO: This line of code loads data into the 'SkyliteDB.tblEmployees' table. You can move, or remove it, as needed.
         Me.TblEmployeesTableAdapter.Fill(Me.SkyliteDB.tblEmployees)
         'TODO: This line of code loads data into the 'Group26DataSet6.EMPLOYEES' table. You can move, or remove it, as needed.
-
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
