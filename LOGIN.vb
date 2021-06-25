@@ -12,15 +12,22 @@
         Dim userIndex As Int16 = 0
 
         For Each row As DataRow In empTable.Rows
-            If uname = row.Field(Of String)("Employee_ID") Then
+            If String.Compare(uname, empTable.Rows(userIndex).ItemArray(0).ToString) = 0 Then
                 Exit For
             Else
-                userIndex = userIndex + 1
+                userIndex += 1
             End If
 
         Next
 
-        If empTable.Rows(userIndex)("Employee_Password") = pass Then
+        If userIndex >= empTable.Rows.Count Then
+            MessageBox.Show("Incorrect Username / Password Combination!")
+            Exit Sub
+        End If
+
+        Dim empPass As String = empTable.Rows(userIndex)("Employee_Password")
+
+        If String.Compare(pass, empPass) = 0 Then
             Me.Close()
         Else
             MessageBox.Show("Incorrect Username / Password Combination!")

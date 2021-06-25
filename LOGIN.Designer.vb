@@ -28,11 +28,11 @@ Partial Class LOGIN
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.cmbUser = New System.Windows.Forms.ComboBox()
         Me.TblEmployeesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SkyliteDB = New M2.SkyliteDB()
         Me.TblEmployeesTableAdapter = New M2.SkyliteDBTableAdapters.tblEmployeesTableAdapter()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.TblEmployeesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -96,10 +96,21 @@ Partial Class LOGIN
         Me.Panel1.Size = New System.Drawing.Size(338, 202)
         Me.Panel1.TabIndex = 6
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Corbel", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(98, 13)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(135, 23)
+        Me.Label1.TabIndex = 7
+        Me.Label1.Text = "PLEASE LOGIN"
+        '
         'cmbUser
         '
         Me.cmbUser.DataSource = Me.TblEmployeesBindingSource
-        Me.cmbUser.DisplayMember = "Employee_Name"
+        Me.cmbUser.DisplayMember = "Employee_ID"
         Me.cmbUser.FormattingEnabled = True
         Me.cmbUser.Location = New System.Drawing.Point(84, 70)
         Me.cmbUser.Name = "cmbUser"
@@ -120,17 +131,6 @@ Partial Class LOGIN
         'TblEmployeesTableAdapter
         '
         Me.TblEmployeesTableAdapter.ClearBeforeFill = True
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Corbel", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(98, 13)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(135, 23)
-        Me.Label1.TabIndex = 7
-        Me.Label1.Text = "PLEASE LOGIN"
         '
         'LOGIN
         '
