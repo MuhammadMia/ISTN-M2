@@ -33,6 +33,7 @@ Partial Class SKYLITE
         Me.btnLogIn = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
+        Me.btnAdminLogOut = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -104,6 +105,7 @@ Partial Class SKYLITE
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.btnAdminLogOut)
         Me.Panel1.Controls.Add(Me.btnLogOut)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.btnLogIn)
@@ -183,6 +185,21 @@ Partial Class SKYLITE
         Me.Button5.Text = "APPOINTMENTS"
         Me.Button5.UseVisualStyleBackColor = False
         '
+        'btnAdminLogOut
+        '
+        Me.btnAdminLogOut.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnAdminLogOut.Enabled = False
+        Me.btnAdminLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAdminLogOut.Font = New System.Drawing.Font("Corbel", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAdminLogOut.ForeColor = System.Drawing.Color.White
+        Me.btnAdminLogOut.Location = New System.Drawing.Point(645, 3)
+        Me.btnAdminLogOut.Name = "btnAdminLogOut"
+        Me.btnAdminLogOut.Size = New System.Drawing.Size(128, 28)
+        Me.btnAdminLogOut.TabIndex = 20
+        Me.btnAdminLogOut.Text = "ADMIN LOG OUT"
+        Me.btnAdminLogOut.UseVisualStyleBackColor = False
+        Me.btnAdminLogOut.Visible = False
+        '
         'SKYLITE
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -208,4 +225,5 @@ Partial Class SKYLITE
     Friend WithEvents btnLogIn As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents btnLogOut As Button
+    Friend WithEvents btnAdminLogOut As Button
 End Class

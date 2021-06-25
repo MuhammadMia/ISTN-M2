@@ -24,8 +24,8 @@ Partial Class ADMIN_LOGIN
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txbPass = New System.Windows.Forms.TextBox()
+        Me.txbUser = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -36,8 +36,8 @@ Partial Class ADMIN_LOGIN
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
         Me.Panel1.Controls.Add(Me.Button2)
-        Me.Panel1.Controls.Add(Me.TextBox2)
-        Me.Panel1.Controls.Add(Me.TextBox1)
+        Me.Panel1.Controls.Add(Me.txbPass)
+        Me.Panel1.Controls.Add(Me.txbUser)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
@@ -59,21 +59,21 @@ Partial Class ADMIN_LOGIN
         Me.Button2.Text = "LOG IN"
         Me.Button2.UseVisualStyleBackColor = False
         '
-        'TextBox2
+        'txbPass
         '
-        Me.TextBox2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.TextBox2.Location = New System.Drawing.Point(83, 108)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(163, 20)
-        Me.TextBox2.TabIndex = 4
+        Me.txbPass.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.txbPass.Location = New System.Drawing.Point(83, 108)
+        Me.txbPass.Name = "txbPass"
+        Me.txbPass.Size = New System.Drawing.Size(163, 20)
+        Me.txbPass.TabIndex = 4
         '
-        'TextBox1
+        'txbUser
         '
-        Me.TextBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.TextBox1.Location = New System.Drawing.Point(83, 68)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(163, 20)
-        Me.TextBox1.TabIndex = 3
+        Me.txbUser.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.txbUser.Location = New System.Drawing.Point(83, 68)
+        Me.txbUser.Name = "txbUser"
+        Me.txbUser.Size = New System.Drawing.Size(163, 20)
+        Me.txbUser.TabIndex = 3
         '
         'Label3
         '
@@ -123,8 +123,8 @@ Partial Class ADMIN_LOGIN
     End Sub
 
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txbPass As TextBox
+    Friend WithEvents txbUser As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label

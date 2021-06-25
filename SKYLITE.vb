@@ -78,15 +78,22 @@
 
     End Sub
 
+    Dim adminLoggedIn As Boolean = False
+
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        If btnLogOut.Enabled = True Then
+        If adminLoggedIn = True Then
             Dim form As EMPLOYEES
             form = New EMPLOYEES
             Me.Hide()
             form.ShowDialog()
             Me.Show()
         Else
-            MessageBox.Show("Please log in first")
+            MessageBox.Show("Please log in as an Administrator first")
+            Dim adminLogin As ADMIN_LOGIN = New ADMIN_LOGIN
+            adminLogin.ShowDialog()
+            adminLoggedIn = True
+            btnAdminLogOut.Visible = True
+            btnAdminLogOut.Enabled = True
         End If
 
     End Sub
@@ -116,5 +123,11 @@
         btnLogOut.Enabled = False
 
         MessageBox.Show("Logged out")
+    End Sub
+
+    Private Sub btnAdminLogOut_Click(sender As Object, e As EventArgs) Handles btnAdminLogOut.Click
+        adminLoggedIn = False
+        btnAdminLogOut.Visible = False
+        btnAdminLogOut.Enabled = False
     End Sub
 End Class
