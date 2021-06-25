@@ -180,7 +180,7 @@ Partial Class SKYLITE
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(185, 57)
         Me.Button5.TabIndex = 5
-        Me.Button5.Text = "APOINTMENTS"
+        Me.Button5.Text = "APPOINTMENTS"
         Me.Button5.UseVisualStyleBackColor = False
         '
         'SKYLITE

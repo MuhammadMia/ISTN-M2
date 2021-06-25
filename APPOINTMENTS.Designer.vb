@@ -25,6 +25,19 @@ Partial Class APPOINTMENTS
         Me.components = New System.ComponentModel.Container()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.txbAppNum = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
+        Me.tblAppointments = New System.Windows.Forms.DataGridView()
+        Me.AppNumberDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ClientIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmployeeIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AppDateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AppTimeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AppDetailsDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AppStatusDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.APPOINTMENTSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SkyliteDB = New M2.SkyliteDB()
         Me.txbStatus = New System.Windows.Forms.TextBox()
         Me.txbDetails = New System.Windows.Forms.TextBox()
         Me.txbTime = New System.Windows.Forms.TextBox()
@@ -42,25 +55,12 @@ Partial Class APPOINTMENTS
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.tblAppointments = New System.Windows.Forms.DataGridView()
-        Me.SkyliteDB = New M2.SkyliteDB()
-        Me.APPOINTMENTSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.APPOINTMENTSTableAdapter = New M2.SkyliteDBTableAdapters.APPOINTMENTSTableAdapter()
-        Me.AppNumberDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ClientIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EmployeeIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AppDateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AppTimeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AppDetailsDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AppStatusDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
-        Me.txbDate = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.txbAppNum = New System.Windows.Forms.TextBox()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Panel1.SuspendLayout()
         CType(Me.tblAppointments, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.APPOINTMENTSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button8
@@ -79,9 +79,9 @@ Partial Class APPOINTMENTS
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.DateTimePicker1)
         Me.Panel1.Controls.Add(Me.txbAppNum)
         Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Controls.Add(Me.txbDate)
         Me.Panel1.Controls.Add(Me.MonthCalendar1)
         Me.Panel1.Controls.Add(Me.tblAppointments)
         Me.Panel1.Controls.Add(Me.txbStatus)
@@ -106,6 +106,93 @@ Partial Class APPOINTMENTS
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1077, 430)
         Me.Panel1.TabIndex = 19
+        '
+        'txbAppNum
+        '
+        Me.txbAppNum.Location = New System.Drawing.Point(889, 102)
+        Me.txbAppNum.Name = "txbAppNum"
+        Me.txbAppNum.Size = New System.Drawing.Size(173, 20)
+        Me.txbAppNum.TabIndex = 93
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label3.Location = New System.Drawing.Point(795, 105)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(86, 13)
+        Me.Label3.TabIndex = 92
+        Me.Label3.Text = "Appointment No."
+        '
+        'MonthCalendar1
+        '
+        Me.MonthCalendar1.CalendarDimensions = New System.Drawing.Size(1, 2)
+        Me.MonthCalendar1.Location = New System.Drawing.Point(16, 100)
+        Me.MonthCalendar1.Name = "MonthCalendar1"
+        Me.MonthCalendar1.TabIndex = 90
+        '
+        'tblAppointments
+        '
+        Me.tblAppointments.AutoGenerateColumns = False
+        Me.tblAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.tblAppointments.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.AppNumberDataGridViewTextBoxColumn, Me.ClientIDDataGridViewTextBoxColumn, Me.EmployeeIDDataGridViewTextBoxColumn, Me.AppDateDataGridViewTextBoxColumn, Me.AppTimeDataGridViewTextBoxColumn, Me.AppDetailsDataGridViewTextBoxColumn, Me.AppStatusDataGridViewTextBoxColumn})
+        Me.tblAppointments.DataSource = Me.APPOINTMENTSBindingSource
+        Me.tblAppointments.Location = New System.Drawing.Point(250, 107)
+        Me.tblAppointments.Name = "tblAppointments"
+        Me.tblAppointments.Size = New System.Drawing.Size(536, 295)
+        Me.tblAppointments.TabIndex = 89
+        '
+        'AppNumberDataGridViewTextBoxColumn
+        '
+        Me.AppNumberDataGridViewTextBoxColumn.DataPropertyName = "App_Number"
+        Me.AppNumberDataGridViewTextBoxColumn.HeaderText = "App_Number"
+        Me.AppNumberDataGridViewTextBoxColumn.Name = "AppNumberDataGridViewTextBoxColumn"
+        '
+        'ClientIDDataGridViewTextBoxColumn
+        '
+        Me.ClientIDDataGridViewTextBoxColumn.DataPropertyName = "Client_ID"
+        Me.ClientIDDataGridViewTextBoxColumn.HeaderText = "Client_ID"
+        Me.ClientIDDataGridViewTextBoxColumn.Name = "ClientIDDataGridViewTextBoxColumn"
+        '
+        'EmployeeIDDataGridViewTextBoxColumn
+        '
+        Me.EmployeeIDDataGridViewTextBoxColumn.DataPropertyName = "Employee_ID"
+        Me.EmployeeIDDataGridViewTextBoxColumn.HeaderText = "Employee_ID"
+        Me.EmployeeIDDataGridViewTextBoxColumn.Name = "EmployeeIDDataGridViewTextBoxColumn"
+        '
+        'AppDateDataGridViewTextBoxColumn
+        '
+        Me.AppDateDataGridViewTextBoxColumn.DataPropertyName = "App_Date"
+        Me.AppDateDataGridViewTextBoxColumn.HeaderText = "App_Date"
+        Me.AppDateDataGridViewTextBoxColumn.Name = "AppDateDataGridViewTextBoxColumn"
+        '
+        'AppTimeDataGridViewTextBoxColumn
+        '
+        Me.AppTimeDataGridViewTextBoxColumn.DataPropertyName = "App_Time"
+        Me.AppTimeDataGridViewTextBoxColumn.HeaderText = "App_Time"
+        Me.AppTimeDataGridViewTextBoxColumn.Name = "AppTimeDataGridViewTextBoxColumn"
+        '
+        'AppDetailsDataGridViewTextBoxColumn
+        '
+        Me.AppDetailsDataGridViewTextBoxColumn.DataPropertyName = "App_Details"
+        Me.AppDetailsDataGridViewTextBoxColumn.HeaderText = "App_Details"
+        Me.AppDetailsDataGridViewTextBoxColumn.Name = "AppDetailsDataGridViewTextBoxColumn"
+        '
+        'AppStatusDataGridViewTextBoxColumn
+        '
+        Me.AppStatusDataGridViewTextBoxColumn.DataPropertyName = "App_Status"
+        Me.AppStatusDataGridViewTextBoxColumn.HeaderText = "App_Status"
+        Me.AppStatusDataGridViewTextBoxColumn.Name = "AppStatusDataGridViewTextBoxColumn"
+        '
+        'APPOINTMENTSBindingSource
+        '
+        Me.APPOINTMENTSBindingSource.DataMember = "APPOINTMENTS"
+        Me.APPOINTMENTSBindingSource.DataSource = Me.SkyliteDB
+        '
+        'SkyliteDB
+        '
+        Me.SkyliteDB.DataSetName = "SkyliteDB"
+        Me.SkyliteDB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'txbStatus
         '
@@ -269,103 +356,16 @@ Partial Class APPOINTMENTS
         Me.Label1.TabIndex = 63
         Me.Label1.Text = "APPOINTMENTS"
         '
-        'tblAppointments
-        '
-        Me.tblAppointments.AutoGenerateColumns = False
-        Me.tblAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.tblAppointments.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.AppNumberDataGridViewTextBoxColumn, Me.ClientIDDataGridViewTextBoxColumn, Me.EmployeeIDDataGridViewTextBoxColumn, Me.AppDateDataGridViewTextBoxColumn, Me.AppTimeDataGridViewTextBoxColumn, Me.AppDetailsDataGridViewTextBoxColumn, Me.AppStatusDataGridViewTextBoxColumn})
-        Me.tblAppointments.DataSource = Me.APPOINTMENTSBindingSource
-        Me.tblAppointments.Location = New System.Drawing.Point(250, 107)
-        Me.tblAppointments.Name = "tblAppointments"
-        Me.tblAppointments.Size = New System.Drawing.Size(536, 295)
-        Me.tblAppointments.TabIndex = 89
-        '
-        'SkyliteDB
-        '
-        Me.SkyliteDB.DataSetName = "SkyliteDB"
-        Me.SkyliteDB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'APPOINTMENTSBindingSource
-        '
-        Me.APPOINTMENTSBindingSource.DataMember = "APPOINTMENTS"
-        Me.APPOINTMENTSBindingSource.DataSource = Me.SkyliteDB
-        '
         'APPOINTMENTSTableAdapter
         '
         Me.APPOINTMENTSTableAdapter.ClearBeforeFill = True
         '
-        'AppNumberDataGridViewTextBoxColumn
+        'DateTimePicker1
         '
-        Me.AppNumberDataGridViewTextBoxColumn.DataPropertyName = "App_Number"
-        Me.AppNumberDataGridViewTextBoxColumn.HeaderText = "App_Number"
-        Me.AppNumberDataGridViewTextBoxColumn.Name = "AppNumberDataGridViewTextBoxColumn"
-        '
-        'ClientIDDataGridViewTextBoxColumn
-        '
-        Me.ClientIDDataGridViewTextBoxColumn.DataPropertyName = "Client_ID"
-        Me.ClientIDDataGridViewTextBoxColumn.HeaderText = "Client_ID"
-        Me.ClientIDDataGridViewTextBoxColumn.Name = "ClientIDDataGridViewTextBoxColumn"
-        '
-        'EmployeeIDDataGridViewTextBoxColumn
-        '
-        Me.EmployeeIDDataGridViewTextBoxColumn.DataPropertyName = "Employee_ID"
-        Me.EmployeeIDDataGridViewTextBoxColumn.HeaderText = "Employee_ID"
-        Me.EmployeeIDDataGridViewTextBoxColumn.Name = "EmployeeIDDataGridViewTextBoxColumn"
-        '
-        'AppDateDataGridViewTextBoxColumn
-        '
-        Me.AppDateDataGridViewTextBoxColumn.DataPropertyName = "App_Date"
-        Me.AppDateDataGridViewTextBoxColumn.HeaderText = "App_Date"
-        Me.AppDateDataGridViewTextBoxColumn.Name = "AppDateDataGridViewTextBoxColumn"
-        '
-        'AppTimeDataGridViewTextBoxColumn
-        '
-        Me.AppTimeDataGridViewTextBoxColumn.DataPropertyName = "App_Time"
-        Me.AppTimeDataGridViewTextBoxColumn.HeaderText = "App_Time"
-        Me.AppTimeDataGridViewTextBoxColumn.Name = "AppTimeDataGridViewTextBoxColumn"
-        '
-        'AppDetailsDataGridViewTextBoxColumn
-        '
-        Me.AppDetailsDataGridViewTextBoxColumn.DataPropertyName = "App_Details"
-        Me.AppDetailsDataGridViewTextBoxColumn.HeaderText = "App_Details"
-        Me.AppDetailsDataGridViewTextBoxColumn.Name = "AppDetailsDataGridViewTextBoxColumn"
-        '
-        'AppStatusDataGridViewTextBoxColumn
-        '
-        Me.AppStatusDataGridViewTextBoxColumn.DataPropertyName = "App_Status"
-        Me.AppStatusDataGridViewTextBoxColumn.HeaderText = "App_Status"
-        Me.AppStatusDataGridViewTextBoxColumn.Name = "AppStatusDataGridViewTextBoxColumn"
-        '
-        'MonthCalendar1
-        '
-        Me.MonthCalendar1.CalendarDimensions = New System.Drawing.Size(1, 2)
-        Me.MonthCalendar1.Location = New System.Drawing.Point(16, 100)
-        Me.MonthCalendar1.Name = "MonthCalendar1"
-        Me.MonthCalendar1.TabIndex = 90
-        '
-        'txbDate
-        '
-        Me.txbDate.Location = New System.Drawing.Point(889, 180)
-        Me.txbDate.Name = "txbDate"
-        Me.txbDate.Size = New System.Drawing.Size(173, 20)
-        Me.txbDate.TabIndex = 91
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(795, 105)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(86, 13)
-        Me.Label3.TabIndex = 92
-        Me.Label3.Text = "Appointment No."
-        '
-        'txbAppNum
-        '
-        Me.txbAppNum.Location = New System.Drawing.Point(889, 102)
-        Me.txbAppNum.Name = "txbAppNum"
-        Me.txbAppNum.Size = New System.Drawing.Size(173, 20)
-        Me.txbAppNum.TabIndex = 93
+        Me.DateTimePicker1.Location = New System.Drawing.Point(889, 180)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(173, 20)
+        Me.DateTimePicker1.TabIndex = 94
         '
         'APPOINTMENTS
         '
@@ -378,8 +378,8 @@ Partial Class APPOINTMENTS
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.tblAppointments, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.APPOINTMENTSBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -415,7 +415,7 @@ Partial Class APPOINTMENTS
     Friend WithEvents AppTimeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents AppDetailsDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents AppStatusDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents txbDate As TextBox
     Friend WithEvents txbAppNum As TextBox
     Friend WithEvents Label3 As Label
+    Friend WithEvents DateTimePicker1 As DateTimePicker
 End Class

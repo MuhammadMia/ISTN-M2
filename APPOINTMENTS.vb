@@ -18,7 +18,7 @@
         Dim appNum As String = txbAppNum.Text
         Dim cliId As String = txbClientID.Text
         Dim empID As String = txbEmpID.Text
-        Dim date1 As Date = txbDate.Text
+        Dim date1 As Date = DateTimePicker1.Value
         Dim time As String = txbTime.Text
         Dim details As String = txbDetails.Text
         Dim status As String = txbStatus.Text
@@ -64,7 +64,7 @@
         Dim appNum As String = txbAppNum.Text
         Dim cliId As String = txbClientID.Text
         Dim empID As String = txbEmpID.Text
-        Dim date1 As Date = txbDate.Text
+        Dim date1 As Date = DateTimePicker1.Value
         Dim time As String = txbTime.Text
         Dim details As String = txbDetails.Text
         Dim status As String = txbStatus.Text
