@@ -14,4 +14,12 @@
         form.ShowDialog()
         Me.Show()
     End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim form As VIEW_SALES
+        form = New VIEW_SALES
+        Me.Hide()
+        form.ShowDialog()
+        Me.Show()
+    End Sub
 End Class
