@@ -41,12 +41,14 @@ Partial Class VIEW_SALES
         Me.Button8 = New System.Windows.Forms.Button()
         Me.SALESBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TblSalesTableAdapter = New M2.SkyliteDBTableAdapters.tblSalesTableAdapter()
+        Me.TblSalesBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.Panel1.SuspendLayout()
         CType(Me.tblSales, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblSalesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SkyliteDBBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SALESBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TblSalesBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -112,7 +114,7 @@ Partial Class VIEW_SALES
         Me.tblSales.AutoGenerateColumns = False
         Me.tblSales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.tblSales.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
-        Me.tblSales.DataSource = Me.TblSalesBindingSource
+        Me.tblSales.DataSource = Me.TblSalesBindingSource1
         Me.tblSales.Location = New System.Drawing.Point(62, 111)
         Me.tblSales.Name = "tblSales"
         Me.tblSales.Size = New System.Drawing.Size(643, 283)
@@ -190,6 +192,11 @@ Partial Class VIEW_SALES
         '
         Me.TblSalesTableAdapter.ClearBeforeFill = True
         '
+        'TblSalesBindingSource1
+        '
+        Me.TblSalesBindingSource1.DataMember = "tblSales"
+        Me.TblSalesBindingSource1.DataSource = Me.SkyliteDB
+        '
         'VIEW_SALES
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -205,6 +212,7 @@ Partial Class VIEW_SALES
         CType(Me.SkyliteDBBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SALESBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TblSalesBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -233,4 +241,5 @@ Partial Class VIEW_SALES
     Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
+    Friend WithEvents TblSalesBindingSource1 As BindingSource
 End Class

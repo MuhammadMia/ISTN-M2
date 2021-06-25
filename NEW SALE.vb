@@ -57,7 +57,7 @@
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Dim clientID As String = txbClientID.Text
-        Dim employeeID As String = cmbEmployeeID.SelectedItem.ToString
+        Dim employeeID As String = cmbEmployeeID.Text
         Dim saleDate As Date = dtSaleDate.Value
         Dim saleType As String = cmbSaleType.SelectedItem.ToString
         Dim contractLength As String = txbContractLength.Text
@@ -73,7 +73,7 @@
             lblTotalMonthly.Text = "R" & total
             lblTotalOnce.Text = "R0.00"
         Else
-            sql = "INSERT INTO tblSales (Sale_Number, Client_ID, Employee_ID, Sale_Date, Payment_Type, Amount_Due) VALUES ('" & (SkyliteDB.tblSales.Rows.Count + 1) & "', '" & clientID & "', '0', '" & employeeID & "', '" & saleDate & "', '" & paymentType & "', '" & total & "');"
+            sql = "INSERT INTO tblSales (Sale_Number, Client_ID, Employee_ID, Sale_Date, Payment_Type, Amount_Due) VALUES ('" & (SkyliteDB.tblSales.Rows.Count + 1) & "', '" & clientID & "', '" & employeeID & "', '" & saleDate & "', '" & paymentType & "', '" & total & "');"
             lblTotalOnce.Text = "R" & total
             lblTotalMonthly.Text = "R0.00"
         End If

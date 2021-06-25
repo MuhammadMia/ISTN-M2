@@ -25,19 +25,34 @@ Partial Class NEW_SALE
         Me.components = New System.ComponentModel.Container()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.cmbEmployeeID = New System.Windows.Forms.ComboBox()
+        Me.TblEmployeesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SkyliteDB = New M2.SkyliteDB()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.dtSaleDate = New System.Windows.Forms.DateTimePicker()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.tblProducts = New System.Windows.Forms.DataGridView()
+        Me.ProductIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SupplierIDDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ProductNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ProductDescriptionDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ManufacturerDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColourDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CostPriceDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SalePriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CurrentStockDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TblProductsBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
         Me.TblProductsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.SkyliteDB = New M2.SkyliteDB()
         Me.PRODUCTSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.txbSearch = New System.Windows.Forms.TextBox()
         Me.btnAddToCart = New System.Windows.Forms.Button()
         Me.btnRemove = New System.Windows.Forms.Button()
         Me.tblCart = New System.Windows.Forms.DataGridView()
+        Me.ProductIDDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ProductNameDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SalePriceDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TblSaleItemsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TblProductsBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.txbClientID = New System.Windows.Forms.TextBox()
         Me.cmbSaleType = New System.Windows.Forms.ComboBox()
@@ -49,41 +64,26 @@ Partial Class NEW_SALE
         Me.btnPlaceOrder = New System.Windows.Forms.Button()
         Me.TblProductsTableAdapter = New M2.SkyliteDBTableAdapters.tblProductsTableAdapter()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.TblProductsBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ProductIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SupplierIDDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ProductNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ProductDescriptionDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ManufacturerDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColourDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CostPriceDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SalePriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CurrentStockDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SkyliteDBGCP1 = New M2.SkyliteDBGCP()
-        Me.TblSaleItemsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TblSaleItemsTableAdapter = New M2.SkyliteDBTableAdapters.tblSaleItemsTableAdapter()
-        Me.TblEmployeesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TblEmployeesTableAdapter = New M2.SkyliteDBTableAdapters.tblEmployeesTableAdapter()
-        Me.ProductIDDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ProductNameDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SalePriceDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.lblTotalMonthly = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.cmbPaymentType = New System.Windows.Forms.ComboBox()
-        CType(Me.tblProducts, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TblProductsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.lblTotalMonthly = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.SkyliteDBGCP1 = New M2.SkyliteDBGCP()
+        Me.TblSaleItemsTableAdapter = New M2.SkyliteDBTableAdapters.tblSaleItemsTableAdapter()
+        Me.TblEmployeesTableAdapter = New M2.SkyliteDBTableAdapters.tblEmployeesTableAdapter()
+        CType(Me.TblEmployeesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.tblProducts, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TblProductsBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TblProductsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PRODUCTSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.tblCart, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TblSaleItemsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblProductsBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
-        CType(Me.TblProductsBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SkyliteDBGCP1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TblSaleItemsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TblEmployeesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button8
@@ -102,13 +102,23 @@ Partial Class NEW_SALE
         'cmbEmployeeID
         '
         Me.cmbEmployeeID.DataSource = Me.TblEmployeesBindingSource
-        Me.cmbEmployeeID.DisplayMember = "Employee_Name"
+        Me.cmbEmployeeID.DisplayMember = "Employee_ID"
         Me.cmbEmployeeID.FormattingEnabled = True
         Me.cmbEmployeeID.Location = New System.Drawing.Point(146, 338)
         Me.cmbEmployeeID.Name = "cmbEmployeeID"
         Me.cmbEmployeeID.Size = New System.Drawing.Size(200, 21)
         Me.cmbEmployeeID.TabIndex = 17
         Me.cmbEmployeeID.ValueMember = "Employee_ID"
+        '
+        'TblEmployeesBindingSource
+        '
+        Me.TblEmployeesBindingSource.DataMember = "tblEmployees"
+        Me.TblEmployeesBindingSource.DataSource = Me.SkyliteDB
+        '
+        'SkyliteDB
+        '
+        Me.SkyliteDB.DataSetName = "SkyliteDB"
+        Me.SkyliteDB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Label2
         '
@@ -176,15 +186,69 @@ Partial Class NEW_SALE
         Me.tblProducts.Size = New System.Drawing.Size(527, 182)
         Me.tblProducts.TabIndex = 23
         '
+        'ProductIDDataGridViewTextBoxColumn
+        '
+        Me.ProductIDDataGridViewTextBoxColumn.DataPropertyName = "Product_ID"
+        Me.ProductIDDataGridViewTextBoxColumn.HeaderText = "Product_ID"
+        Me.ProductIDDataGridViewTextBoxColumn.Name = "ProductIDDataGridViewTextBoxColumn"
+        '
+        'SupplierIDDataGridViewTextBoxColumn1
+        '
+        Me.SupplierIDDataGridViewTextBoxColumn1.DataPropertyName = "Supplier_ID"
+        Me.SupplierIDDataGridViewTextBoxColumn1.HeaderText = "Supplier_ID"
+        Me.SupplierIDDataGridViewTextBoxColumn1.Name = "SupplierIDDataGridViewTextBoxColumn1"
+        '
+        'ProductNameDataGridViewTextBoxColumn
+        '
+        Me.ProductNameDataGridViewTextBoxColumn.DataPropertyName = "Product_Name"
+        Me.ProductNameDataGridViewTextBoxColumn.HeaderText = "Product_Name"
+        Me.ProductNameDataGridViewTextBoxColumn.Name = "ProductNameDataGridViewTextBoxColumn"
+        '
+        'ProductDescriptionDataGridViewTextBoxColumn1
+        '
+        Me.ProductDescriptionDataGridViewTextBoxColumn1.DataPropertyName = "Product_Description"
+        Me.ProductDescriptionDataGridViewTextBoxColumn1.HeaderText = "Product_Description"
+        Me.ProductDescriptionDataGridViewTextBoxColumn1.Name = "ProductDescriptionDataGridViewTextBoxColumn1"
+        '
+        'ManufacturerDataGridViewTextBoxColumn
+        '
+        Me.ManufacturerDataGridViewTextBoxColumn.DataPropertyName = "Manufacturer"
+        Me.ManufacturerDataGridViewTextBoxColumn.HeaderText = "Manufacturer"
+        Me.ManufacturerDataGridViewTextBoxColumn.Name = "ManufacturerDataGridViewTextBoxColumn"
+        '
+        'ColourDataGridViewTextBoxColumn
+        '
+        Me.ColourDataGridViewTextBoxColumn.DataPropertyName = "Colour"
+        Me.ColourDataGridViewTextBoxColumn.HeaderText = "Colour"
+        Me.ColourDataGridViewTextBoxColumn.Name = "ColourDataGridViewTextBoxColumn"
+        '
+        'CostPriceDataGridViewTextBoxColumn1
+        '
+        Me.CostPriceDataGridViewTextBoxColumn1.DataPropertyName = "Cost_Price"
+        Me.CostPriceDataGridViewTextBoxColumn1.HeaderText = "Cost_Price"
+        Me.CostPriceDataGridViewTextBoxColumn1.Name = "CostPriceDataGridViewTextBoxColumn1"
+        '
+        'SalePriceDataGridViewTextBoxColumn
+        '
+        Me.SalePriceDataGridViewTextBoxColumn.DataPropertyName = "Sale_Price"
+        Me.SalePriceDataGridViewTextBoxColumn.HeaderText = "Sale_Price"
+        Me.SalePriceDataGridViewTextBoxColumn.Name = "SalePriceDataGridViewTextBoxColumn"
+        '
+        'CurrentStockDataGridViewTextBoxColumn
+        '
+        Me.CurrentStockDataGridViewTextBoxColumn.DataPropertyName = "Current_Stock"
+        Me.CurrentStockDataGridViewTextBoxColumn.HeaderText = "Current_Stock"
+        Me.CurrentStockDataGridViewTextBoxColumn.Name = "CurrentStockDataGridViewTextBoxColumn"
+        '
+        'TblProductsBindingSource2
+        '
+        Me.TblProductsBindingSource2.DataMember = "tblProducts"
+        Me.TblProductsBindingSource2.DataSource = Me.SkyliteDB
+        '
         'TblProductsBindingSource
         '
         Me.TblProductsBindingSource.DataMember = "tblProducts"
         Me.TblProductsBindingSource.DataSource = Me.SkyliteDB
-        '
-        'SkyliteDB
-        '
-        Me.SkyliteDB.DataSetName = "SkyliteDB"
-        Me.SkyliteDB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'PRODUCTSBindingSource
         '
@@ -234,6 +298,29 @@ Partial Class NEW_SALE
         Me.tblCart.Name = "tblCart"
         Me.tblCart.Size = New System.Drawing.Size(417, 182)
         Me.tblCart.TabIndex = 29
+        '
+        'ProductIDDataGridViewTextBoxColumn1
+        '
+        Me.ProductIDDataGridViewTextBoxColumn1.DataPropertyName = "Product_ID"
+        Me.ProductIDDataGridViewTextBoxColumn1.HeaderText = "Product_ID"
+        Me.ProductIDDataGridViewTextBoxColumn1.Name = "ProductIDDataGridViewTextBoxColumn1"
+        '
+        'ProductNameDataGridViewTextBoxColumn1
+        '
+        Me.ProductNameDataGridViewTextBoxColumn1.DataPropertyName = "Product_Name"
+        Me.ProductNameDataGridViewTextBoxColumn1.HeaderText = "Product_Name"
+        Me.ProductNameDataGridViewTextBoxColumn1.Name = "ProductNameDataGridViewTextBoxColumn1"
+        '
+        'SalePriceDataGridViewTextBoxColumn1
+        '
+        Me.SalePriceDataGridViewTextBoxColumn1.DataPropertyName = "Sale_Price"
+        Me.SalePriceDataGridViewTextBoxColumn1.HeaderText = "Sale_Price"
+        Me.SalePriceDataGridViewTextBoxColumn1.Name = "SalePriceDataGridViewTextBoxColumn1"
+        '
+        'TblSaleItemsBindingSource
+        '
+        Me.TblSaleItemsBindingSource.DataMember = "tblSaleItems"
+        Me.TblSaleItemsBindingSource.DataSource = Me.SkyliteDB
         '
         'TblProductsBindingSource1
         '
@@ -361,125 +448,26 @@ Partial Class NEW_SALE
         Me.Panel1.Size = New System.Drawing.Size(1176, 481)
         Me.Panel1.TabIndex = 41
         '
-        'Label10
+        'Label6
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Corbel Light", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label10.Location = New System.Drawing.Point(488, 3)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(237, 59)
-        Me.Label10.TabIndex = 64
-        Me.Label10.Text = "NEW SALE"
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.Font = New System.Drawing.Font("Corbel", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label6.Location = New System.Drawing.Point(28, 445)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(82, 15)
+        Me.Label6.TabIndex = 69
+        Me.Label6.Text = "Payment Type"
         '
-        'Label1
+        'cmbPaymentType
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(414, 70)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(116, 13)
-        Me.Label1.TabIndex = 66
-        Me.Label1.Text = "(Select the Entire Row)"
-        '
-        'TblProductsBindingSource2
-        '
-        Me.TblProductsBindingSource2.DataMember = "tblProducts"
-        Me.TblProductsBindingSource2.DataSource = Me.SkyliteDB
-        '
-        'ProductIDDataGridViewTextBoxColumn
-        '
-        Me.ProductIDDataGridViewTextBoxColumn.DataPropertyName = "Product_ID"
-        Me.ProductIDDataGridViewTextBoxColumn.HeaderText = "Product_ID"
-        Me.ProductIDDataGridViewTextBoxColumn.Name = "ProductIDDataGridViewTextBoxColumn"
-        '
-        'SupplierIDDataGridViewTextBoxColumn1
-        '
-        Me.SupplierIDDataGridViewTextBoxColumn1.DataPropertyName = "Supplier_ID"
-        Me.SupplierIDDataGridViewTextBoxColumn1.HeaderText = "Supplier_ID"
-        Me.SupplierIDDataGridViewTextBoxColumn1.Name = "SupplierIDDataGridViewTextBoxColumn1"
-        '
-        'ProductNameDataGridViewTextBoxColumn
-        '
-        Me.ProductNameDataGridViewTextBoxColumn.DataPropertyName = "Product_Name"
-        Me.ProductNameDataGridViewTextBoxColumn.HeaderText = "Product_Name"
-        Me.ProductNameDataGridViewTextBoxColumn.Name = "ProductNameDataGridViewTextBoxColumn"
-        '
-        'ProductDescriptionDataGridViewTextBoxColumn1
-        '
-        Me.ProductDescriptionDataGridViewTextBoxColumn1.DataPropertyName = "Product_Description"
-        Me.ProductDescriptionDataGridViewTextBoxColumn1.HeaderText = "Product_Description"
-        Me.ProductDescriptionDataGridViewTextBoxColumn1.Name = "ProductDescriptionDataGridViewTextBoxColumn1"
-        '
-        'ManufacturerDataGridViewTextBoxColumn
-        '
-        Me.ManufacturerDataGridViewTextBoxColumn.DataPropertyName = "Manufacturer"
-        Me.ManufacturerDataGridViewTextBoxColumn.HeaderText = "Manufacturer"
-        Me.ManufacturerDataGridViewTextBoxColumn.Name = "ManufacturerDataGridViewTextBoxColumn"
-        '
-        'ColourDataGridViewTextBoxColumn
-        '
-        Me.ColourDataGridViewTextBoxColumn.DataPropertyName = "Colour"
-        Me.ColourDataGridViewTextBoxColumn.HeaderText = "Colour"
-        Me.ColourDataGridViewTextBoxColumn.Name = "ColourDataGridViewTextBoxColumn"
-        '
-        'CostPriceDataGridViewTextBoxColumn1
-        '
-        Me.CostPriceDataGridViewTextBoxColumn1.DataPropertyName = "Cost_Price"
-        Me.CostPriceDataGridViewTextBoxColumn1.HeaderText = "Cost_Price"
-        Me.CostPriceDataGridViewTextBoxColumn1.Name = "CostPriceDataGridViewTextBoxColumn1"
-        '
-        'SalePriceDataGridViewTextBoxColumn
-        '
-        Me.SalePriceDataGridViewTextBoxColumn.DataPropertyName = "Sale_Price"
-        Me.SalePriceDataGridViewTextBoxColumn.HeaderText = "Sale_Price"
-        Me.SalePriceDataGridViewTextBoxColumn.Name = "SalePriceDataGridViewTextBoxColumn"
-        '
-        'CurrentStockDataGridViewTextBoxColumn
-        '
-        Me.CurrentStockDataGridViewTextBoxColumn.DataPropertyName = "Current_Stock"
-        Me.CurrentStockDataGridViewTextBoxColumn.HeaderText = "Current_Stock"
-        Me.CurrentStockDataGridViewTextBoxColumn.Name = "CurrentStockDataGridViewTextBoxColumn"
-        '
-        'SkyliteDBGCP1
-        '
-        Me.SkyliteDBGCP1.DataSetName = "SkyliteDBGCP"
-        Me.SkyliteDBGCP1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'TblSaleItemsBindingSource
-        '
-        Me.TblSaleItemsBindingSource.DataMember = "tblSaleItems"
-        Me.TblSaleItemsBindingSource.DataSource = Me.SkyliteDB
-        '
-        'TblSaleItemsTableAdapter
-        '
-        Me.TblSaleItemsTableAdapter.ClearBeforeFill = True
-        '
-        'TblEmployeesBindingSource
-        '
-        Me.TblEmployeesBindingSource.DataMember = "tblEmployees"
-        Me.TblEmployeesBindingSource.DataSource = Me.SkyliteDB
-        '
-        'TblEmployeesTableAdapter
-        '
-        Me.TblEmployeesTableAdapter.ClearBeforeFill = True
-        '
-        'ProductIDDataGridViewTextBoxColumn1
-        '
-        Me.ProductIDDataGridViewTextBoxColumn1.DataPropertyName = "Product_ID"
-        Me.ProductIDDataGridViewTextBoxColumn1.HeaderText = "Product_ID"
-        Me.ProductIDDataGridViewTextBoxColumn1.Name = "ProductIDDataGridViewTextBoxColumn1"
-        '
-        'ProductNameDataGridViewTextBoxColumn1
-        '
-        Me.ProductNameDataGridViewTextBoxColumn1.DataPropertyName = "Product_Name"
-        Me.ProductNameDataGridViewTextBoxColumn1.HeaderText = "Product_Name"
-        Me.ProductNameDataGridViewTextBoxColumn1.Name = "ProductNameDataGridViewTextBoxColumn1"
-        '
-        'SalePriceDataGridViewTextBoxColumn1
-        '
-        Me.SalePriceDataGridViewTextBoxColumn1.DataPropertyName = "Sale_Price"
-        Me.SalePriceDataGridViewTextBoxColumn1.HeaderText = "Sale_Price"
-        Me.SalePriceDataGridViewTextBoxColumn1.Name = "SalePriceDataGridViewTextBoxColumn1"
+        Me.cmbPaymentType.FormattingEnabled = True
+        Me.cmbPaymentType.Items.AddRange(New Object() {"EFT", "Debit Order", "Cash"})
+        Me.cmbPaymentType.Location = New System.Drawing.Point(146, 443)
+        Me.cmbPaymentType.Name = "cmbPaymentType"
+        Me.cmbPaymentType.Size = New System.Drawing.Size(200, 21)
+        Me.cmbPaymentType.TabIndex = 70
         '
         'lblTotalMonthly
         '
@@ -503,26 +491,38 @@ Partial Class NEW_SALE
         Me.Label8.TabIndex = 67
         Me.Label8.Text = "Total Due Monthly:"
         '
-        'Label6
+        'Label1
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.BackColor = System.Drawing.Color.Transparent
-        Me.Label6.Font = New System.Drawing.Font("Corbel", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(28, 445)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(82, 15)
-        Me.Label6.TabIndex = 69
-        Me.Label6.Text = "Payment Type"
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(414, 70)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(116, 13)
+        Me.Label1.TabIndex = 66
+        Me.Label1.Text = "(Select the Entire Row)"
         '
-        'cmbPaymentType
+        'Label10
         '
-        Me.cmbPaymentType.FormattingEnabled = True
-        Me.cmbPaymentType.Items.AddRange(New Object() {"EFT", "Debit Order", "Cash"})
-        Me.cmbPaymentType.Location = New System.Drawing.Point(146, 443)
-        Me.cmbPaymentType.Name = "cmbPaymentType"
-        Me.cmbPaymentType.Size = New System.Drawing.Size(200, 21)
-        Me.cmbPaymentType.TabIndex = 70
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Corbel Light", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label10.Location = New System.Drawing.Point(488, 3)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(237, 59)
+        Me.Label10.TabIndex = 64
+        Me.Label10.Text = "NEW SALE"
+        '
+        'SkyliteDBGCP1
+        '
+        Me.SkyliteDBGCP1.DataSetName = "SkyliteDBGCP"
+        Me.SkyliteDBGCP1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'TblSaleItemsTableAdapter
+        '
+        Me.TblSaleItemsTableAdapter.ClearBeforeFill = True
+        '
+        'TblEmployeesTableAdapter
+        '
+        Me.TblEmployeesTableAdapter.ClearBeforeFill = True
         '
         'NEW_SALE
         '
@@ -532,18 +532,18 @@ Partial Class NEW_SALE
         Me.Controls.Add(Me.Panel1)
         Me.Name = "NEW_SALE"
         Me.Text = "NEW_SALE"
-        CType(Me.tblProducts, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TblProductsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TblEmployeesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.tblProducts, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TblProductsBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TblProductsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PRODUCTSBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.tblCart, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TblSaleItemsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TblProductsBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.TblProductsBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SkyliteDBGCP1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TblSaleItemsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TblEmployeesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
