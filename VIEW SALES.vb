@@ -1,7 +1,8 @@
 ﻿Public Class VIEW_SALES
     Private Sub VIEW_SALES_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'Group26DS.tblSale' table. You can move, or remove it, as needed.
+        Me.TblSaleTableAdapter.Fill(Me.Group26DS.tblSale)
         'TODO: This line of code loads data into the 'SkyliteDB.tblSales' table. You can move, or remove it, as needed.
-        Me.TblSalesTableAdapter.Fill(Me.SkyliteDB.tblSales)
         'TODO: This line of code loads data into the 'Group26DataSet3.SALES' table. You can move, or remove it, as needed.
 
     End Sub
@@ -12,7 +13,7 @@
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
 
-        Dim selectedSale As String = tblSales.SelectedCells(0).Value
+        Dim selectedSale As String = TblSaleTableAdapter.SelectedCells(0).Value
 
         Dim sql As String
         sql = "DELETE FROM tblEmployees WHERE Employee_ID = '" & selectedSale & "';"

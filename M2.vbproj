@@ -110,6 +110,11 @@
     <Compile Include="EMPLOYEES.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="group26DS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>group26DS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="INDIVIDUAL CLIENTS.Designer.vb">
       <DependentUpon>INDIVIDUAL CLIENTS.vb</DependentUpon>
     </Compile>
@@ -236,6 +241,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="group26DS.xsc">
+      <DependentUpon>group26DS.xsd</DependentUpon>
+    </None>
+    <None Include="group26DS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>group26DS.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="group26DS.xss">
+      <DependentUpon>group26DS.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

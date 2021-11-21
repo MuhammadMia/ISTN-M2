@@ -54,11 +54,13 @@ Partial Class BUSINESS_CLIENTS
         Me.Label4 = New System.Windows.Forms.Label()
         Me.BUSINESSCLIENTSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TblClientsBusinessTableAdapter = New M2.SkyliteDBTableAdapters.tblClientsBusinessTableAdapter()
+        Me.TblClientsBusinessBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.Panel1.SuspendLayout()
         CType(Me.tblClientsBusiness, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblClientsBusinessBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BUSINESSCLIENTSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TblClientsBusinessBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -225,7 +227,7 @@ Partial Class BUSINESS_CLIENTS
         Me.tblClientsBusiness.AutoGenerateColumns = False
         Me.tblClientsBusiness.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.tblClientsBusiness.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
-        Me.tblClientsBusiness.DataSource = Me.TblClientsBusinessBindingSource
+        Me.tblClientsBusiness.DataSource = Me.TblClientsBusinessBindingSource1
         Me.tblClientsBusiness.Location = New System.Drawing.Point(40, 100)
         Me.tblClientsBusiness.Name = "tblClientsBusiness"
         Me.tblClientsBusiness.Size = New System.Drawing.Size(543, 302)
@@ -345,6 +347,11 @@ Partial Class BUSINESS_CLIENTS
         '
         Me.TblClientsBusinessTableAdapter.ClearBeforeFill = True
         '
+        'TblClientsBusinessBindingSource1
+        '
+        Me.TblClientsBusinessBindingSource1.DataMember = "tblClientsBusiness"
+        Me.TblClientsBusinessBindingSource1.DataSource = Me.SkyliteDB
+        '
         'BUSINESS_CLIENTS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -359,6 +366,7 @@ Partial Class BUSINESS_CLIENTS
         CType(Me.TblClientsBusinessBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BUSINESSCLIENTSBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TblClientsBusinessBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -400,4 +408,5 @@ Partial Class BUSINESS_CLIENTS
     Friend WithEvents Label1 As Label
     Friend WithEvents Button3 As Button
     Friend WithEvents Label5 As Label
+    Friend WithEvents TblClientsBusinessBindingSource1 As BindingSource
 End Class

@@ -25,6 +25,7 @@ Partial Class APPOINTMENTS
         Me.components = New System.ComponentModel.Container()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.txbAppNum = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
@@ -56,11 +57,12 @@ Partial Class APPOINTMENTS
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.APPOINTMENTSTableAdapter = New M2.SkyliteDBTableAdapters.APPOINTMENTSTableAdapter()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.APPOINTMENTSBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.Panel1.SuspendLayout()
         CType(Me.tblAppointments, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.APPOINTMENTSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.APPOINTMENTSBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button8
@@ -107,6 +109,13 @@ Partial Class APPOINTMENTS
         Me.Panel1.Size = New System.Drawing.Size(1077, 430)
         Me.Panel1.TabIndex = 19
         '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Location = New System.Drawing.Point(889, 180)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(173, 20)
+        Me.DateTimePicker1.TabIndex = 94
+        '
         'txbAppNum
         '
         Me.txbAppNum.Location = New System.Drawing.Point(889, 102)
@@ -136,7 +145,7 @@ Partial Class APPOINTMENTS
         Me.tblAppointments.AutoGenerateColumns = False
         Me.tblAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.tblAppointments.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.AppNumberDataGridViewTextBoxColumn, Me.ClientIDDataGridViewTextBoxColumn, Me.EmployeeIDDataGridViewTextBoxColumn, Me.AppDateDataGridViewTextBoxColumn, Me.AppTimeDataGridViewTextBoxColumn, Me.AppDetailsDataGridViewTextBoxColumn, Me.AppStatusDataGridViewTextBoxColumn})
-        Me.tblAppointments.DataSource = Me.APPOINTMENTSBindingSource
+        Me.tblAppointments.DataSource = Me.APPOINTMENTSBindingSource1
         Me.tblAppointments.Location = New System.Drawing.Point(250, 107)
         Me.tblAppointments.Name = "tblAppointments"
         Me.tblAppointments.Size = New System.Drawing.Size(536, 295)
@@ -360,12 +369,10 @@ Partial Class APPOINTMENTS
         '
         Me.APPOINTMENTSTableAdapter.ClearBeforeFill = True
         '
-        'DateTimePicker1
+        'APPOINTMENTSBindingSource1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(889, 180)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(173, 20)
-        Me.DateTimePicker1.TabIndex = 94
+        Me.APPOINTMENTSBindingSource1.DataMember = "APPOINTMENTS"
+        Me.APPOINTMENTSBindingSource1.DataSource = Me.SkyliteDB
         '
         'APPOINTMENTS
         '
@@ -380,6 +387,7 @@ Partial Class APPOINTMENTS
         CType(Me.tblAppointments, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.APPOINTMENTSBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.APPOINTMENTSBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -418,4 +426,5 @@ Partial Class APPOINTMENTS
     Friend WithEvents txbAppNum As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents APPOINTMENTSBindingSource1 As BindingSource
 End Class

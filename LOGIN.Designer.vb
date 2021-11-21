@@ -29,10 +29,10 @@ Partial Class LOGIN
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.cmbUser = New System.Windows.Forms.ComboBox()
         Me.TblEmployeesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SkyliteDB = New M2.SkyliteDB()
         Me.TblEmployeesTableAdapter = New M2.SkyliteDBTableAdapters.tblEmployeesTableAdapter()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         CType(Me.TblEmployeesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -84,8 +84,8 @@ Partial Class LOGIN
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.TextBox1)
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Controls.Add(Me.cmbUser)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.txbPassword)
@@ -107,17 +107,6 @@ Partial Class LOGIN
         Me.Label1.TabIndex = 7
         Me.Label1.Text = "PLEASE LOGIN"
         '
-        'cmbUser
-        '
-        Me.cmbUser.DataSource = Me.TblEmployeesBindingSource
-        Me.cmbUser.DisplayMember = "Employee_ID"
-        Me.cmbUser.FormattingEnabled = True
-        Me.cmbUser.Location = New System.Drawing.Point(84, 70)
-        Me.cmbUser.Name = "cmbUser"
-        Me.cmbUser.Size = New System.Drawing.Size(163, 21)
-        Me.cmbUser.TabIndex = 18
-        Me.cmbUser.ValueMember = "Employee_ID"
-        '
         'TblEmployeesBindingSource
         '
         Me.TblEmployeesBindingSource.DataMember = "tblEmployees"
@@ -131,6 +120,14 @@ Partial Class LOGIN
         'TblEmployeesTableAdapter
         '
         Me.TblEmployeesTableAdapter.ClearBeforeFill = True
+        '
+        'TextBox1
+        '
+        Me.TextBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.TextBox1.Location = New System.Drawing.Point(84, 70)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(163, 20)
+        Me.TextBox1.TabIndex = 17
         '
         'LOGIN
         '
@@ -154,8 +151,8 @@ Partial Class LOGIN
     Friend WithEvents Label3 As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents SkyliteDB As SkyliteDB
-    Friend WithEvents cmbUser As ComboBox
     Friend WithEvents TblEmployeesBindingSource As BindingSource
     Friend WithEvents TblEmployeesTableAdapter As SkyliteDBTableAdapters.tblEmployeesTableAdapter
     Friend WithEvents Label1 As Label
+    Friend WithEvents TextBox1 As TextBox
 End Class

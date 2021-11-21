@@ -35,20 +35,25 @@ Partial Class VIEW_SALES
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TblSaleBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Group26DS = New M2.group26DS()
+        Me.Button8 = New System.Windows.Forms.Button()
+        Me.TblSalesBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SkyliteDB = New M2.SkyliteDB()
         Me.TblSalesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SkyliteDBBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.SkyliteDB = New M2.SkyliteDB()
-        Me.Button8 = New System.Windows.Forms.Button()
         Me.SALESBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TblSalesTableAdapter = New M2.SkyliteDBTableAdapters.tblSalesTableAdapter()
-        Me.TblSalesBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TblSaleTableAdapter = New M2.group26DSTableAdapters.tblSaleTableAdapter()
         Me.Panel1.SuspendLayout()
         CType(Me.tblSales, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TblSaleBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Group26DS, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TblSalesBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblSalesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SkyliteDBBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SALESBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TblSalesBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -111,10 +116,11 @@ Partial Class VIEW_SALES
         '
         'tblSales
         '
+        Me.tblSales.AllowUserToOrderColumns = True
         Me.tblSales.AutoGenerateColumns = False
         Me.tblSales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.tblSales.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
-        Me.tblSales.DataSource = Me.TblSalesBindingSource1
+        Me.tblSales.DataSource = Me.TblSaleBindingSource
         Me.tblSales.Location = New System.Drawing.Point(62, 111)
         Me.tblSales.Name = "tblSales"
         Me.tblSales.Size = New System.Drawing.Size(643, 283)
@@ -156,20 +162,15 @@ Partial Class VIEW_SALES
         Me.DataGridViewTextBoxColumn6.HeaderText = "Amount_Due"
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
         '
-        'TblSalesBindingSource
+        'TblSaleBindingSource
         '
-        Me.TblSalesBindingSource.DataMember = "tblSales"
-        Me.TblSalesBindingSource.DataSource = Me.SkyliteDBBindingSource
+        Me.TblSaleBindingSource.DataMember = "tblSale"
+        Me.TblSaleBindingSource.DataSource = Me.Group26DS
         '
-        'SkyliteDBBindingSource
+        'Group26DS
         '
-        Me.SkyliteDBBindingSource.DataSource = Me.SkyliteDB
-        Me.SkyliteDBBindingSource.Position = 0
-        '
-        'SkyliteDB
-        '
-        Me.SkyliteDB.DataSetName = "SkyliteDB"
-        Me.SkyliteDB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.Group26DS.DataSetName = "group26DS"
+        Me.Group26DS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Button8
         '
@@ -184,6 +185,26 @@ Partial Class VIEW_SALES
         Me.Button8.Text = "BACK"
         Me.Button8.UseVisualStyleBackColor = False
         '
+        'TblSalesBindingSource1
+        '
+        Me.TblSalesBindingSource1.DataMember = "tblSales"
+        Me.TblSalesBindingSource1.DataSource = Me.SkyliteDB
+        '
+        'SkyliteDB
+        '
+        Me.SkyliteDB.DataSetName = "SkyliteDB"
+        Me.SkyliteDB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'TblSalesBindingSource
+        '
+        Me.TblSalesBindingSource.DataMember = "tblSales"
+        Me.TblSalesBindingSource.DataSource = Me.SkyliteDBBindingSource
+        '
+        'SkyliteDBBindingSource
+        '
+        Me.SkyliteDBBindingSource.DataSource = Me.SkyliteDB
+        Me.SkyliteDBBindingSource.Position = 0
+        '
         'SALESBindingSource
         '
         Me.SALESBindingSource.DataMember = "SALES"
@@ -192,10 +213,9 @@ Partial Class VIEW_SALES
         '
         Me.TblSalesTableAdapter.ClearBeforeFill = True
         '
-        'TblSalesBindingSource1
+        'TblSaleTableAdapter
         '
-        Me.TblSalesBindingSource1.DataMember = "tblSales"
-        Me.TblSalesBindingSource1.DataSource = Me.SkyliteDB
+        Me.TblSaleTableAdapter.ClearBeforeFill = True
         '
         'VIEW_SALES
         '
@@ -208,11 +228,13 @@ Partial Class VIEW_SALES
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.tblSales, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TblSaleBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Group26DS, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TblSalesBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TblSalesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SkyliteDBBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SkyliteDB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SALESBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TblSalesBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -242,4 +264,7 @@ Partial Class VIEW_SALES
     Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
     Friend WithEvents TblSalesBindingSource1 As BindingSource
+    Friend WithEvents Group26DS As group26DS
+    Friend WithEvents TblSaleBindingSource As BindingSource
+    Friend WithEvents TblSaleTableAdapter As group26DSTableAdapters.tblSaleTableAdapter
 End Class

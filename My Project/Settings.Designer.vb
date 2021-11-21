@@ -15,7 +15,7 @@ Option Explicit On
 Namespace My
     
     <Global.System.Runtime.CompilerServices.CompilerGeneratedAttribute(),  _
-     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.10.0.0"),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.0.3.0"),  _
      Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Advanced)>  _
     Partial Friend NotInheritable Class MySettings
         Inherits Global.System.Configuration.ApplicationSettingsBase
@@ -57,8 +57,8 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=146.230.177.46\ist3;Initial Catalog=group26;Persist Security Info=Tru"& _ 
-            "e;User ID=group26;Password=d1er2")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=34.67.177.192;Initial Catalog=SkyliteDB;Persist Security Info=True;Us"& _ 
+            "er ID=sqlserver;Password=istn")>  _
         Public ReadOnly Property group26Contracts() As String
             Get
                 Return CType(Me("group26Contracts"),String)
@@ -73,6 +73,17 @@ Namespace My
         Public ReadOnly Property SkyliteDBGCP() As String
             Get
                 Return CType(Me("SkyliteDBGCP"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=146.230.177.46\ist3;Initial Catalog=group26;Persist Security Info=Tru"& _ 
+            "e;User ID=group26;Password=d1er2")>  _
+        Public ReadOnly Property group26ConnectionString() As String
+            Get
+                Return CType(Me("group26ConnectionString"),String)
             End Get
         End Property
     End Class
